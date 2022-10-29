@@ -44,7 +44,7 @@ namespace AD_SeaAnimalGame
 
         private void FishSpawn()
         {
-
+            //spawn new pic box for fish object
             PictureBox normalFish = new PictureBox();
             normalFish.Height = 50;
             normalFish.Width = 50;
@@ -62,7 +62,7 @@ namespace AD_SeaAnimalGame
 
         private void NotFishSpawn()
         {
-
+            //spawn new pic box for random object
             PictureBox notFish = new PictureBox();
             notFish.Height = 50;
             notFish.Width = 50;
