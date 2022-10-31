@@ -41,6 +41,7 @@ namespace AD_SeaAnimalGame
 
             fish.Add(normalFish);
             this.Controls.Add(normalFish);
+            
         }
 
         private void NotFishSpawn()
@@ -90,19 +91,19 @@ namespace AD_SeaAnimalGame
 
         private void GamePage_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Left)
+            if (e.KeyCode == Keys.A)
             {
                 submarineLeft = true;
             }
-            if (e.KeyCode == Keys.Right)
+            if (e.KeyCode == Keys.D)
             {
                 submarineRight = true;
             }
-            if (e.KeyCode == Keys.Up)
+            if (e.KeyCode == Keys.W)
             {
                 submarineUp = true;
             }
-            if (e.KeyCode == Keys.Down)
+            if (e.KeyCode == Keys.S)
             {
                 submarineDown = true;
             }
@@ -110,19 +111,19 @@ namespace AD_SeaAnimalGame
 
         private void GamePage_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Left)
+            if (e.KeyCode == Keys.A)
             {
                 submarineLeft = false;
             }
-            if (e.KeyCode == Keys.Right)
+            if (e.KeyCode == Keys.D)
             {
                 submarineRight = false;
             }
-            if (e.KeyCode == Keys.Up)
+            if (e.KeyCode == Keys.W)
             {
                 submarineUp = false;
             }
-            if (e.KeyCode == Keys.Down)
+            if (e.KeyCode == Keys.S)
             {
                 submarineDown = false;
             }
@@ -135,8 +136,6 @@ namespace AD_SeaAnimalGame
         private void FishSpawnTimer_Tick(object sender, EventArgs e)
         {
             FishSpawn();
-
-
 
         }
 
