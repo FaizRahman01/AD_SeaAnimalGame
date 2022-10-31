@@ -23,24 +23,7 @@ namespace AD_SeaAnimalGame
             InitializeComponent();
         }
 
-        private void panelGamePage_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.windowLocation = e.Location;
-        }
 
-        private void panelGamePage_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                // Refers to the Form location (or whatever you trigger the event on)
-                this.Location = new Point(
-                    (this.Location.X - windowLocation.X) + e.X,
-                    (this.Location.Y - windowLocation.Y) + e.Y
-                );
-
-                this.Update();
-            }
-        }
 
         private void FishSpawn()
         {
@@ -76,6 +59,28 @@ namespace AD_SeaAnimalGame
 
             notfish.Add(notFish);
             this.Controls.Add(notFish);
+        }
+
+
+
+        //Event--------------------------------
+        private void panelGamePage_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.windowLocation = e.Location;
+        }
+
+        private void panelGamePage_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                // Refers to the Form location (or whatever you trigger the event on)
+                this.Location = new Point(
+                    (this.Location.X - windowLocation.X) + e.X,
+                    (this.Location.Y - windowLocation.Y) + e.Y
+                );
+
+                this.Update();
+            }
         }
 
 
@@ -124,6 +129,7 @@ namespace AD_SeaAnimalGame
         }
 
 
+        int playerScore = 0;
 
 
         private void FishSpawnTimer_Tick(object sender, EventArgs e)
@@ -163,6 +169,10 @@ namespace AD_SeaAnimalGame
                 pboxSubmarine.Top += submarineSpeed;
             }
 
+
+            lblGameScore.Text = "Score: " + playerScore;
+
+
             foreach (PictureBox fishpb in fish.ToList())
             {
                 if (pboxSubmarine.Bounds.IntersectsWith(fishpb.Bounds))
@@ -170,9 +180,12 @@ namespace AD_SeaAnimalGame
                     // if the collision happened do the following
                     fish.Remove(fishpb);
                     this.Controls.Remove(fishpb);
+                    playerScore++;
                 }
 
             }
+
+
 
             foreach (PictureBox notfishpb in notfish.ToList())
             {
@@ -181,6 +194,16 @@ namespace AD_SeaAnimalGame
                     // if the collision happened do the following
                     notfish.Remove(notfishpb);
                     this.Controls.Remove(notfishpb);
+
+                    if(playerScore <= 0)
+                    {
+                        playerScore = 0;
+                    }
+                    else if(playerScore > 0)
+                    {
+                        playerScore--;
+                    }
+                    
                 }
 
             }
