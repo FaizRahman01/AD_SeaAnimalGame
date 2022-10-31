@@ -12,7 +12,7 @@ namespace AD_SeaAnimalGame
 {
     public partial class GamePage : Form
     {
-        private Point windowLocation;
+
 
         Random randomSpawn = new Random();
         List<PictureBox> fish = new List<PictureBox>();
@@ -65,24 +65,7 @@ namespace AD_SeaAnimalGame
 
 
         //Event--------------------------------
-        private void panelGamePage_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.windowLocation = e.Location;
-        }
 
-        private void panelGamePage_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                // Refers to the Form location (or whatever you trigger the event on)
-                this.Location = new Point(
-                    (this.Location.X - windowLocation.X) + e.X,
-                    (this.Location.Y - windowLocation.Y) + e.Y
-                );
-
-                this.Update();
-            }
-        }
 
 
         bool submarineUp, submarineDown, submarineLeft, submarineRight;
@@ -94,18 +77,22 @@ namespace AD_SeaAnimalGame
             if (e.KeyCode == Keys.A)
             {
                 submarineLeft = true;
+                pboxSubmarine.Image = Properties.Resources.submarineleft;
             }
             if (e.KeyCode == Keys.D)
             {
                 submarineRight = true;
+                pboxSubmarine.Image = Properties.Resources.submarineright;
             }
             if (e.KeyCode == Keys.W)
             {
                 submarineUp = true;
+                pboxSubmarine.Image = Properties.Resources.submarineup;
             }
             if (e.KeyCode == Keys.S)
             {
                 submarineDown = true;
+                pboxSubmarine.Image = Properties.Resources.submarinedown;
             }
         }
 

@@ -113,5 +113,17 @@
   <ItemGroup>
     <None Include="Resources\trash.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\submarinedown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\submarineleft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\submarineright.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\submarineup.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

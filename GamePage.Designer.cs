@@ -31,29 +31,14 @@ namespace AD_SeaAnimalGame
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GamePage));
-            this.panelGamePage = new System.Windows.Forms.Panel();
             this.lblGameTimer = new System.Windows.Forms.Label();
             this.lblGameScore = new System.Windows.Forms.Label();
             this.pboxSubmarine = new System.Windows.Forms.PictureBox();
             this.FishSpawnTimer = new System.Windows.Forms.Timer(this.components);
             this.NonFishSpawnTimer = new System.Windows.Forms.Timer(this.components);
             this.SubmarineMoveTimer = new System.Windows.Forms.Timer(this.components);
-            this.panelGamePage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSubmarine)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panelGamePage
-            // 
-            this.panelGamePage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panelGamePage.Controls.Add(this.lblGameTimer);
-            this.panelGamePage.Controls.Add(this.lblGameScore);
-            this.panelGamePage.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelGamePage.Location = new System.Drawing.Point(0, 0);
-            this.panelGamePage.Name = "panelGamePage";
-            this.panelGamePage.Size = new System.Drawing.Size(1000, 41);
-            this.panelGamePage.TabIndex = 8;
-            this.panelGamePage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelGamePage_MouseDown);
-            this.panelGamePage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelGamePage_MouseMove);
             // 
             // lblGameTimer
             // 
@@ -61,7 +46,7 @@ namespace AD_SeaAnimalGame
             this.lblGameTimer.BackColor = System.Drawing.Color.Transparent;
             this.lblGameTimer.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGameTimer.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblGameTimer.Location = new System.Drawing.Point(858, 4);
+            this.lblGameTimer.Location = new System.Drawing.Point(846, 9);
             this.lblGameTimer.Name = "lblGameTimer";
             this.lblGameTimer.Size = new System.Drawing.Size(142, 33);
             this.lblGameTimer.TabIndex = 7;
@@ -73,7 +58,7 @@ namespace AD_SeaAnimalGame
             this.lblGameScore.BackColor = System.Drawing.Color.Transparent;
             this.lblGameScore.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGameScore.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblGameScore.Location = new System.Drawing.Point(449, 2);
+            this.lblGameScore.Location = new System.Drawing.Point(459, 9);
             this.lblGameScore.Name = "lblGameScore";
             this.lblGameScore.Size = new System.Drawing.Size(104, 33);
             this.lblGameScore.TabIndex = 0;
@@ -87,6 +72,7 @@ namespace AD_SeaAnimalGame
             this.pboxSubmarine.Location = new System.Drawing.Point(455, 375);
             this.pboxSubmarine.Name = "pboxSubmarine";
             this.pboxSubmarine.Size = new System.Drawing.Size(108, 78);
+            this.pboxSubmarine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pboxSubmarine.TabIndex = 9;
             this.pboxSubmarine.TabStop = false;
             // 
@@ -116,24 +102,22 @@ namespace AD_SeaAnimalGame
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1000, 700);
+            this.Controls.Add(this.lblGameTimer);
             this.Controls.Add(this.pboxSubmarine);
-            this.Controls.Add(this.panelGamePage);
+            this.Controls.Add(this.lblGameScore);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "GamePage";
             this.Text = "GamePage";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GamePage_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.GamePage_KeyUp);
-            this.panelGamePage.ResumeLayout(false);
-            this.panelGamePage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSubmarine)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelGamePage;
         private System.Windows.Forms.Label lblGameTimer;
         private System.Windows.Forms.Label lblGameScore;
         private System.Windows.Forms.PictureBox pboxSubmarine;
