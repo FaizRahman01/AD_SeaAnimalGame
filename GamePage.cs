@@ -137,6 +137,19 @@ namespace AD_SeaAnimalGame
         //timer for submarine
 
         int playerScore = 0;
+
+        private void btnExitGame_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PlayerMainPage pmainpage = new PlayerMainPage();
+            pmainpage.Show();
+        }
+
+        private void btnCloseGame_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         int wrongCatch = 0;
         int correctCatch = 0;
         private void SubmarineMoveTimer_Tick(object sender, EventArgs e)

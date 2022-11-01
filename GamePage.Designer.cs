@@ -40,7 +40,10 @@ namespace AD_SeaAnimalGame
             this.lblGameScore = new System.Windows.Forms.Label();
             this.lblNotFishCatch = new System.Windows.Forms.Label();
             this.lblFishCatch = new System.Windows.Forms.Label();
+            this.btnExitGame = new System.Windows.Forms.Button();
+            this.btnCloseGame = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSubmarine)).BeginInit();
+            this.panelGameOver.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,6 +82,8 @@ namespace AD_SeaAnimalGame
             this.panelGameOver.BackColor = System.Drawing.Color.Transparent;
             this.panelGameOver.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.gameover;
             this.panelGameOver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelGameOver.Controls.Add(this.btnCloseGame);
+            this.panelGameOver.Controls.Add(this.btnExitGame);
             this.panelGameOver.Location = new System.Drawing.Point(338, 170);
             this.panelGameOver.Name = "panelGameOver";
             this.panelGameOver.Size = new System.Drawing.Size(337, 238);
@@ -137,6 +142,32 @@ namespace AD_SeaAnimalGame
             this.lblFishCatch.Text = "Fish : 0";
             this.lblFishCatch.Visible = false;
             // 
+            // btnExitGame
+            // 
+            this.btnExitGame.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnExitGame.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExitGame.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnExitGame.Location = new System.Drawing.Point(47, 187);
+            this.btnExitGame.Name = "btnExitGame";
+            this.btnExitGame.Size = new System.Drawing.Size(79, 38);
+            this.btnExitGame.TabIndex = 2;
+            this.btnExitGame.Text = "Menu";
+            this.btnExitGame.UseVisualStyleBackColor = false;
+            this.btnExitGame.Click += new System.EventHandler(this.btnExitGame_Click);
+            // 
+            // btnCloseGame
+            // 
+            this.btnCloseGame.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnCloseGame.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.btnCloseGame.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCloseGame.Location = new System.Drawing.Point(225, 187);
+            this.btnCloseGame.Name = "btnCloseGame";
+            this.btnCloseGame.Size = new System.Drawing.Size(75, 38);
+            this.btnCloseGame.TabIndex = 3;
+            this.btnCloseGame.Text = "Quit";
+            this.btnCloseGame.UseVisualStyleBackColor = false;
+            this.btnCloseGame.Click += new System.EventHandler(this.btnCloseGame_Click);
+            // 
             // GamePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,7 +181,7 @@ namespace AD_SeaAnimalGame
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelGameOver);
             this.Controls.Add(this.pboxSubmarine);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "GamePage";
@@ -158,6 +189,7 @@ namespace AD_SeaAnimalGame
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GamePage_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.GamePage_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.pboxSubmarine)).EndInit();
+            this.panelGameOver.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -175,5 +207,7 @@ namespace AD_SeaAnimalGame
         private System.Windows.Forms.Label lblGameScore;
         private System.Windows.Forms.Label lblNotFishCatch;
         private System.Windows.Forms.Label lblFishCatch;
+        private System.Windows.Forms.Button btnCloseGame;
+        private System.Windows.Forms.Button btnExitGame;
     }
 }

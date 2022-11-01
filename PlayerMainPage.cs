@@ -46,6 +46,7 @@ namespace AD_SeaAnimalGame
 
         private void btnPlayNow_Click(object sender, EventArgs e)
         {
+            this.Hide();
             GamePage gamepage = new GamePage();
             gamepage.Show();
         }
