@@ -52,6 +52,12 @@
     <Compile Include="GamePage.Designer.cs">
       <DependentUpon>GamePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="GamePage2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GamePage2.Designer.cs">
+      <DependentUpon>GamePage2.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GamePage.resx">
       <DependentUpon>GamePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GamePage2.resx">
+      <DependentUpon>GamePage2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
