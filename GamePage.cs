@@ -118,7 +118,7 @@ namespace AD_SeaAnimalGame
         }
 
 
-
+        //timer for object spawn
 
 
         private void FishSpawnTimer_Tick(object sender, EventArgs e)
@@ -131,6 +131,10 @@ namespace AD_SeaAnimalGame
         {
             NotFishSpawn();
         }
+
+
+
+        //timer for submarine
 
         int wrongCatch = 0;
         int playerScore = 0;
