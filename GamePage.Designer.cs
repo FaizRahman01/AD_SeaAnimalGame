@@ -138,7 +138,7 @@ namespace AD_SeaAnimalGame
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "GamePage";
-            this.Text = "GamePage";
+            this.Text = "Fish Legends";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GamePage_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.GamePage_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.pboxSubmarine)).EndInit();

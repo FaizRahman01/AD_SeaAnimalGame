@@ -134,7 +134,7 @@ namespace AD_SeaAnimalGame
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PlayerNamePage";
-            this.Text = "PlayerNamePage";
+            this.Text = "Fish Legends";
             this.panelPNamePage.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
