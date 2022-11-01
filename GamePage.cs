@@ -132,7 +132,7 @@ namespace AD_SeaAnimalGame
             NotFishSpawn();
         }
 
-
+        int wrongCatch = 0;
         int playerScore = 0;
         private void SubmarineMoveTimer_Tick(object sender, EventArgs e)
         {
@@ -156,8 +156,8 @@ namespace AD_SeaAnimalGame
                 pboxSubmarine.Top += submarineSpeed;
             }
 
-
-            lblGameScore.Text = "Score: " + playerScore;
+            lblGameScore.Text = " " + playerScore;
+            lblNotFishCatch.Text = "Fail: " + wrongCatch;
 
 
             foreach (PictureBox fishpb in fish.ToList())
@@ -197,6 +197,16 @@ namespace AD_SeaAnimalGame
                     SoundPlayer player = new SoundPlayer(Properties.Resources.correct);
                     player.Play();
 
+
+                    wrongCatch++;
+                    if (wrongCatch == 5)
+                    {
+                        FishSpawnTimer.Stop();
+                        NonFishSpawnTimer.Stop();
+                        SubmarineMoveTimer.Stop();
+                        panelGameOver.Visible = true;
+
+                    }
                 }
 
             }
