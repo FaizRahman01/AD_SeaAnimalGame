@@ -125,5 +125,11 @@
   <ItemGroup>
     <None Include="Resources\submarineup.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button9.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button10.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

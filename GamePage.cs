@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace AD_SeaAnimalGame
 {
@@ -117,7 +118,7 @@ namespace AD_SeaAnimalGame
         }
 
 
-        int playerScore = 0;
+
 
 
         private void FishSpawnTimer_Tick(object sender, EventArgs e)
@@ -132,7 +133,7 @@ namespace AD_SeaAnimalGame
         }
 
 
-
+        int playerScore = 0;
         private void SubmarineMoveTimer_Tick(object sender, EventArgs e)
         {
             if (submarineLeft == true && pboxSubmarine.Left > 0)
@@ -145,7 +146,7 @@ namespace AD_SeaAnimalGame
                 pboxSubmarine.Left += submarineSpeed;
             }
 
-            if (submarineUp == true && pboxSubmarine.Top > 41)
+            if (submarineUp == true && pboxSubmarine.Top > 0)
             {
                 pboxSubmarine.Top -= submarineSpeed;
             }
@@ -167,6 +168,9 @@ namespace AD_SeaAnimalGame
                     fish.Remove(fishpb);
                     this.Controls.Remove(fishpb);
                     playerScore++;
+
+                    SoundPlayer player = new SoundPlayer(Properties.Resources.correct);
+                    player.Play();
                 }
 
             }
@@ -189,7 +193,10 @@ namespace AD_SeaAnimalGame
                     {
                         playerScore--;
                     }
-                    
+
+                    SoundPlayer player = new SoundPlayer(Properties.Resources.correct);
+                    player.Play();
+
                 }
 
             }

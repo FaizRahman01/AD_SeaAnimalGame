@@ -125,6 +125,7 @@ namespace AD_SeaAnimalGame
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.panelMainPage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainPage";
             this.Text = "Form1";
             this.panelMainPage.ResumeLayout(false);
