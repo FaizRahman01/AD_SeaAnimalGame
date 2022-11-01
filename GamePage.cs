@@ -136,8 +136,9 @@ namespace AD_SeaAnimalGame
 
         //timer for submarine
 
-        int wrongCatch = 0;
         int playerScore = 0;
+        int wrongCatch = 0;
+        int correctCatch = 0;
         private void SubmarineMoveTimer_Tick(object sender, EventArgs e)
         {
             if (submarineLeft == true && pboxSubmarine.Left > 0)
@@ -160,8 +161,9 @@ namespace AD_SeaAnimalGame
                 pboxSubmarine.Top += submarineSpeed;
             }
 
-            lblGameScore.Text = " " + playerScore;
-            lblNotFishCatch.Text = "Fail: " + wrongCatch;
+            lblGameScore.Text = "" + playerScore;
+            lblNotFishCatch.Text = "NotFish: " + wrongCatch;
+            lblFishCatch.Text = "Fish: " + correctCatch;
 
 
             foreach (PictureBox fishpb in fish.ToList())
@@ -171,7 +173,10 @@ namespace AD_SeaAnimalGame
                     // if the collision happened do the following
                     fish.Remove(fishpb);
                     this.Controls.Remove(fishpb);
-                    playerScore++;
+
+                    correctCatch++;
+                    wrongCatch = 0;
+                    playerScore = correctCatch + wrongCatch;
 
                     SoundPlayer player = new SoundPlayer(Properties.Resources.correct);
                     player.Play();
@@ -189,20 +194,24 @@ namespace AD_SeaAnimalGame
                     notfish.Remove(notfishpb);
                     this.Controls.Remove(notfishpb);
 
-                    if(playerScore <= 0)
-                    {
-                        playerScore = 0;
-                    }
-                    else if(playerScore > 0)
-                    {
-                        playerScore--;
-                    }
-
-                    SoundPlayer player = new SoundPlayer(Properties.Resources.correct);
+                    SoundPlayer player = new SoundPlayer(Properties.Resources.wrong);
                     player.Play();
 
 
                     wrongCatch++;
+                    correctCatch--;
+                    playerScore = correctCatch;
+
+                    if (playerScore < 0)
+                    {
+                        playerScore = 0;
+                    }
+
+                    if (correctCatch < 0)
+                    {
+                        correctCatch = 0;
+                    }
+
                     if (wrongCatch == 5)
                     {
                         FishSpawnTimer.Stop();
