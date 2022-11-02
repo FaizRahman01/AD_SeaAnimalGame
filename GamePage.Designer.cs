@@ -36,12 +36,14 @@ namespace AD_SeaAnimalGame
             this.NonFishSpawnTimer = new System.Windows.Forms.Timer(this.components);
             this.SubmarineMoveTimer = new System.Windows.Forms.Timer(this.components);
             this.panelGameOver = new System.Windows.Forms.Panel();
+            this.btnCloseGame = new System.Windows.Forms.Button();
+            this.btnExitGame = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblGameScore = new System.Windows.Forms.Label();
             this.lblNotFishCatch = new System.Windows.Forms.Label();
             this.lblFishCatch = new System.Windows.Forms.Label();
-            this.btnExitGame = new System.Windows.Forms.Button();
-            this.btnCloseGame = new System.Windows.Forms.Button();
+            this.lblGameTImer = new System.Windows.Forms.Label();
+            this.timerCountdownGame = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pboxSubmarine)).BeginInit();
             this.panelGameOver.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -90,13 +92,39 @@ namespace AD_SeaAnimalGame
             this.panelGameOver.TabIndex = 14;
             this.panelGameOver.Visible = false;
             // 
+            // btnCloseGame
+            // 
+            this.btnCloseGame.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnCloseGame.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.btnCloseGame.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCloseGame.Location = new System.Drawing.Point(225, 187);
+            this.btnCloseGame.Name = "btnCloseGame";
+            this.btnCloseGame.Size = new System.Drawing.Size(75, 38);
+            this.btnCloseGame.TabIndex = 3;
+            this.btnCloseGame.Text = "Quit";
+            this.btnCloseGame.UseVisualStyleBackColor = false;
+            this.btnCloseGame.Click += new System.EventHandler(this.btnCloseGame_Click);
+            // 
+            // btnExitGame
+            // 
+            this.btnExitGame.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnExitGame.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExitGame.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnExitGame.Location = new System.Drawing.Point(47, 187);
+            this.btnExitGame.Name = "btnExitGame";
+            this.btnExitGame.Size = new System.Drawing.Size(79, 38);
+            this.btnExitGame.TabIndex = 2;
+            this.btnExitGame.Text = "Menu";
+            this.btnExitGame.UseVisualStyleBackColor = false;
+            this.btnExitGame.Click += new System.EventHandler(this.btnExitGame_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.playerscoredisplay;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.lblGameScore);
-            this.panel1.Location = new System.Drawing.Point(455, 9);
+            this.panel1.Location = new System.Drawing.Point(863, 9);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(117, 64);
             this.panel1.TabIndex = 15;
@@ -142,31 +170,24 @@ namespace AD_SeaAnimalGame
             this.lblFishCatch.Text = "Fish : 0";
             this.lblFishCatch.Visible = false;
             // 
-            // btnExitGame
+            // lblGameTImer
             // 
-            this.btnExitGame.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnExitGame.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExitGame.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnExitGame.Location = new System.Drawing.Point(47, 187);
-            this.btnExitGame.Name = "btnExitGame";
-            this.btnExitGame.Size = new System.Drawing.Size(79, 38);
-            this.btnExitGame.TabIndex = 2;
-            this.btnExitGame.Text = "Menu";
-            this.btnExitGame.UseVisualStyleBackColor = false;
-            this.btnExitGame.Click += new System.EventHandler(this.btnExitGame_Click);
+            this.lblGameTImer.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblGameTImer.AutoSize = true;
+            this.lblGameTImer.BackColor = System.Drawing.Color.Transparent;
+            this.lblGameTImer.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameTImer.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblGameTImer.Location = new System.Drawing.Point(453, 18);
+            this.lblGameTImer.Name = "lblGameTImer";
+            this.lblGameTImer.Size = new System.Drawing.Size(59, 33);
+            this.lblGameTImer.TabIndex = 18;
+            this.lblGameTImer.Text = "60 s";
             // 
-            // btnCloseGame
+            // timerCountdownGame
             // 
-            this.btnCloseGame.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnCloseGame.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.btnCloseGame.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCloseGame.Location = new System.Drawing.Point(225, 187);
-            this.btnCloseGame.Name = "btnCloseGame";
-            this.btnCloseGame.Size = new System.Drawing.Size(75, 38);
-            this.btnCloseGame.TabIndex = 3;
-            this.btnCloseGame.Text = "Quit";
-            this.btnCloseGame.UseVisualStyleBackColor = false;
-            this.btnCloseGame.Click += new System.EventHandler(this.btnCloseGame_Click);
+            this.timerCountdownGame.Enabled = true;
+            this.timerCountdownGame.Interval = 1000;
+            this.timerCountdownGame.Tick += new System.EventHandler(this.timerCountdownGame_Tick);
             // 
             // GamePage
             // 
@@ -176,6 +197,7 @@ namespace AD_SeaAnimalGame
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1000, 700);
+            this.Controls.Add(this.lblGameTImer);
             this.Controls.Add(this.lblFishCatch);
             this.Controls.Add(this.lblNotFishCatch);
             this.Controls.Add(this.panel1);
@@ -209,5 +231,7 @@ namespace AD_SeaAnimalGame
         private System.Windows.Forms.Label lblFishCatch;
         private System.Windows.Forms.Button btnCloseGame;
         private System.Windows.Forms.Button btnExitGame;
+        private System.Windows.Forms.Label lblGameTImer;
+        private System.Windows.Forms.Timer timerCountdownGame;
     }
 }

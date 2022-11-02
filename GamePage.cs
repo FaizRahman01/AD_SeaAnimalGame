@@ -148,7 +148,36 @@ namespace AD_SeaAnimalGame
         private void btnCloseGame_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        } 
+        }
+
+
+        private static int GameTime = 60;
+        private int TimeCounter = GameTime;
+
+        private void timerCountdownGame_Tick(object sender, EventArgs e)
+        {
+            lblGameTImer.Text = String.Format("{0} s", TimeCounter);
+
+            
+
+            if(TimeCounter > 0)
+            {
+                timerCountdownGame.Start();
+
+                GameTime = TimeCounter;
+                TimeCounter--;
+            }
+            else if(TimeCounter == 0)
+            {
+                timerCountdownGame.Stop();
+                FishSpawnTimer.Stop();
+                NonFishSpawnTimer.Stop();
+                SubmarineMoveTimer.Stop();
+                panelGameOver.Visible = true;
+            }
+        }
+
+
 
         int wrongCatch = 0;
         int correctCatch = 0;
