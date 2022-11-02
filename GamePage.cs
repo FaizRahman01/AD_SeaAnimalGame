@@ -29,7 +29,7 @@ namespace AD_SeaAnimalGame
 
 
 
-        private void FishSpawn()
+        private async void FishSpawn()
         {
             //spawn new pic box for fish object
             PictureBox normalFish = new PictureBox();
@@ -45,7 +45,10 @@ namespace AD_SeaAnimalGame
 
             fish.Add(normalFish);
             this.Controls.Add(normalFish);
-            
+
+
+            await Task.Delay(3000);
+            normalFish.Dispose();
         }
 
 
@@ -65,9 +68,11 @@ namespace AD_SeaAnimalGame
 
             notfish.Add(notFish);
             this.Controls.Add(notFish);
+
+            
         }
 
-        private void OctopusSpawn()
+        private async void OctopusSpawn()
         {
             //spawn new pic box for octopus object
             PictureBox Octopus = new PictureBox();
@@ -84,9 +89,11 @@ namespace AD_SeaAnimalGame
             octopus.Add(Octopus);
             this.Controls.Add(Octopus);
 
+            await Task.Delay(3000);
+            Octopus.Dispose();
         }
 
-        private void SeaTurtleSpawn()
+        private async void SeaTurtleSpawn()
         {
             //spawn new pic box for sea turtle object
             PictureBox SeaTurtle = new PictureBox();
@@ -103,6 +110,8 @@ namespace AD_SeaAnimalGame
             seaTurtle.Add(SeaTurtle);
             this.Controls.Add(SeaTurtle);
 
+            await Task.Delay(3000);
+            SeaTurtle.Dispose();
         }
 
         //---------------Event-----------------\\
@@ -240,46 +249,17 @@ namespace AD_SeaAnimalGame
 
         private void AnimalSpawnTime_Tick(object sender, EventArgs e)
         {
-            foreach (PictureBox fishpb in fish.ToList())
-            {
-                if (pboxSubmarine.Bounds.IntersectsWith(fishpb.Bounds) == false)
-                {
-
-                    fish.Remove(fishpb);
-                    this.Controls.Remove(fishpb);
-
-
-                }
-            }
+           
         }
 
         private void octopusDisappearTimer_Tick(object sender, EventArgs e)
         {
-            foreach (PictureBox octopuspb in octopus.ToList())
-            {
-                if (pboxSubmarine.Bounds.IntersectsWith(octopuspb.Bounds) == false)
-                {
-
-                    octopus.Remove(octopuspb);
-                    this.Controls.Remove(octopuspb);
-
-
-                }
-            }
+            
         }
 
         private void SeaTurtleDisappearTimer_Tick(object sender, EventArgs e)
         {
-            foreach (PictureBox seaturtlepb in seaTurtle.ToList())
-            {
-                if (pboxSubmarine.Bounds.IntersectsWith(seaturtlepb.Bounds) == false)
-                {
-                    seaTurtle.Remove(seaturtlepb);
-                    this.Controls.Remove(seaturtlepb);
-
-
-                }
-            }
+           
         }
 
         int correctCatch = 0;
