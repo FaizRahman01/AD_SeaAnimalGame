@@ -165,6 +165,7 @@ namespace AD_SeaAnimalGame
         private void btnCloseGame_Click(object sender, EventArgs e)
         {
             Application.Exit();
+            GameTime = 60;
         }
 
         private void btnExitGame_Click(object sender, EventArgs e)
@@ -172,6 +173,8 @@ namespace AD_SeaAnimalGame
             this.Hide();
             PlayerMainPage pmainpage = new PlayerMainPage();
             pmainpage.Show();
+
+            GameTime = 60;
         }
 
         int wrongCatch = 0;
