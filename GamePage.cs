@@ -68,19 +68,19 @@ namespace AD_SeaAnimalGame
         private void OctopusSpawn()
         {
             //spawn new pic box for fish object
-            PictureBox octopus = new PictureBox();
-            octopus.Height = 50;
-            octopus.Width = 50;
-            octopus.Image = Properties.Resources.octopus;
-            octopus.SizeMode = PictureBoxSizeMode.StretchImage;
-            octopus.BackColor = Color.Transparent;
+            PictureBox Octopus = new PictureBox();
+            Octopus.Height = 50;
+            Octopus.Width = 50;
+            Octopus.Image = Properties.Resources.octopus;
+            Octopus.SizeMode = PictureBoxSizeMode.StretchImage;
+            Octopus.BackColor = Color.Transparent;
 
-            int x = randomSpawn.Next(10, this.ClientSize.Width - normalFish.Width);
-            int y = randomSpawn.Next(10, this.ClientSize.Height - normalFish.Height);
-            normalFish.Location = new Point(x, y);
+            int x = randomSpawn.Next(10, this.ClientSize.Width - Octopus.Width);
+            int y = randomSpawn.Next(10, this.ClientSize.Height - Octopus.Height);
+            Octopus.Location = new Point(x, y);
 
-            fish.Add(normalFish);
-            this.Controls.Add(normalFish);
+            octopus.Add(Octopus);
+            this.Controls.Add(Octopus);
 
         }
 
