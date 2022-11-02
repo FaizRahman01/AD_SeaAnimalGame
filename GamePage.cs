@@ -148,7 +148,7 @@ namespace AD_SeaAnimalGame
         private void btnCloseGame_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
+        } 
 
         int wrongCatch = 0;
         int correctCatch = 0;
