@@ -45,6 +45,8 @@ namespace AD_SeaAnimalGame
             this.lblGameTImer = new System.Windows.Forms.Label();
             this.timerCountdownGame = new System.Windows.Forms.Timer(this.components);
             this.panelBackground2 = new System.Windows.Forms.Panel();
+            this.submarineHP = new System.Windows.Forms.ProgressBar();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSubmarine)).BeginInit();
             this.panelGameOver.SuspendLayout();
             this.panelBackground1.SuspendLayout();
@@ -56,7 +58,7 @@ namespace AD_SeaAnimalGame
             this.pboxSubmarine.BackColor = System.Drawing.Color.Transparent;
             this.pboxSubmarine.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pboxSubmarine.BackgroundImage")));
             this.pboxSubmarine.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pboxSubmarine.Location = new System.Drawing.Point(696, 123);
+            this.pboxSubmarine.Location = new System.Drawing.Point(735, 391);
             this.pboxSubmarine.Name = "pboxSubmarine";
             this.pboxSubmarine.Size = new System.Drawing.Size(108, 78);
             this.pboxSubmarine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -159,7 +161,7 @@ namespace AD_SeaAnimalGame
             this.lblNotFishCatch.BackColor = System.Drawing.Color.Transparent;
             this.lblNotFishCatch.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNotFishCatch.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblNotFishCatch.Location = new System.Drawing.Point(12, 9);
+            this.lblNotFishCatch.Location = new System.Drawing.Point(12, 617);
             this.lblNotFishCatch.Name = "lblNotFishCatch";
             this.lblNotFishCatch.Size = new System.Drawing.Size(122, 33);
             this.lblNotFishCatch.TabIndex = 16;
@@ -173,7 +175,7 @@ namespace AD_SeaAnimalGame
             this.lblFishCatch.BackColor = System.Drawing.Color.Transparent;
             this.lblFishCatch.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFishCatch.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblFishCatch.Location = new System.Drawing.Point(12, 51);
+            this.lblFishCatch.Location = new System.Drawing.Point(12, 658);
             this.lblFishCatch.Name = "lblFishCatch";
             this.lblFishCatch.Size = new System.Drawing.Size(87, 33);
             this.lblFishCatch.TabIndex = 17;
@@ -210,6 +212,27 @@ namespace AD_SeaAnimalGame
             this.panelBackground2.Size = new System.Drawing.Size(117, 64);
             this.panelBackground2.TabIndex = 19;
             // 
+            // submarineHP
+            // 
+            this.submarineHP.Location = new System.Drawing.Point(383, 668);
+            this.submarineHP.Name = "submarineHP";
+            this.submarineHP.Size = new System.Drawing.Size(238, 23);
+            this.submarineHP.TabIndex = 20;
+            this.submarineHP.Value = 100;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(424, 632);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(162, 33);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Submarine  HP";
+            // 
             // GamePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,12 +241,14 @@ namespace AD_SeaAnimalGame
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1000, 700);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.submarineHP);
+            this.Controls.Add(this.panelGameOver);
             this.Controls.Add(this.panelBackground1);
             this.Controls.Add(this.panelBackground2);
             this.Controls.Add(this.lblFishCatch);
             this.Controls.Add(this.pboxSubmarine);
             this.Controls.Add(this.lblNotFishCatch);
-            this.Controls.Add(this.panelGameOver);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -257,5 +282,7 @@ namespace AD_SeaAnimalGame
         private System.Windows.Forms.Button btnExitGame;
         private System.Windows.Forms.Button btnCloseGame;
         private System.Windows.Forms.Panel panelBackground2;
+        private System.Windows.Forms.ProgressBar submarineHP;
+        private System.Windows.Forms.Label label1;
     }
 }

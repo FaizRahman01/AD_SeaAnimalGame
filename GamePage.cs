@@ -65,9 +65,10 @@ namespace AD_SeaAnimalGame
 
 
 
-        //Event--------------------------------
+        //---------------Event-----------------\\
 
 
+        //<<<<<<<<<<<<Game Movement>>>>>>>>>>>>>>>\\
 
         bool submarineUp, submarineDown, submarineLeft, submarineRight;
 
@@ -118,14 +119,16 @@ namespace AD_SeaAnimalGame
         }
 
 
-        //timer for object spawn
 
+        //<<<<<<<<<<<<Timer for fish to spawn in a time set>>>>>>>>>>>>>>>\\
 
         private void FishSpawnTimer_Tick(object sender, EventArgs e)
         {
             FishSpawn();
 
         }
+
+        //<<<<<<<<<<<<Timer for random object to spawn in a time set>>>>>>>>>>>>>>>\\
 
         private void NonFishSpawnTimer_Tick(object sender, EventArgs e)
         {
@@ -138,7 +141,10 @@ namespace AD_SeaAnimalGame
 
         private static int GameTime = 60;
         private int TimeCounter = GameTime;
+        
+        
 
+        //<<<<<<<<<<<<Timer for game countdown for game to end>>>>>>>>>>>>>>>\\
         private void timerCountdownGame_Tick(object sender, EventArgs e)
         {
             lblGameTImer.Text = String.Format("{0} s", TimeCounter);
@@ -162,12 +168,14 @@ namespace AD_SeaAnimalGame
             }
         }
 
+        //<<<<<<<<<<<<Button for game to close>>>>>>>>>>>>>>>\\
         private void btnCloseGame_Click(object sender, EventArgs e)
         {
             Application.Exit();
             GameTime = 60;
         }
 
+        //<<<<<<<<<<<<Button to return to main menu page>>>>>>>>>>>>>>>\\
         private void btnExitGame_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -179,6 +187,11 @@ namespace AD_SeaAnimalGame
 
         int wrongCatch = 0;
         int correctCatch = 0;
+
+
+        int playerHP = 100;
+        
+        //<<<<<<<<<<<<Timer for submarine movement and the function of submarine>>>>>>>>>>>>>>>\\
         private void SubmarineMoveTimer_Tick(object sender, EventArgs e)
         {
             if (submarineLeft == true && pboxSubmarine.Left > 0)
@@ -206,18 +219,22 @@ namespace AD_SeaAnimalGame
             lblFishCatch.Text = "Fish: " + correctCatch;
 
 
+            submarineHP.Value = Convert.ToInt32(playerHP);
+
+            //remove fish when intersect  with submarine
             foreach (PictureBox fishpb in fish.ToList())
             {
                 if (pboxSubmarine.Bounds.IntersectsWith(fishpb.Bounds))
                 {
-                    // if the collision happened do the following
+                    
                     fish.Remove(fishpb);
                     this.Controls.Remove(fishpb);
 
                     correctCatch++;
                     wrongCatch = 0;
-                    playerScore = correctCatch + wrongCatch;
 
+                    playerScore = correctCatch + wrongCatch;
+                    playerHP = 100;
                     SoundPlayer player = new SoundPlayer(Properties.Resources.correct);
                     player.Play();
                 }
@@ -225,19 +242,19 @@ namespace AD_SeaAnimalGame
             }
 
 
-
+            //remove random object when intersect  with submarine
             foreach (PictureBox notfishpb in notfish.ToList())
             {
                 if (pboxSubmarine.Bounds.IntersectsWith(notfishpb.Bounds))
                 {
-                    // if the collision happened do the following
+                    
                     notfish.Remove(notfishpb);
                     this.Controls.Remove(notfishpb);
 
                     SoundPlayer player = new SoundPlayer(Properties.Resources.wrong);
                     player.Play();
 
-
+                    playerHP -= 20;
                     wrongCatch++;
                     correctCatch--;
                     playerScore = correctCatch;
@@ -254,6 +271,7 @@ namespace AD_SeaAnimalGame
 
                     if (wrongCatch == 5)
                     {
+
                         timerCountdownGame.Stop();
                         FishSpawnTimer.Stop();
                         NonFishSpawnTimer.Stop();
