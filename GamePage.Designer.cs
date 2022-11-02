@@ -50,9 +50,6 @@ namespace AD_SeaAnimalGame
             this.SeaTurtleTimer = new System.Windows.Forms.Timer(this.components);
             this.OctupusSpawnTimer = new System.Windows.Forms.Timer(this.components);
             this.pointLbl = new System.Windows.Forms.Label();
-            this.AnimalSpawnTime = new System.Windows.Forms.Timer(this.components);
-            this.octopusDisappearTimer = new System.Windows.Forms.Timer(this.components);
-            this.SeaTurtleDisappearTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pboxSubmarine)).BeginInit();
             this.panelGameOver.SuspendLayout();
             this.panelBackground1.SuspendLayout();
@@ -262,24 +259,6 @@ namespace AD_SeaAnimalGame
             this.pointLbl.Size = new System.Drawing.Size(0, 33);
             this.pointLbl.TabIndex = 22;
             // 
-            // AnimalSpawnTime
-            // 
-            this.AnimalSpawnTime.Enabled = true;
-            this.AnimalSpawnTime.Interval = 6000;
-            this.AnimalSpawnTime.Tick += new System.EventHandler(this.AnimalSpawnTime_Tick);
-            // 
-            // octopusDisappearTimer
-            // 
-            this.octopusDisappearTimer.Enabled = true;
-            this.octopusDisappearTimer.Interval = 6000;
-            this.octopusDisappearTimer.Tick += new System.EventHandler(this.octopusDisappearTimer_Tick);
-            // 
-            // SeaTurtleDisappearTimer
-            // 
-            this.SeaTurtleDisappearTimer.Enabled = true;
-            this.SeaTurtleDisappearTimer.Interval = 6000;
-            this.SeaTurtleDisappearTimer.Tick += new System.EventHandler(this.SeaTurtleDisappearTimer_Tick);
-            // 
             // GamePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,8 +314,5 @@ namespace AD_SeaAnimalGame
         private System.Windows.Forms.Timer SeaTurtleTimer;
         private System.Windows.Forms.Timer OctupusSpawnTimer;
         private System.Windows.Forms.Label pointLbl;
-        private System.Windows.Forms.Timer AnimalSpawnTime;
-        private System.Windows.Forms.Timer octopusDisappearTimer;
-        private System.Windows.Forms.Timer SeaTurtleDisappearTimer;
     }
 }

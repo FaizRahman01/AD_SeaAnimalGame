@@ -46,7 +46,6 @@ namespace AD_SeaAnimalGame
             fish.Add(normalFish);
             this.Controls.Add(normalFish);
 
-
             await Task.Delay(3000);
             normalFish.Dispose();
         }
