@@ -140,8 +140,8 @@ namespace AD_SeaAnimalGame
 
         int playerScore = 0;
 
-        private static int GameTime = 60;
-        private int TimeCounter = GameTime;
+        private static int TimeCounter = 60;
+
         
         
 
@@ -156,7 +156,7 @@ namespace AD_SeaAnimalGame
             {
                 timerCountdownGame.Start();
 
-                GameTime = TimeCounter;
+                
                 TimeCounter--;
             }
             else if(TimeCounter == 0)
@@ -173,7 +173,7 @@ namespace AD_SeaAnimalGame
         private void btnCloseGame_Click(object sender, EventArgs e)
         {
             Application.Exit();
-            GameTime = 60;
+            TimeCounter = 60;
         }
 
         //<<<<<<<<<<<<Button to return to main menu page>>>>>>>>>>>>>>>\\
@@ -183,7 +183,7 @@ namespace AD_SeaAnimalGame
             PlayerMainPage pmainpage = new PlayerMainPage();
             pmainpage.Show();
 
-            GameTime = 60;
+            TimeCounter = 60;
         }
 
         int wrongCatch = 0;
