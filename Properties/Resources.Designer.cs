@@ -132,9 +132,29 @@ namespace AD_SeaAnimalGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap octopus {
+            get {
+                object obj = ResourceManager.GetObject("octopus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap playerscoredisplay {
             get {
                 object obj = ResourceManager.GetObject("playerscoredisplay", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap seaturtle {
+            get {
+                object obj = ResourceManager.GetObject("seaturtle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

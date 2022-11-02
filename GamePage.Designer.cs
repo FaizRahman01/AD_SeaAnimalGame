@@ -47,6 +47,8 @@ namespace AD_SeaAnimalGame
             this.panelBackground2 = new System.Windows.Forms.Panel();
             this.submarineHP = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
+            this.SeaTurtleTimer = new System.Windows.Forms.Timer(this.components);
+            this.OctupusSpawnTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pboxSubmarine)).BeginInit();
             this.panelGameOver.SuspendLayout();
             this.panelBackground1.SuspendLayout();
@@ -233,6 +235,18 @@ namespace AD_SeaAnimalGame
             this.label1.TabIndex = 21;
             this.label1.Text = "Submarine  HP";
             // 
+            // SeaTurtleTimer
+            // 
+            this.SeaTurtleTimer.Enabled = true;
+            this.SeaTurtleTimer.Interval = 15000;
+            this.SeaTurtleTimer.Tick += new System.EventHandler(this.SeaTurtleTimer_Tick);
+            // 
+            // OctupusSpawnTimer
+            // 
+            this.OctupusSpawnTimer.Enabled = true;
+            this.OctupusSpawnTimer.Interval = 11000;
+            this.OctupusSpawnTimer.Tick += new System.EventHandler(this.OctupusSpawnTimer_Tick);
+            // 
             // GamePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,5 +298,7 @@ namespace AD_SeaAnimalGame
         private System.Windows.Forms.Panel panelBackground2;
         private System.Windows.Forms.ProgressBar submarineHP;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer SeaTurtleTimer;
+        private System.Windows.Forms.Timer OctupusSpawnTimer;
     }
 }

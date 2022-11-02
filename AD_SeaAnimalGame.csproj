@@ -149,5 +149,11 @@
   <ItemGroup>
     <None Include="Resources\buttonbg2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\octopus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seaturtle.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

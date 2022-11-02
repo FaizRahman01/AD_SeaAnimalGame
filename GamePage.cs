@@ -20,6 +20,7 @@ namespace AD_SeaAnimalGame
         List<PictureBox> fish = new List<PictureBox>();
         List<PictureBox> notfish = new List<PictureBox>();
         List<PictureBox> octopus = new List<PictureBox>();
+        List<PictureBox> seaTurtle = new List<PictureBox>();
 
         public GamePage()
         {
@@ -67,7 +68,7 @@ namespace AD_SeaAnimalGame
 
         private void OctopusSpawn()
         {
-            //spawn new pic box for fish object
+            //spawn new pic box for octopus object
             PictureBox Octopus = new PictureBox();
             Octopus.Height = 50;
             Octopus.Width = 50;
@@ -81,6 +82,25 @@ namespace AD_SeaAnimalGame
 
             octopus.Add(Octopus);
             this.Controls.Add(Octopus);
+
+        }
+
+        private void SeaTurtleSpawn()
+        {
+            //spawn new pic box for sea turtle object
+            PictureBox SeaTurtle = new PictureBox();
+            SeaTurtle.Height = 50;
+            SeaTurtle.Width = 50;
+            SeaTurtle.Image = Properties.Resources.seaturtle;
+            SeaTurtle.SizeMode = PictureBoxSizeMode.StretchImage;
+            SeaTurtle.BackColor = Color.Transparent;
+
+            int x = randomSpawn.Next(10, this.ClientSize.Width - SeaTurtle.Width);
+            int y = randomSpawn.Next(10, this.ClientSize.Height - SeaTurtle.Height);
+            SeaTurtle.Location = new Point(x, y);
+
+            seaTurtle.Add(SeaTurtle);
+            this.Controls.Add(SeaTurtle);
 
         }
 
@@ -144,7 +164,8 @@ namespace AD_SeaAnimalGame
         private void FishSpawnTimer_Tick(object sender, EventArgs e)
         {
             FishSpawn();
-
+            
+            
         }
 
         //<<<<<<<<<<<<Timer for random object to spawn in a time set>>>>>>>>>>>>>>>\\
@@ -205,6 +226,17 @@ namespace AD_SeaAnimalGame
         }
 
         int wrongCatch = 0;
+
+        private void SeaTurtleTimer_Tick(object sender, EventArgs e)
+        {
+            SeaTurtleSpawn();
+        }
+
+        private void OctupusSpawnTimer_Tick(object sender, EventArgs e)
+        {
+            OctopusSpawn();
+        }
+
         int correctCatch = 0;
 
 
@@ -250,6 +282,46 @@ namespace AD_SeaAnimalGame
                     this.Controls.Remove(fishpb);
 
                     correctCatch++;
+                    wrongCatch = 0;
+
+                    playerScore = correctCatch + wrongCatch;
+                    playerHP = 100;
+                    SoundPlayer player = new SoundPlayer(Properties.Resources.correct);
+                    player.Play();
+                }
+
+            }
+
+            //remove octopus when intersect  with submarine
+            foreach (PictureBox octopuspb in octopus.ToList())
+            {
+                if (pboxSubmarine.Bounds.IntersectsWith(octopuspb.Bounds))
+                {
+
+                    octopus.Remove(octopuspb);
+                    this.Controls.Remove(octopuspb);
+
+                    correctCatch+=2;
+                    wrongCatch = 0;
+
+                    playerScore = correctCatch + wrongCatch;
+                    playerHP = 100;
+                    SoundPlayer player = new SoundPlayer(Properties.Resources.correct);
+                    player.Play();
+                }
+
+            }
+
+            //remove sea turtle when intersect  with submarine
+            foreach (PictureBox seaturtlepb in seaTurtle.ToList())
+            {
+                if (pboxSubmarine.Bounds.IntersectsWith(seaturtlepb.Bounds))
+                {
+
+                    seaTurtle.Remove(seaturtlepb);
+                    this.Controls.Remove(seaturtlepb);
+
+                    correctCatch += 3;
                     wrongCatch = 0;
 
                     playerScore = correctCatch + wrongCatch;
