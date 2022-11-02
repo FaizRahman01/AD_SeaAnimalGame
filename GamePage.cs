@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
+using System.Drawing;
 
 namespace AD_SeaAnimalGame
 {
@@ -199,7 +200,7 @@ namespace AD_SeaAnimalGame
                 pboxSubmarine.Left -= submarineSpeed;
             }
 
-            if (submarineRight == true && pboxSubmarine.Left < 877)
+            if (submarineRight == true && pboxSubmarine.Left < 892)
             {
                 pboxSubmarine.Left += submarineSpeed;
             }
@@ -209,7 +210,7 @@ namespace AD_SeaAnimalGame
                 pboxSubmarine.Top -= submarineSpeed;
             }
 
-            if (submarineDown == true && pboxSubmarine.Top < 599)
+            if (submarineDown == true && pboxSubmarine.Top < 600)
             {
                 pboxSubmarine.Top += submarineSpeed;
             }
