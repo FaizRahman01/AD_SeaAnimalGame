@@ -19,6 +19,7 @@ namespace AD_SeaAnimalGame
         Random randomSpawn = new Random();
         List<PictureBox> fish = new List<PictureBox>();
         List<PictureBox> notfish = new List<PictureBox>();
+        List<PictureBox> octopus = new List<PictureBox>();
 
         public GamePage()
         {
@@ -64,7 +65,24 @@ namespace AD_SeaAnimalGame
             this.Controls.Add(notFish);
         }
 
+        private void OctopusSpawn()
+        {
+            //spawn new pic box for fish object
+            PictureBox octopus = new PictureBox();
+            octopus.Height = 50;
+            octopus.Width = 50;
+            octopus.Image = Properties.Resources.octopus;
+            octopus.SizeMode = PictureBoxSizeMode.StretchImage;
+            octopus.BackColor = Color.Transparent;
 
+            int x = randomSpawn.Next(10, this.ClientSize.Width - normalFish.Width);
+            int y = randomSpawn.Next(10, this.ClientSize.Height - normalFish.Height);
+            normalFish.Location = new Point(x, y);
+
+            fish.Add(normalFish);
+            this.Controls.Add(normalFish);
+
+        }
 
         //---------------Event-----------------\\
 
