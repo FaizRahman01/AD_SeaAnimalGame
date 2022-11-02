@@ -48,6 +48,7 @@ namespace AD_SeaAnimalGame
             
         }
 
+
         private void NotFishSpawn()
         {
             //spawn new pic box for random object
@@ -237,6 +238,50 @@ namespace AD_SeaAnimalGame
             OctopusSpawn();
         }
 
+        private void AnimalSpawnTime_Tick(object sender, EventArgs e)
+        {
+            foreach (PictureBox fishpb in fish.ToList())
+            {
+                if (pboxSubmarine.Bounds.IntersectsWith(fishpb.Bounds) == false)
+                {
+
+                    fish.Remove(fishpb);
+                    this.Controls.Remove(fishpb);
+
+
+                }
+            }
+        }
+
+        private void octopusDisappearTimer_Tick(object sender, EventArgs e)
+        {
+            foreach (PictureBox octopuspb in octopus.ToList())
+            {
+                if (pboxSubmarine.Bounds.IntersectsWith(octopuspb.Bounds) == false)
+                {
+
+                    octopus.Remove(octopuspb);
+                    this.Controls.Remove(octopuspb);
+
+
+                }
+            }
+        }
+
+        private void SeaTurtleDisappearTimer_Tick(object sender, EventArgs e)
+        {
+            foreach (PictureBox seaturtlepb in seaTurtle.ToList())
+            {
+                if (pboxSubmarine.Bounds.IntersectsWith(seaturtlepb.Bounds) == false)
+                {
+                    seaTurtle.Remove(seaturtlepb);
+                    this.Controls.Remove(seaturtlepb);
+
+
+                }
+            }
+        }
+
         int correctCatch = 0;
 
 
@@ -286,8 +331,12 @@ namespace AD_SeaAnimalGame
 
                     playerScore = correctCatch + wrongCatch;
                     playerHP = 100;
+                    pointLbl.Text = "+1";
+
                     SoundPlayer player = new SoundPlayer(Properties.Resources.correct);
                     player.Play();
+
+
                 }
 
             }
@@ -306,6 +355,8 @@ namespace AD_SeaAnimalGame
 
                     playerScore = correctCatch + wrongCatch;
                     playerHP = 100;
+                    pointLbl.Text = "+2";
+
                     SoundPlayer player = new SoundPlayer(Properties.Resources.correct);
                     player.Play();
                 }
@@ -326,6 +377,8 @@ namespace AD_SeaAnimalGame
 
                     playerScore = correctCatch + wrongCatch;
                     playerHP = 100;
+                    pointLbl.Text = "+3";
+
                     SoundPlayer player = new SoundPlayer(Properties.Resources.correct);
                     player.Play();
                 }
@@ -344,7 +397,7 @@ namespace AD_SeaAnimalGame
 
                     SoundPlayer player = new SoundPlayer(Properties.Resources.wrong);
                     player.Play();
-
+                    pointLbl.Text = "-1";
                     playerHP -= 20;
                     wrongCatch++;
                     correctCatch--;
