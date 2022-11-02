@@ -32,11 +32,14 @@ namespace AD_SeaAnimalGame
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlayerNamePage));
             this.panelPNamePage = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
-            this.lblPName = new System.Windows.Forms.Label();
             this.tboxPName = new System.Windows.Forms.TextBox();
-            this.btnPlay = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.btnLoginPlayer = new System.Windows.Forms.Button();
+            this.btnRegisterPlayer = new System.Windows.Forms.Button();
+            this.panelBackground = new System.Windows.Forms.Panel();
+            this.lblPName = new System.Windows.Forms.Label();
             this.panelPNamePage.SuspendLayout();
+            this.panelBackground.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelPNamePage
@@ -65,44 +68,16 @@ namespace AD_SeaAnimalGame
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // lblPName
-            // 
-            this.lblPName.AutoSize = true;
-            this.lblPName.BackColor = System.Drawing.Color.Transparent;
-            this.lblPName.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPName.ForeColor = System.Drawing.Color.Blue;
-            this.lblPName.Location = new System.Drawing.Point(569, 297);
-            this.lblPName.Name = "lblPName";
-            this.lblPName.Size = new System.Drawing.Size(170, 31);
-            this.lblPName.TabIndex = 5;
-            this.lblPName.Text = "Player Name";
-            this.lblPName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // tboxPName
             // 
             this.tboxPName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.tboxPName.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tboxPName.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tboxPName.Location = new System.Drawing.Point(575, 336);
+            this.tboxPName.Location = new System.Drawing.Point(516, 336);
             this.tboxPName.Multiline = true;
             this.tboxPName.Name = "tboxPName";
-            this.tboxPName.Size = new System.Drawing.Size(164, 32);
+            this.tboxPName.Size = new System.Drawing.Size(275, 32);
             this.tboxPName.TabIndex = 6;
-            // 
-            // btnPlay
-            // 
-            this.btnPlay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnPlay.BackColor = System.Drawing.Color.Transparent;
-            this.btnPlay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPlay.BackgroundImage")));
-            this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPlay.FlatAppearance.BorderSize = 0;
-            this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlay.Location = new System.Drawing.Point(607, 374);
-            this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(114, 80);
-            this.btnPlay.TabIndex = 7;
-            this.btnPlay.UseVisualStyleBackColor = false;
-            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // btnBack
             // 
@@ -119,6 +94,67 @@ namespace AD_SeaAnimalGame
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // btnLoginPlayer
+            // 
+            this.btnLoginPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnLoginPlayer.BackColor = System.Drawing.Color.Transparent;
+            this.btnLoginPlayer.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.buttonbg;
+            this.btnLoginPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLoginPlayer.FlatAppearance.BorderSize = 0;
+            this.btnLoginPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoginPlayer.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnLoginPlayer.ForeColor = System.Drawing.Color.White;
+            this.btnLoginPlayer.Location = new System.Drawing.Point(677, 404);
+            this.btnLoginPlayer.Name = "btnLoginPlayer";
+            this.btnLoginPlayer.Size = new System.Drawing.Size(114, 80);
+            this.btnLoginPlayer.TabIndex = 10;
+            this.btnLoginPlayer.Text = "Enter";
+            this.btnLoginPlayer.UseVisualStyleBackColor = false;
+            this.btnLoginPlayer.Click += new System.EventHandler(this.btnLoginPlayer_Click);
+            // 
+            // btnRegisterPlayer
+            // 
+            this.btnRegisterPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnRegisterPlayer.BackColor = System.Drawing.Color.Transparent;
+            this.btnRegisterPlayer.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.buttonbg;
+            this.btnRegisterPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRegisterPlayer.FlatAppearance.BorderSize = 0;
+            this.btnRegisterPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegisterPlayer.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnRegisterPlayer.ForeColor = System.Drawing.Color.White;
+            this.btnRegisterPlayer.Location = new System.Drawing.Point(516, 404);
+            this.btnRegisterPlayer.Name = "btnRegisterPlayer";
+            this.btnRegisterPlayer.Size = new System.Drawing.Size(114, 80);
+            this.btnRegisterPlayer.TabIndex = 11;
+            this.btnRegisterPlayer.Text = "New Player";
+            this.btnRegisterPlayer.UseVisualStyleBackColor = false;
+            this.btnRegisterPlayer.Click += new System.EventHandler(this.btnRegisterPlayer_Click);
+            // 
+            // panelBackground
+            // 
+            this.panelBackground.AutoSize = true;
+            this.panelBackground.BackColor = System.Drawing.Color.Transparent;
+            this.panelBackground.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.bgtemplate;
+            this.panelBackground.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelBackground.Controls.Add(this.lblPName);
+            this.panelBackground.Location = new System.Drawing.Point(567, 221);
+            this.panelBackground.Name = "panelBackground";
+            this.panelBackground.Size = new System.Drawing.Size(200, 100);
+            this.panelBackground.TabIndex = 12;
+            // 
+            // lblPName
+            // 
+            this.lblPName.AutoSize = true;
+            this.lblPName.BackColor = System.Drawing.Color.Transparent;
+            this.lblPName.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPName.ForeColor = System.Drawing.Color.Navy;
+            this.lblPName.Location = new System.Drawing.Point(17, 35);
+            this.lblPName.Name = "lblPName";
+            this.lblPName.Size = new System.Drawing.Size(170, 31);
+            this.lblPName.TabIndex = 13;
+            this.lblPName.Text = "Player Name";
+            this.lblPName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // PlayerNamePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,16 +162,19 @@ namespace AD_SeaAnimalGame
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1000, 700);
+            this.Controls.Add(this.panelBackground);
+            this.Controls.Add(this.btnRegisterPlayer);
+            this.Controls.Add(this.btnLoginPlayer);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.tboxPName);
-            this.Controls.Add(this.lblPName);
             this.Controls.Add(this.panelPNamePage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PlayerNamePage";
             this.Text = "Fish Legends";
             this.panelPNamePage.ResumeLayout(false);
+            this.panelBackground.ResumeLayout(false);
+            this.panelBackground.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,9 +184,11 @@ namespace AD_SeaAnimalGame
 
         private System.Windows.Forms.Panel panelPNamePage;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Label lblPName;
         private System.Windows.Forms.TextBox tboxPName;
-        private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnLoginPlayer;
+        private System.Windows.Forms.Button btnRegisterPlayer;
+        private System.Windows.Forms.Panel panelBackground;
+        private System.Windows.Forms.Label lblPName;
     }
 }

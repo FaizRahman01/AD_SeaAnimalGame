@@ -63,6 +63,26 @@ namespace AD_SeaAnimalGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bgGameOver {
+            get {
+                object obj = ResourceManager.GetObject("bgGameOver", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bgtemplate {
+            get {
+                object obj = ResourceManager.GetObject("bgtemplate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bluefish {
             get {
                 object obj = ResourceManager.GetObject("bluefish", resourceCulture);
@@ -76,6 +96,16 @@ namespace AD_SeaAnimalGame.Properties {
         internal static System.Drawing.Bitmap buttonbg {
             get {
                 object obj = ResourceManager.GetObject("buttonbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buttonbg2 {
+            get {
+                object obj = ResourceManager.GetObject("buttonbg2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

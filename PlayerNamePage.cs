@@ -49,11 +49,16 @@ namespace AD_SeaAnimalGame
             mainpage.Show();
         }
 
-        private void btnPlay_Click(object sender, EventArgs e)
+        private void btnLoginPlayer_Click(object sender, EventArgs e)
         {
             this.Hide();
             PlayerMainPage pmainpage = new PlayerMainPage();
             pmainpage.Show();
+        }
+
+        private void btnRegisterPlayer_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

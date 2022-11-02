@@ -66,12 +66,12 @@ namespace AD_SeaAnimalGame
             // btnPlayNow
             // 
             this.btnPlayNow.BackColor = System.Drawing.Color.Transparent;
-            this.btnPlayNow.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPlayNow.BackgroundImage")));
+            this.btnPlayNow.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.buttonbg;
             this.btnPlayNow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPlayNow.FlatAppearance.BorderSize = 0;
             this.btnPlayNow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlayNow.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlayNow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnPlayNow.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnPlayNow.ForeColor = System.Drawing.Color.White;
             this.btnPlayNow.Location = new System.Drawing.Point(578, 350);
             this.btnPlayNow.Name = "btnPlayNow";
             this.btnPlayNow.Size = new System.Drawing.Size(140, 70);
@@ -83,12 +83,12 @@ namespace AD_SeaAnimalGame
             // btnScore
             // 
             this.btnScore.BackColor = System.Drawing.Color.Transparent;
-            this.btnScore.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnScore.BackgroundImage")));
+            this.btnScore.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.buttonbg;
             this.btnScore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnScore.FlatAppearance.BorderSize = 0;
             this.btnScore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnScore.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnScore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnScore.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnScore.ForeColor = System.Drawing.Color.White;
             this.btnScore.Location = new System.Drawing.Point(578, 453);
             this.btnScore.Name = "btnScore";
             this.btnScore.Size = new System.Drawing.Size(140, 70);

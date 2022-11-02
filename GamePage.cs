@@ -134,22 +134,7 @@ namespace AD_SeaAnimalGame
 
 
 
-        //timer for submarine
-
         int playerScore = 0;
-
-        private void btnExitGame_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            PlayerMainPage pmainpage = new PlayerMainPage();
-            pmainpage.Show();
-        }
-
-        private void btnCloseGame_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
 
         private static int GameTime = 60;
         private int TimeCounter = GameTime;
@@ -177,7 +162,17 @@ namespace AD_SeaAnimalGame
             }
         }
 
+        private void btnCloseGame_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
+        private void btnExitGame_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PlayerMainPage pmainpage = new PlayerMainPage();
+            pmainpage.Show();
+        }
 
         int wrongCatch = 0;
         int correctCatch = 0;
@@ -256,6 +251,7 @@ namespace AD_SeaAnimalGame
 
                     if (wrongCatch == 5)
                     {
+                        timerCountdownGame.Stop();
                         FishSpawnTimer.Stop();
                         NonFishSpawnTimer.Stop();
                         SubmarineMoveTimer.Stop();
