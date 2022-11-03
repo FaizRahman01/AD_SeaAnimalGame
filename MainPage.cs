@@ -17,6 +17,7 @@ namespace AD_SeaAnimalGame
         public MainPage()
         {
             InitializeComponent();
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)

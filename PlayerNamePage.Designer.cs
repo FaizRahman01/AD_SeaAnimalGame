@@ -38,8 +38,10 @@ namespace AD_SeaAnimalGame
             this.btnRegisterPlayer = new System.Windows.Forms.Button();
             this.panelBackground = new System.Windows.Forms.Panel();
             this.lblPName = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelPNamePage.SuspendLayout();
             this.panelBackground.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelPNamePage
@@ -70,10 +72,13 @@ namespace AD_SeaAnimalGame
             // 
             // tboxPName
             // 
+            this.tboxPName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tboxPName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.tboxPName.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tboxPName.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tboxPName.Location = new System.Drawing.Point(516, 336);
+            this.tboxPName.Location = new System.Drawing.Point(12, 158);
             this.tboxPName.Multiline = true;
             this.tboxPName.Name = "tboxPName";
             this.tboxPName.Size = new System.Drawing.Size(275, 32);
@@ -96,7 +101,9 @@ namespace AD_SeaAnimalGame
             // 
             // btnLoginPlayer
             // 
-            this.btnLoginPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnLoginPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLoginPlayer.BackColor = System.Drawing.Color.Transparent;
             this.btnLoginPlayer.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.buttonbg;
             this.btnLoginPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -104,7 +111,7 @@ namespace AD_SeaAnimalGame
             this.btnLoginPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoginPlayer.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnLoginPlayer.ForeColor = System.Drawing.Color.White;
-            this.btnLoginPlayer.Location = new System.Drawing.Point(677, 404);
+            this.btnLoginPlayer.Location = new System.Drawing.Point(173, 226);
             this.btnLoginPlayer.Name = "btnLoginPlayer";
             this.btnLoginPlayer.Size = new System.Drawing.Size(114, 80);
             this.btnLoginPlayer.TabIndex = 10;
@@ -114,7 +121,9 @@ namespace AD_SeaAnimalGame
             // 
             // btnRegisterPlayer
             // 
-            this.btnRegisterPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnRegisterPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRegisterPlayer.BackColor = System.Drawing.Color.Transparent;
             this.btnRegisterPlayer.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.buttonbg;
             this.btnRegisterPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -122,7 +131,7 @@ namespace AD_SeaAnimalGame
             this.btnRegisterPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegisterPlayer.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnRegisterPlayer.ForeColor = System.Drawing.Color.White;
-            this.btnRegisterPlayer.Location = new System.Drawing.Point(516, 404);
+            this.btnRegisterPlayer.Location = new System.Drawing.Point(12, 226);
             this.btnRegisterPlayer.Name = "btnRegisterPlayer";
             this.btnRegisterPlayer.Size = new System.Drawing.Size(114, 80);
             this.btnRegisterPlayer.TabIndex = 11;
@@ -132,12 +141,15 @@ namespace AD_SeaAnimalGame
             // 
             // panelBackground
             // 
+            this.panelBackground.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBackground.AutoSize = true;
             this.panelBackground.BackColor = System.Drawing.Color.Transparent;
             this.panelBackground.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.bgtemplate;
             this.panelBackground.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelBackground.Controls.Add(this.lblPName);
-            this.panelBackground.Location = new System.Drawing.Point(567, 221);
+            this.panelBackground.Location = new System.Drawing.Point(48, 43);
             this.panelBackground.Name = "panelBackground";
             this.panelBackground.Size = new System.Drawing.Size(200, 100);
             this.panelBackground.TabIndex = 12;
@@ -155,6 +167,18 @@ namespace AD_SeaAnimalGame
             this.lblPName.Text = "Player Name";
             this.lblPName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.panelBackground);
+            this.panel1.Controls.Add(this.tboxPName);
+            this.panel1.Controls.Add(this.btnRegisterPlayer);
+            this.panel1.Controls.Add(this.btnLoginPlayer);
+            this.panel1.Location = new System.Drawing.Point(382, 165);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(297, 380);
+            this.panel1.TabIndex = 13;
+            // 
             // PlayerNamePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,22 +186,21 @@ namespace AD_SeaAnimalGame
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1000, 700);
-            this.Controls.Add(this.panelBackground);
-            this.Controls.Add(this.btnRegisterPlayer);
-            this.Controls.Add(this.btnLoginPlayer);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.tboxPName);
             this.Controls.Add(this.panelPNamePage);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PlayerNamePage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fish Legends";
             this.panelPNamePage.ResumeLayout(false);
             this.panelBackground.ResumeLayout(false);
             this.panelBackground.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -191,5 +214,6 @@ namespace AD_SeaAnimalGame
         private System.Windows.Forms.Button btnRegisterPlayer;
         private System.Windows.Forms.Panel panelBackground;
         private System.Windows.Forms.Label lblPName;
+        private System.Windows.Forms.Panel panel1;
     }
 }

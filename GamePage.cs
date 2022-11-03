@@ -24,6 +24,8 @@ namespace AD_SeaAnimalGame
         public GamePage()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(0, 0);
         }
 
         private void FishSpawn()
@@ -330,7 +332,7 @@ namespace AD_SeaAnimalGame
                 pboxSubmarine.Left += submarineSpeed;
             }
 
-            if (submarineUp == true && pboxSubmarine.Top > 0)
+            if (submarineUp == true && pboxSubmarine.Top > 71)
             {
                 pboxSubmarine.Top -= submarineSpeed;
             }
