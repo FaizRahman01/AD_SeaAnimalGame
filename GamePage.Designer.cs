@@ -199,9 +199,9 @@ namespace AD_SeaAnimalGame
             this.lblGameTImer.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblGameTImer.Location = new System.Drawing.Point(32, 14);
             this.lblGameTImer.Name = "lblGameTImer";
-            this.lblGameTImer.Size = new System.Drawing.Size(59, 33);
+            this.lblGameTImer.Size = new System.Drawing.Size(73, 33);
             this.lblGameTImer.TabIndex = 18;
-            this.lblGameTImer.Text = "60 s";
+            this.lblGameTImer.Text = "120 s";
             // 
             // panelBackground2
             // 
