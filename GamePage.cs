@@ -19,6 +19,8 @@ namespace AD_SeaAnimalGame
         List<PictureBox> notfish = new List<PictureBox>();
         List<PictureBox> octopus = new List<PictureBox>();
         List<PictureBox> seaturtle = new List<PictureBox>();
+        List<PictureBox> fish2 = new List<PictureBox>();
+        List<PictureBox> notfish2 = new List<PictureBox>();
         public GamePage()
         {
             InitializeComponent();
@@ -58,7 +60,6 @@ namespace AD_SeaAnimalGame
 
             notfish.Add(pbNotFish);
             this.Controls.Add(pbNotFish);
-
 
         }
 
@@ -103,6 +104,48 @@ namespace AD_SeaAnimalGame
 
             await Task.Delay(3000);
             pbOctopus.Dispose();
+        }
+
+        private async void FishSpawn2()
+        {
+
+            PictureBox pbNormalFish2 = new PictureBox();
+            pbNormalFish2.Height = 50;
+            pbNormalFish2.Width = 50;
+            pbNormalFish2.Image = Properties.Resources.bluefish;
+            pbNormalFish2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbNormalFish2.BackColor = Color.Transparent;
+
+            int x = randomSpawn.Next(10, this.ClientSize.Width - pbNormalFish2.Width);
+            int y = randomSpawn.Next(10, this.ClientSize.Height - pbNormalFish2.Height);
+            pbNormalFish2.Location = new Point(x, y);
+
+            fish2.Add(pbNormalFish2);
+            this.Controls.Add(pbNormalFish2);
+
+            await Task.Delay(3000);
+            pbNormalFish2.Dispose();
+        }
+
+        private async void NotFishSpawn2()
+        {
+
+            PictureBox pbNotFish2 = new PictureBox();
+            pbNotFish2.Height = 50;
+            pbNotFish2.Width = 50;
+            pbNotFish2.Image = Properties.Resources.trash;
+            pbNotFish2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbNotFish2.BackColor = Color.Transparent;
+
+            int x = randomSpawn.Next(10, this.ClientSize.Width - pbNotFish2.Width);
+            int y = randomSpawn.Next(10, this.ClientSize.Height - pbNotFish2.Height);
+            pbNotFish2.Location = new Point(x, y);
+
+            notfish2.Add(pbNotFish2);
+            this.Controls.Add(pbNotFish2);
+
+            await Task.Delay(3000);
+            pbNotFish2.Dispose();
         }
 
 
@@ -179,6 +222,15 @@ namespace AD_SeaAnimalGame
             OctopusSpawn();
         }
 
+        private void FishSpawnTimer2_Tick(object sender, EventArgs e)
+        {
+            FishSpawn2();
+        }
+        private void NotFishSpawnTimer2_Tick(object sender, EventArgs e)
+        {
+            NotFishSpawn2();
+        }
+
 
         private void btnExitGame_Click(object sender, EventArgs e)
         {
@@ -186,30 +238,28 @@ namespace AD_SeaAnimalGame
             PlayerMainPage pmainpage = new PlayerMainPage();
             pmainpage.Show();
 
-            TimeCounter = 60;
+            TimeCounter = 120;
         }
 
         private void btnCloseGame_Click(object sender, EventArgs e)
         {
             Application.Exit();
-            TimeCounter = 60;
+            TimeCounter = 120;
         }
 
-        private static int TimeCounter = 60;
+        private static int TimeCounter = 120;
 
         private void CountdownGameTimer_Tick(object sender, EventArgs e)
         {
             lblGameTImer.Text = String.Format("{0} s", TimeCounter);
 
-
-
             if (TimeCounter > 0)
             {
                 CountdownGameTimer.Start();
-
-
                 TimeCounter--;
             }
+
+
             else if (TimeCounter == 0)
             {
                 CountdownGameTimer.Stop();
@@ -217,10 +267,52 @@ namespace AD_SeaAnimalGame
                 NonFishSpawnTimer.Stop();
                 TurtleSpawnTimer.Stop();
                 OctopusSpawnTimer.Stop();
+                FishSpawnTimer2.Stop();
+                NotFishSpawnTimer2.Stop();
                 SubmarineMoveTimer.Stop();
                 panelGameOver.Visible = true;
             }
+
+
+            if(playerScore < 5)
+            {
+                TurtleSpawnTimer.Stop();
+                OctopusSpawnTimer.Stop();
+                FishSpawnTimer2.Stop();
+                NotFishSpawnTimer2.Stop();
+            }
+
+
+            else if (playerScore == 5)
+            {
+                TurtleSpawnTimer.Start();
+                OctopusSpawnTimer.Start();
+                FishSpawnTimer2.Start();
+                NotFishSpawnTimer2.Start();
+
+                FishSpawnTimer.Stop();
+                NonFishSpawnTimer.Stop();
+
+                lblLevelDisplay.Text = "Level 2";
+
+                foreach (PictureBox fishpb in fish.ToList())
+                {
+                    fish.Remove(fishpb);
+                    this.Controls.Remove(fishpb);
+
+                }
+
+                foreach (PictureBox notfishpb in notfish.ToList())
+                {
+                    notfish.Remove(notfishpb);
+                    this.Controls.Remove(notfishpb);
+                }
+            }
+
+
+
         }
+
 
         int wrongCatch = 0;
         int playerScore = 0;
@@ -310,6 +402,8 @@ namespace AD_SeaAnimalGame
                         NonFishSpawnTimer.Stop();
                         TurtleSpawnTimer.Stop();
                         OctopusSpawnTimer.Stop();
+                        FishSpawnTimer2.Stop();
+                        NotFishSpawnTimer2.Stop();
                         SubmarineMoveTimer.Stop();
                         panelGameOver.Visible = true;
 
@@ -362,6 +456,70 @@ namespace AD_SeaAnimalGame
 
             }
 
+            foreach (PictureBox fishpb2 in fish2.ToList())
+            {
+                if (pboxSubmarine.Bounds.IntersectsWith(fishpb2.Bounds))
+                {
+                    // if the collision happened do the following
+                    fish2.Remove(fishpb2);
+                    this.Controls.Remove(fishpb2);
+
+                    correctCatch++;
+                    wrongCatch = 0;
+                    playerScore = correctCatch + wrongCatch;
+                    playerHP = 100;
+                    lblPointEarn.Text = "+1";
+
+                    SoundPlayer player = new SoundPlayer(Properties.Resources.correct);
+                    player.Play();
+                }
+
+            }
+
+            foreach (PictureBox notfishpb2 in notfish2.ToList())
+            {
+                if (pboxSubmarine.Bounds.IntersectsWith(notfishpb2.Bounds))
+                {
+                    // if the collision happened do the following
+                    notfish2.Remove(notfishpb2);
+                    this.Controls.Remove(notfishpb2);
+
+                    SoundPlayer player = new SoundPlayer(Properties.Resources.wrong);
+                    player.Play();
+
+
+                    lblPointEarn.Text = "-1";
+                    playerHP -= 20;
+                    wrongCatch++;
+                    correctCatch--;
+                    playerScore = correctCatch;
+
+                    if (playerScore < 0)
+                    {
+                        playerScore = 0;
+                    }
+
+                    if (correctCatch < 0)
+                    {
+                        correctCatch = 0;
+                    }
+
+                    if (wrongCatch == 5)
+                    {
+                        CountdownGameTimer.Stop();
+                        FishSpawnTimer.Stop();
+                        NonFishSpawnTimer.Stop();
+                        TurtleSpawnTimer.Stop();
+                        OctopusSpawnTimer.Stop();
+                        FishSpawnTimer2.Stop();
+                        NotFishSpawnTimer2.Stop();
+                        SubmarineMoveTimer.Stop();
+                        panelGameOver.Visible = true;
+
+                    }
+                }
+
+            }
 
         }
     }

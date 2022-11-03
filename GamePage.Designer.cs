@@ -50,10 +50,15 @@ namespace AD_SeaAnimalGame
             this.TurtleSpawnTimer = new System.Windows.Forms.Timer(this.components);
             this.OctopusSpawnTimer = new System.Windows.Forms.Timer(this.components);
             this.CountdownGameTimer = new System.Windows.Forms.Timer(this.components);
+            this.FishSpawnTimer2 = new System.Windows.Forms.Timer(this.components);
+            this.NotFishSpawnTimer2 = new System.Windows.Forms.Timer(this.components);
+            this.panelBackground3 = new System.Windows.Forms.Panel();
+            this.lblLevelDisplay = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSubmarine)).BeginInit();
             this.panelGameOver.SuspendLayout();
             this.panelBackground1.SuspendLayout();
             this.panelBackground2.SuspendLayout();
+            this.panelBackground3.SuspendLayout();
             this.SuspendLayout();
             // 
             // pboxSubmarine
@@ -95,7 +100,7 @@ namespace AD_SeaAnimalGame
             this.panelGameOver.Controls.Add(this.btnCloseGame);
             this.panelGameOver.Location = new System.Drawing.Point(338, 170);
             this.panelGameOver.Name = "panelGameOver";
-            this.panelGameOver.Size = new System.Drawing.Size(337, 238);
+            this.panelGameOver.Size = new System.Drawing.Size(337, 220);
             this.panelGameOver.TabIndex = 14;
             this.panelGameOver.Visible = false;
             // 
@@ -236,7 +241,7 @@ namespace AD_SeaAnimalGame
             this.lblPointEarn.BackColor = System.Drawing.Color.Transparent;
             this.lblPointEarn.Font = new System.Drawing.Font("Showcard Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPointEarn.ForeColor = System.Drawing.Color.Red;
-            this.lblPointEarn.Location = new System.Drawing.Point(895, 76);
+            this.lblPointEarn.Location = new System.Drawing.Point(820, 25);
             this.lblPointEarn.Name = "lblPointEarn";
             this.lblPointEarn.Size = new System.Drawing.Size(27, 33);
             this.lblPointEarn.TabIndex = 22;
@@ -260,6 +265,42 @@ namespace AD_SeaAnimalGame
             this.CountdownGameTimer.Interval = 1000;
             this.CountdownGameTimer.Tick += new System.EventHandler(this.CountdownGameTimer_Tick);
             // 
+            // FishSpawnTimer2
+            // 
+            this.FishSpawnTimer2.Enabled = true;
+            this.FishSpawnTimer2.Interval = 6000;
+            this.FishSpawnTimer2.Tick += new System.EventHandler(this.FishSpawnTimer2_Tick);
+            // 
+            // NotFishSpawnTimer2
+            // 
+            this.NotFishSpawnTimer2.Enabled = true;
+            this.NotFishSpawnTimer2.Interval = 6500;
+            this.NotFishSpawnTimer2.Tick += new System.EventHandler(this.NotFishSpawnTimer2_Tick);
+            // 
+            // panelBackground3
+            // 
+            this.panelBackground3.BackColor = System.Drawing.Color.Transparent;
+            this.panelBackground3.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.bgtemplate;
+            this.panelBackground3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelBackground3.Controls.Add(this.lblLevelDisplay);
+            this.panelBackground3.Location = new System.Drawing.Point(863, 91);
+            this.panelBackground3.Name = "panelBackground3";
+            this.panelBackground3.Size = new System.Drawing.Size(117, 64);
+            this.panelBackground3.TabIndex = 23;
+            // 
+            // lblLevelDisplay
+            // 
+            this.lblLevelDisplay.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblLevelDisplay.AutoSize = true;
+            this.lblLevelDisplay.BackColor = System.Drawing.Color.Transparent;
+            this.lblLevelDisplay.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLevelDisplay.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblLevelDisplay.Location = new System.Drawing.Point(19, 14);
+            this.lblLevelDisplay.Name = "lblLevelDisplay";
+            this.lblLevelDisplay.Size = new System.Drawing.Size(84, 33);
+            this.lblLevelDisplay.TabIndex = 18;
+            this.lblLevelDisplay.Text = "Level 1";
+            // 
             // GamePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -268,6 +309,7 @@ namespace AD_SeaAnimalGame
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1000, 700);
+            this.Controls.Add(this.panelBackground3);
             this.Controls.Add(this.lblPointEarn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.submarineHP);
@@ -291,6 +333,8 @@ namespace AD_SeaAnimalGame
             this.panelBackground1.PerformLayout();
             this.panelBackground2.ResumeLayout(false);
             this.panelBackground2.PerformLayout();
+            this.panelBackground3.ResumeLayout(false);
+            this.panelBackground3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,5 +360,9 @@ namespace AD_SeaAnimalGame
         private System.Windows.Forms.Timer TurtleSpawnTimer;
         private System.Windows.Forms.Timer OctopusSpawnTimer;
         private System.Windows.Forms.Timer CountdownGameTimer;
+        private System.Windows.Forms.Timer FishSpawnTimer2;
+        private System.Windows.Forms.Timer NotFishSpawnTimer2;
+        private System.Windows.Forms.Panel panelBackground3;
+        private System.Windows.Forms.Label lblLevelDisplay;
     }
 }
