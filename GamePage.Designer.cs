@@ -76,7 +76,7 @@ namespace AD_SeaAnimalGame
             // FishSpawnTimer
             // 
             this.FishSpawnTimer.Enabled = true;
-            this.FishSpawnTimer.Interval = 7000;
+            this.FishSpawnTimer.Interval = 4000;
             this.FishSpawnTimer.Tick += new System.EventHandler(this.FishSpawnTimer_Tick);
             // 
             // NonFishSpawnTimer
