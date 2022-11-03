@@ -168,6 +168,7 @@ namespace AD_SeaAnimalGame
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.tboxPName);
             this.Controls.Add(this.panelPNamePage);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PlayerNamePage";
