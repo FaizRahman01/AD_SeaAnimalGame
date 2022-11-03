@@ -43,13 +43,13 @@ namespace AD_SeaAnimalGame
             this.lblNotFishCatch = new System.Windows.Forms.Label();
             this.lblFishCatch = new System.Windows.Forms.Label();
             this.lblGameTImer = new System.Windows.Forms.Label();
-            this.timerCountdownGame = new System.Windows.Forms.Timer(this.components);
             this.panelBackground2 = new System.Windows.Forms.Panel();
             this.submarineHP = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
-            this.SeaTurtleTimer = new System.Windows.Forms.Timer(this.components);
-            this.OctupusSpawnTimer = new System.Windows.Forms.Timer(this.components);
-            this.pointLbl = new System.Windows.Forms.Label();
+            this.lblPointEarn = new System.Windows.Forms.Label();
+            this.TurtleSpawnTimer = new System.Windows.Forms.Timer(this.components);
+            this.OctopusSpawnTimer = new System.Windows.Forms.Timer(this.components);
+            this.CountdownGameTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pboxSubmarine)).BeginInit();
             this.panelGameOver.SuspendLayout();
             this.panelBackground1.SuspendLayout();
@@ -198,12 +198,6 @@ namespace AD_SeaAnimalGame
             this.lblGameTImer.TabIndex = 18;
             this.lblGameTImer.Text = "60 s";
             // 
-            // timerCountdownGame
-            // 
-            this.timerCountdownGame.Enabled = true;
-            this.timerCountdownGame.Interval = 1000;
-            this.timerCountdownGame.Tick += new System.EventHandler(this.timerCountdownGame_Tick);
-            // 
             // panelBackground2
             // 
             this.panelBackground2.BackColor = System.Drawing.Color.Transparent;
@@ -236,28 +230,35 @@ namespace AD_SeaAnimalGame
             this.label1.TabIndex = 21;
             this.label1.Text = "Submarine  HP";
             // 
-            // SeaTurtleTimer
+            // lblPointEarn
             // 
-            this.SeaTurtleTimer.Enabled = true;
-            this.SeaTurtleTimer.Interval = 15000;
-            this.SeaTurtleTimer.Tick += new System.EventHandler(this.SeaTurtleTimer_Tick);
+            this.lblPointEarn.AutoSize = true;
+            this.lblPointEarn.BackColor = System.Drawing.Color.Transparent;
+            this.lblPointEarn.Font = new System.Drawing.Font("Showcard Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPointEarn.ForeColor = System.Drawing.Color.Red;
+            this.lblPointEarn.Location = new System.Drawing.Point(895, 76);
+            this.lblPointEarn.Name = "lblPointEarn";
+            this.lblPointEarn.Size = new System.Drawing.Size(27, 33);
+            this.lblPointEarn.TabIndex = 22;
+            this.lblPointEarn.Text = "-";
             // 
-            // OctupusSpawnTimer
+            // TurtleSpawnTimer
             // 
-            this.OctupusSpawnTimer.Enabled = true;
-            this.OctupusSpawnTimer.Interval = 11000;
-            this.OctupusSpawnTimer.Tick += new System.EventHandler(this.OctupusSpawnTimer_Tick);
+            this.TurtleSpawnTimer.Enabled = true;
+            this.TurtleSpawnTimer.Interval = 15000;
+            this.TurtleSpawnTimer.Tick += new System.EventHandler(this.TurtleSpawnTimer_Tick);
             // 
-            // pointLbl
+            // OctopusSpawnTimer
             // 
-            this.pointLbl.AutoSize = true;
-            this.pointLbl.BackColor = System.Drawing.Color.Transparent;
-            this.pointLbl.Font = new System.Drawing.Font("Showcard Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pointLbl.ForeColor = System.Drawing.Color.Red;
-            this.pointLbl.Location = new System.Drawing.Point(895, 76);
-            this.pointLbl.Name = "pointLbl";
-            this.pointLbl.Size = new System.Drawing.Size(0, 33);
-            this.pointLbl.TabIndex = 22;
+            this.OctopusSpawnTimer.Enabled = true;
+            this.OctopusSpawnTimer.Interval = 11000;
+            this.OctopusSpawnTimer.Tick += new System.EventHandler(this.OctopusSpawnTimer_Tick);
+            // 
+            // CountdownGameTimer
+            // 
+            this.CountdownGameTimer.Enabled = true;
+            this.CountdownGameTimer.Interval = 1000;
+            this.CountdownGameTimer.Tick += new System.EventHandler(this.CountdownGameTimer_Tick);
             // 
             // GamePage
             // 
@@ -267,7 +268,7 @@ namespace AD_SeaAnimalGame
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1000, 700);
-            this.Controls.Add(this.pointLbl);
+            this.Controls.Add(this.lblPointEarn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.submarineHP);
             this.Controls.Add(this.panelGameOver);
@@ -306,14 +307,14 @@ namespace AD_SeaAnimalGame
         private System.Windows.Forms.Label lblNotFishCatch;
         private System.Windows.Forms.Label lblFishCatch;
         private System.Windows.Forms.Label lblGameTImer;
-        private System.Windows.Forms.Timer timerCountdownGame;
         private System.Windows.Forms.Button btnExitGame;
         private System.Windows.Forms.Button btnCloseGame;
         private System.Windows.Forms.Panel panelBackground2;
         private System.Windows.Forms.ProgressBar submarineHP;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Timer SeaTurtleTimer;
-        private System.Windows.Forms.Timer OctupusSpawnTimer;
-        private System.Windows.Forms.Label pointLbl;
+        private System.Windows.Forms.Label lblPointEarn;
+        private System.Windows.Forms.Timer TurtleSpawnTimer;
+        private System.Windows.Forms.Timer OctopusSpawnTimer;
+        private System.Windows.Forms.Timer CountdownGameTimer;
     }
 }
