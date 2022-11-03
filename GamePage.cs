@@ -24,8 +24,7 @@ namespace AD_SeaAnimalGame
         public GamePage()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.Manual;
-            this.Location = new Point(0, 0);
+
         }
 
         private void FishSpawn()
