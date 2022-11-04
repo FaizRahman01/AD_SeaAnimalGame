@@ -14,6 +14,8 @@ namespace AD_SeaAnimalGame
 {
     public partial class GamePage : Form
     {
+        private Point windowLocation;
+
         Random randomSpawn = new Random();
         List<PictureBox> fish = new List<PictureBox>();
         List<PictureBox> notfish = new List<PictureBox>();
@@ -149,6 +151,25 @@ namespace AD_SeaAnimalGame
             pbNotFish2.Dispose();
         }
 
+
+        private void panelGamePage_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.windowLocation = e.Location;
+        }
+
+        private void panelGamePage_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                // Refers to the Form location (or whatever you trigger the event on)
+                this.Location = new Point(
+                    (this.Location.X - windowLocation.X) + e.X,
+                    (this.Location.Y - windowLocation.Y) + e.Y
+                );
+
+                this.Update();
+            }
+        }
 
         bool submarineUp, submarineDown, submarineLeft, submarineRight;
 
@@ -295,19 +316,6 @@ namespace AD_SeaAnimalGame
                 NonFishSpawnTimer.Stop();
 
                 lblLevelDisplay.Text = "Level 2";
-
-                foreach (PictureBox fishpb in fish.ToList())
-                {
-                    fish.Remove(fishpb);
-                    this.Controls.Remove(fishpb);
-
-                }
-
-                foreach (PictureBox notfishpb in notfish.ToList())
-                {
-                    notfish.Remove(notfishpb);
-                    this.Controls.Remove(notfishpb);
-                }
             }
 
 
@@ -317,6 +325,7 @@ namespace AD_SeaAnimalGame
 
         int wrongCatch = 0;
         int playerScore = 0;
+
         int correctCatch = 0;
         int playerHP = 100;
         private void SubmarineMoveTimer_Tick(object sender, EventArgs e)
