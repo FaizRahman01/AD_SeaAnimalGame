@@ -115,7 +115,7 @@ namespace AD_SeaAnimalGame
             PictureBox pbNormalFish2 = new PictureBox();
             pbNormalFish2.Height = 50;
             pbNormalFish2.Width = 50;
-            pbNormalFish2.Image = Properties.Resources.bluefish;
+            pbNormalFish2.Image = Properties.Resources.yellowfish;
             pbNormalFish2.SizeMode = PictureBoxSizeMode.StretchImage;
             pbNormalFish2.BackColor = Color.Transparent;
 
@@ -136,7 +136,7 @@ namespace AD_SeaAnimalGame
             PictureBox pbNotFish2 = new PictureBox();
             pbNotFish2.Height = 50;
             pbNotFish2.Width = 50;
-            pbNotFish2.Image = Properties.Resources.trash;
+            pbNotFish2.Image = Properties.Resources.bottle;
             pbNotFish2.SizeMode = PictureBoxSizeMode.StretchImage;
             pbNotFish2.BackColor = Color.Transparent;
 
@@ -269,7 +269,6 @@ namespace AD_SeaAnimalGame
         }
 
         int TimeCounter = 120;
-
         private void CountdownGameTimer_Tick(object sender, EventArgs e)
         {
             lblGameTImer.Text = String.Format("{0} s", TimeCounter);
@@ -308,17 +307,29 @@ namespace AD_SeaAnimalGame
                 FishSpawnTimer2.Start();
                 NotFishSpawnTimer2.Start();
 
+                foreach (PictureBox fishpb in fish.ToList())
+                {
+                    fish.Remove(fishpb);
+                    this.Controls.Remove(fishpb);
+                }
+
+                foreach(PictureBox notfishpb in notfish.ToList())
+                {
+                    notfish.Remove(notfishpb);
+                    this.Controls.Remove(notfishpb);
+
+                }
                 FishSpawnTimer.Stop();
                 NonFishSpawnTimer.Stop();
 
                 lblLevelDisplay.Text = "Level 2";
             }
+
         }
 
 
         int wrongCatch = 0;
         int playerScore = 0;
-
         int correctCatch = 0;
         int playerHP = 100;
         private void SubmarineMoveTimer_Tick(object sender, EventArgs e)
