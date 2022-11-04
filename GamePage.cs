@@ -195,12 +195,12 @@ namespace AD_SeaAnimalGame
             if (e.KeyCode == Keys.W)
             {
                 submarineUp = true;
-                pboxSubmarine.Image = Properties.Resources.submarineup;
+
             }
             if (e.KeyCode == Keys.S)
             {
                 submarineDown = true;
-                pboxSubmarine.Image = Properties.Resources.submarinedown;
+
             }
         }
 
