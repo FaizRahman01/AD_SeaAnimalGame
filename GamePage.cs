@@ -280,8 +280,6 @@ namespace AD_SeaAnimalGame
                 CountdownGameTimer.Start();
                 TimeCounter--;
             }
-
-
             else if (TimeCounter == 0)
             {
                 CountdownGameTimer.Stop();
@@ -296,7 +294,7 @@ namespace AD_SeaAnimalGame
             }
 
 
-            if(playerScore < 5)
+            if (TimeCounter > 100)
             {
                 TurtleSpawnTimer.Stop();
                 OctopusSpawnTimer.Stop();
@@ -304,8 +302,7 @@ namespace AD_SeaAnimalGame
                 NotFishSpawnTimer2.Stop();
             }
 
-
-            else if (playerScore == 5)
+            else if (TimeCounter <= 100)
             {
                 TurtleSpawnTimer.Start();
                 OctopusSpawnTimer.Start();
@@ -317,9 +314,6 @@ namespace AD_SeaAnimalGame
 
                 lblLevelDisplay.Text = "Level 2";
             }
-
-
-
         }
 
 
