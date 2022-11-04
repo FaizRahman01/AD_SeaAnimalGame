@@ -259,7 +259,6 @@ namespace AD_SeaAnimalGame
             this.Hide();
             PlayerMainPage pmainpage = new PlayerMainPage();
             pmainpage.Show();
-
             TimeCounter = 120;
         }
 
@@ -269,7 +268,7 @@ namespace AD_SeaAnimalGame
             TimeCounter = 120;
         }
 
-        private static int TimeCounter = 120;
+        int TimeCounter = 120;
 
         private void CountdownGameTimer_Tick(object sender, EventArgs e)
         {
