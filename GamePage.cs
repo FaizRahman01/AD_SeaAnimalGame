@@ -294,7 +294,7 @@ namespace AD_SeaAnimalGame
             }
 
 
-            if (TimeCounter > 100)
+            if(TimeCounter > 100)
             {
                 TurtleSpawnTimer.Stop();
                 OctopusSpawnTimer.Stop();
@@ -302,7 +302,7 @@ namespace AD_SeaAnimalGame
                 NotFishSpawnTimer2.Stop();
             }
 
-            else if (TimeCounter <= 100)
+            else if(TimeCounter <= 100 && TimeCounter > 0)
             {
                 TurtleSpawnTimer.Start();
                 OctopusSpawnTimer.Start();
