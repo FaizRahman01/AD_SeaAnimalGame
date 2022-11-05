@@ -34,6 +34,7 @@ namespace AD_SeaAnimalGame
             this.btnQuit = new System.Windows.Forms.Button();
             this.btnPlayNow = new System.Windows.Forms.Button();
             this.btnScore = new System.Windows.Forms.Button();
+            this.btnSkin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panelPMainPage
@@ -42,7 +43,7 @@ namespace AD_SeaAnimalGame
             this.panelPMainPage.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPMainPage.Location = new System.Drawing.Point(0, 0);
             this.panelPMainPage.Name = "panelPMainPage";
-            this.panelPMainPage.Size = new System.Drawing.Size(984, 41);
+            this.panelPMainPage.Size = new System.Drawing.Size(1000, 41);
             this.panelPMainPage.TabIndex = 7;
             this.panelPMainPage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelPMainPage_MouseDown);
             this.panelPMainPage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelPMainPage_MouseMove);
@@ -72,7 +73,7 @@ namespace AD_SeaAnimalGame
             this.btnPlayNow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlayNow.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnPlayNow.ForeColor = System.Drawing.Color.White;
-            this.btnPlayNow.Location = new System.Drawing.Point(578, 350);
+            this.btnPlayNow.Location = new System.Drawing.Point(587, 354);
             this.btnPlayNow.Name = "btnPlayNow";
             this.btnPlayNow.Size = new System.Drawing.Size(140, 70);
             this.btnPlayNow.TabIndex = 9;
@@ -89,12 +90,28 @@ namespace AD_SeaAnimalGame
             this.btnScore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnScore.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnScore.ForeColor = System.Drawing.Color.White;
-            this.btnScore.Location = new System.Drawing.Point(578, 453);
+            this.btnScore.Location = new System.Drawing.Point(587, 457);
             this.btnScore.Name = "btnScore";
             this.btnScore.Size = new System.Drawing.Size(140, 70);
             this.btnScore.TabIndex = 10;
             this.btnScore.Text = "SCORE";
             this.btnScore.UseVisualStyleBackColor = false;
+            // 
+            // btnSkin
+            // 
+            this.btnSkin.BackColor = System.Drawing.Color.Transparent;
+            this.btnSkin.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.buttonbg;
+            this.btnSkin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSkin.FlatAppearance.BorderSize = 0;
+            this.btnSkin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSkin.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnSkin.ForeColor = System.Drawing.Color.White;
+            this.btnSkin.Location = new System.Drawing.Point(587, 562);
+            this.btnSkin.Name = "btnSkin";
+            this.btnSkin.Size = new System.Drawing.Size(140, 70);
+            this.btnSkin.TabIndex = 11;
+            this.btnSkin.Text = "SKIN";
+            this.btnSkin.UseVisualStyleBackColor = false;
             // 
             // PlayerMainPage
             // 
@@ -102,7 +119,8 @@ namespace AD_SeaAnimalGame
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(984, 661);
+            this.ClientSize = new System.Drawing.Size(1000, 700);
+            this.Controls.Add(this.btnSkin);
             this.Controls.Add(this.btnScore);
             this.Controls.Add(this.btnPlayNow);
             this.Controls.Add(this.btnQuit);
@@ -123,5 +141,6 @@ namespace AD_SeaAnimalGame
         private System.Windows.Forms.Button btnQuit;
         private System.Windows.Forms.Button btnPlayNow;
         private System.Windows.Forms.Button btnScore;
+        private System.Windows.Forms.Button btnSkin;
     }
 }

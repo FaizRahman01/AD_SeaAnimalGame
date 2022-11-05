@@ -64,6 +64,7 @@ namespace AD_SeaAnimalGame
             notfish.Add(pbNotFish);
             this.Controls.Add(pbNotFish);
 
+
         }
 
         private async void SeaTurtleSpawn()
@@ -179,23 +180,30 @@ namespace AD_SeaAnimalGame
         {
             if (e.KeyCode == Keys.Escape)
             {
-                Application.Exit();
+                CountdownGameTimer.Stop();
+                FishSpawnTimer.Stop();
+                NonFishSpawnTimer.Stop();
+                TurtleSpawnTimer.Stop();
+                OctopusSpawnTimer.Stop();
+                FishSpawnTimer2.Stop();
+                NotFishSpawnTimer2.Stop();
+                SubmarineMoveTimer.Stop();
+                panelGameOver.Visible = true;
             }
 
             if (e.KeyCode == Keys.A)
             {
                 submarineLeft = true;
-                pboxSubmarine.Image = Properties.Resources.submarineleft;
+                
             }
             if (e.KeyCode == Keys.D)
             {
                 submarineRight = true;
-                pboxSubmarine.Image = Properties.Resources.submarineright;
+                
             }
             if (e.KeyCode == Keys.W)
             {
                 submarineUp = true;
-
             }
             if (e.KeyCode == Keys.S)
             {
@@ -332,16 +340,20 @@ namespace AD_SeaAnimalGame
         int playerScore = 0;
         int correctCatch = 0;
         int playerHP = 100;
+
         private void SubmarineMoveTimer_Tick(object sender, EventArgs e)
         {
+            //move left
             if (submarineLeft == true && pboxSubmarine.Left > 0)
             {
                 pboxSubmarine.Left -= submarineSpeed;
+                pboxSubmarine.Image = Properties.Resources.submarineleft;
             }
-
+            //move right
             if (submarineRight == true && pboxSubmarine.Left < 877)
             {
                 pboxSubmarine.Left += submarineSpeed;
+                pboxSubmarine.Image = Properties.Resources.submarineright;
             }
 
             if (submarineUp == true && pboxSubmarine.Top > 71)
