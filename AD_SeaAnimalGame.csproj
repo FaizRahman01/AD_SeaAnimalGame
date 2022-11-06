@@ -73,6 +73,12 @@
     <Compile Include="PlayerSkin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SkinOptionPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkinOptionPage.Designer.cs">
+      <DependentUpon>SkinOptionPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="SpawnItem.cs" />
     <EmbeddedResource Include="GamePage.resx">
       <DependentUpon>GamePage.cs</DependentUpon>
@@ -96,6 +102,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SkinOptionPage.resx">
+      <DependentUpon>SkinOptionPage.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -146,22 +155,40 @@
     <None Include="Resources\buttonbg2.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\bluefish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bottle.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\octopus.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\seaturtle.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\submarine2left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\submarine2right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\submarine3left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\submarine3right.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\yellowfish.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\bottle.png" />
+    <None Include="Resources\boy-fishing.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\bluefish.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\trash.png" />
+    <None Include="Resources\cactus_underwater.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -112,12 +112,13 @@ namespace AD_SeaAnimalGame
             this.btnSkin.TabIndex = 11;
             this.btnSkin.Text = "SKIN";
             this.btnSkin.UseVisualStyleBackColor = false;
+            this.btnSkin.Click += new System.EventHandler(this.btnSkin_Click);
             // 
             // PlayerMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.boy_fishing;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1000, 700);
             this.Controls.Add(this.btnSkin);

@@ -48,6 +48,7 @@ namespace AD_SeaAnimalGame
             // 
             this.panelPNamePage.BackColor = System.Drawing.Color.Transparent;
             this.panelPNamePage.Controls.Add(this.btnClose);
+            this.panelPNamePage.Controls.Add(this.btnBack);
             this.panelPNamePage.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPNamePage.Location = new System.Drawing.Point(0, 0);
             this.panelPNamePage.Name = "panelPNamePage";
@@ -92,9 +93,9 @@ namespace AD_SeaAnimalGame
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(12, 616);
+            this.btnBack.Location = new System.Drawing.Point(7, 3);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(114, 46);
+            this.btnBack.Size = new System.Drawing.Size(94, 35);
             this.btnBack.TabIndex = 8;
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -183,11 +184,10 @@ namespace AD_SeaAnimalGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.boy_fishing;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1000, 700);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.panelPNamePage);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -130,11 +130,17 @@
   <data name="bottle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bottle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="boy_fishing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boy-fishing.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="buttonbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buttonbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="buttonbg2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buttonbg2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cactus_underwater" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cactus_underwater.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="correct" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button9.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -148,17 +154,23 @@
   <data name="seaturtle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\seaturtle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="submarinedown" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\submarinedown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="submarine2left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\submarine2left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="submarine2right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\submarine2right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="submarine3left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\submarine3left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="submarine3right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\submarine3right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="submarineleft" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\submarineleft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="submarineright" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\submarineright.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="submarineup" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\submarineup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="trash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

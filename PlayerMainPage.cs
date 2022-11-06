@@ -50,5 +50,12 @@ namespace AD_SeaAnimalGame
             GamePage gamepage = new GamePage();
             gamepage.Show();
         }
+
+        private void btnSkin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SkinOptionPage skinoptionpage = new SkinOptionPage();
+            skinoptionpage.Show();
+        }
     }
 }

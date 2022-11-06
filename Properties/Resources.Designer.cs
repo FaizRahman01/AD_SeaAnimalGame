@@ -103,6 +103,16 @@ namespace AD_SeaAnimalGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap boy_fishing {
+            get {
+                object obj = ResourceManager.GetObject("boy_fishing", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap buttonbg {
             get {
                 object obj = ResourceManager.GetObject("buttonbg", resourceCulture);
@@ -116,6 +126,16 @@ namespace AD_SeaAnimalGame.Properties {
         internal static System.Drawing.Bitmap buttonbg2 {
             get {
                 object obj = ResourceManager.GetObject("buttonbg2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cactus_underwater {
+            get {
+                object obj = ResourceManager.GetObject("cactus_underwater", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -162,9 +182,39 @@ namespace AD_SeaAnimalGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap submarinedown {
+        internal static System.Drawing.Bitmap submarine2left {
             get {
-                object obj = ResourceManager.GetObject("submarinedown", resourceCulture);
+                object obj = ResourceManager.GetObject("submarine2left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap submarine2right {
+            get {
+                object obj = ResourceManager.GetObject("submarine2right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap submarine3left {
+            get {
+                object obj = ResourceManager.GetObject("submarine3left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap submarine3right {
+            get {
+                object obj = ResourceManager.GetObject("submarine3right", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -185,16 +235,6 @@ namespace AD_SeaAnimalGame.Properties {
         internal static System.Drawing.Bitmap submarineright {
             get {
                 object obj = ResourceManager.GetObject("submarineright", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap submarineup {
-            get {
-                object obj = ResourceManager.GetObject("submarineup", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
