@@ -29,9 +29,7 @@ namespace AD_SeaAnimalGame
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SkinOptionPage));
             this.panelSkinOptionPage = new System.Windows.Forms.Panel();
-            this.btnBack = new System.Windows.Forms.Button();
             this.panelSkinSelection = new System.Windows.Forms.Panel();
             this.lblPlayerChoice = new System.Windows.Forms.Label();
             this.lblStatement = new System.Windows.Forms.Label();
@@ -44,7 +42,7 @@ namespace AD_SeaAnimalGame
             this.pboxSkin3 = new System.Windows.Forms.PictureBox();
             this.pboxSkin2 = new System.Windows.Forms.PictureBox();
             this.pboxSkin1 = new System.Windows.Forms.PictureBox();
-            this.panelSkinOptionPage.SuspendLayout();
+            this.btnConfirm = new System.Windows.Forms.Button();
             this.panelSkinSelection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSkin3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSkin2)).BeginInit();
@@ -54,7 +52,6 @@ namespace AD_SeaAnimalGame
             // panelSkinOptionPage
             // 
             this.panelSkinOptionPage.BackColor = System.Drawing.Color.Transparent;
-            this.panelSkinOptionPage.Controls.Add(this.btnBack);
             this.panelSkinOptionPage.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSkinOptionPage.Location = new System.Drawing.Point(0, 0);
             this.panelSkinOptionPage.Name = "panelSkinOptionPage";
@@ -62,21 +59,6 @@ namespace AD_SeaAnimalGame
             this.panelSkinOptionPage.TabIndex = 4;
             this.panelSkinOptionPage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSkinOptionPage_MouseDown);
             this.panelSkinOptionPage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelSkinOptionPage_MouseMove);
-            // 
-            // btnBack
-            // 
-            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnBack.BackColor = System.Drawing.Color.Transparent;
-            this.btnBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBack.BackgroundImage")));
-            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(7, 3);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(94, 35);
-            this.btnBack.TabIndex = 8;
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // panelSkinSelection
             // 
@@ -86,6 +68,7 @@ namespace AD_SeaAnimalGame
             this.panelSkinSelection.BackColor = System.Drawing.Color.Turquoise;
             this.panelSkinSelection.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.cactus_underwater;
             this.panelSkinSelection.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelSkinSelection.Controls.Add(this.btnConfirm);
             this.panelSkinSelection.Controls.Add(this.lblPlayerChoice);
             this.panelSkinSelection.Controls.Add(this.lblStatement);
             this.panelSkinSelection.Controls.Add(this.btnUse3);
@@ -241,6 +224,23 @@ namespace AD_SeaAnimalGame
             this.pboxSkin1.TabIndex = 0;
             this.pboxSkin1.TabStop = false;
             // 
+            // btnConfirm
+            // 
+            this.btnConfirm.BackColor = System.Drawing.Color.Transparent;
+            this.btnConfirm.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.buttonbg;
+            this.btnConfirm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnConfirm.FlatAppearance.BorderSize = 0;
+            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirm.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirm.ForeColor = System.Drawing.Color.White;
+            this.btnConfirm.Location = new System.Drawing.Point(318, 479);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(99, 45);
+            this.btnConfirm.TabIndex = 13;
+            this.btnConfirm.Text = "CHANGE";
+            this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
             // SkinOptionPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -256,7 +256,6 @@ namespace AD_SeaAnimalGame
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SkinOptionPage";
             this.Load += new System.EventHandler(this.SkinOptionPage_Load);
-            this.panelSkinOptionPage.ResumeLayout(false);
             this.panelSkinSelection.ResumeLayout(false);
             this.panelSkinSelection.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSkin3)).EndInit();
@@ -269,7 +268,6 @@ namespace AD_SeaAnimalGame
         #endregion
 
         private System.Windows.Forms.Panel panelSkinOptionPage;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel panelSkinSelection;
         private System.Windows.Forms.PictureBox pboxSkin1;
         private System.Windows.Forms.PictureBox pboxSkin2;
@@ -282,5 +280,6 @@ namespace AD_SeaAnimalGame
         private System.Windows.Forms.Label lblSkinName1;
         private System.Windows.Forms.Label lblPlayerChoice;
         private System.Windows.Forms.Label lblStatement;
+        private System.Windows.Forms.Button btnConfirm;
     }
 }

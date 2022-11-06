@@ -43,13 +43,6 @@ namespace AD_SeaAnimalGame
             }
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            PlayerMainPage pmainpage = new PlayerMainPage();
-            pmainpage.Show();
-        }
-
         private void btnUse1_Click(object sender, EventArgs e)
         {
             lblPlayerChoice.Text = "Spekter";
@@ -71,6 +64,13 @@ namespace AD_SeaAnimalGame
         private void SkinOptionPage_Load(object sender, EventArgs e)
         {
             lblPlayerChoice.Text = skin;
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PlayerMainPage pmainpage = new PlayerMainPage();
+            pmainpage.Show();
         }
     }
 }
