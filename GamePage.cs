@@ -419,7 +419,7 @@ namespace AD_SeaAnimalGame
                 }
             }
             //move up
-            if (submarineUp == true && pboxSubmarine.Top > 71)
+            if (submarineUp == true && pboxSubmarine.Top > 0)
             {
                 pboxSubmarine.Top -= submarineSpeed;
             }
