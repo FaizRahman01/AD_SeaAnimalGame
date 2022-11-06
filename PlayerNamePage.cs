@@ -52,8 +52,8 @@ namespace AD_SeaAnimalGame
         private void btnLoginPlayer_Click(object sender, EventArgs e)
         {
             this.Hide();
-            PlayerMainPage pmainpage = new PlayerMainPage();
-            pmainpage.Show();
+            SkinOptionPage skinoptionpage = new SkinOptionPage();
+            skinoptionpage.Show();
         }
 
         private void btnRegisterPlayer_Click(object sender, EventArgs e)

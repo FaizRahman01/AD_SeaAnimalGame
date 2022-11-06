@@ -373,6 +373,14 @@ namespace AD_SeaAnimalGame
                 Bitmap bmp = (Bitmap)Properties.Resources.ResourceManager.GetObject(skingame);
                 pboxSubmarine.Image = bmp;
             }
+            else
+            {
+                pskin2.SetSecondSkin("submarineleft");
+                skingame = pskin2.GetSecondSkin();
+                Bitmap bmp = (Bitmap)Properties.Resources.ResourceManager.GetObject(skingame);
+                pboxSubmarine.Image = bmp;
+            }
+
 
             //move left
             if (submarineLeft == true && pboxSubmarine.Left > 0)
