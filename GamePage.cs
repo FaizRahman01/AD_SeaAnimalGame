@@ -349,57 +349,81 @@ namespace AD_SeaAnimalGame
             PlayerSkin3 pskin3 = new PlayerSkin3();
 
             string skingame;
-
+            Bitmap skinImage;
 
             if (SkinOptionPage.SkinOptionInstance.skin == "Spekter")
             {
                 pskin2.SetSecondSkin("submarineleft");
                 skingame = pskin2.GetSecondSkin();
-                Bitmap bmp = (Bitmap)Properties.Resources.ResourceManager.GetObject(skingame);
-                pboxSubmarine.Image = bmp;
+                skinImage = (Bitmap)Properties.Resources.ResourceManager.GetObject(skingame);
+                pboxSubmarine.Image = skinImage;
             }
             else if (SkinOptionPage.SkinOptionInstance.skin == "Fantom")
             {
                 pskin2.SetSecondSkin("submarine2left");
                 skingame = pskin2.GetSecondSkin();
-                Bitmap bmp = (Bitmap)Properties.Resources.ResourceManager.GetObject(skingame);
-                pboxSubmarine.Image = bmp;
+                skinImage = (Bitmap)Properties.Resources.ResourceManager.GetObject(skingame);
+                pboxSubmarine.Image = skinImage;
 
             }
             else if (SkinOptionPage.SkinOptionInstance.skin == "Veindal")
             {
                 pskin3.SetThirdSkin("submarine3left");
                 skingame = pskin3.GetThirdSkin();
-                Bitmap bmp = (Bitmap)Properties.Resources.ResourceManager.GetObject(skingame);
-                pboxSubmarine.Image = bmp;
+                skinImage = (Bitmap)Properties.Resources.ResourceManager.GetObject(skingame);
+                pboxSubmarine.Image = skinImage;
             }
             else
             {
                 pskin2.SetSecondSkin("submarineleft");
                 skingame = pskin2.GetSecondSkin();
-                Bitmap bmp = (Bitmap)Properties.Resources.ResourceManager.GetObject(skingame);
-                pboxSubmarine.Image = bmp;
+                skinImage = (Bitmap)Properties.Resources.ResourceManager.GetObject(skingame);
+                pboxSubmarine.Image = skinImage;
             }
 
-
+            
             //move left
             if (submarineLeft == true && pboxSubmarine.Left > 0)
             {
                 pboxSubmarine.Left -= submarineSpeed;
-                pboxSubmarine.Image = Properties.Resources.submarineleft;
+
+                if(skingame.ToString() == "submarineleft")
+                {
+                    pboxSubmarine.Image = Properties.Resources.submarineleft;
+                }
+                else if(skingame.ToString() == "submarine2left")
+                {
+                    pboxSubmarine.Image = Properties.Resources.submarine2left;
+                }
+                else if (skingame.ToString() == "submarine3left")
+                {
+                    pboxSubmarine.Image = Properties.Resources.submarine3left;
+                }
             }
             //move right
             if (submarineRight == true && pboxSubmarine.Left < 877)
             {
                 pboxSubmarine.Left += submarineSpeed;
-                pboxSubmarine.Image = Properties.Resources.submarineright;
-            }
 
+                if (skingame.ToString() == "submarineleft")
+                {
+                    pboxSubmarine.Image = Properties.Resources.submarineright;
+                }
+                else if (skingame.ToString() == "submarine2left")
+                {
+                    pboxSubmarine.Image = Properties.Resources.submarine2right;
+                }
+                else if (skingame.ToString() == "submarine3left")
+                {
+                    pboxSubmarine.Image = Properties.Resources.submarine3right;
+                }
+            }
+            //move up
             if (submarineUp == true && pboxSubmarine.Top > 71)
             {
                 pboxSubmarine.Top -= submarineSpeed;
             }
-
+            //move down
             if (submarineDown == true && pboxSubmarine.Top < 599)
             {
                 pboxSubmarine.Top += submarineSpeed;
