@@ -15,6 +15,7 @@ namespace AD_SeaAnimalGame
     public partial class GamePage : Form
     {
         private Point windowLocation;
+        public static GamePage GamePageInstance;
 
         Random randomSpawn = new Random();
         List<PictureBox> fish = new List<PictureBox>();
@@ -26,7 +27,7 @@ namespace AD_SeaAnimalGame
         public GamePage()
         {
             InitializeComponent();
-
+            GamePageInstance = this;
         }
 
         private void FishSpawn()
@@ -343,6 +344,36 @@ namespace AD_SeaAnimalGame
 
         private void SubmarineMoveTimer_Tick(object sender, EventArgs e)
         {
+
+            PlayerSkin2 pskin2 = new PlayerSkin2();
+            PlayerSkin3 pskin3 = new PlayerSkin3();
+
+            string skingame;
+
+
+            if (SkinOptionPage.SkinOptionInstance.skin == "Spekter")
+            {
+                pskin2.SetSecondSkin("submarineleft");
+                skingame = pskin2.GetSecondSkin();
+                Bitmap bmp = (Bitmap)Properties.Resources.ResourceManager.GetObject(skingame);
+                pboxSubmarine.Image = bmp;
+            }
+            else if (SkinOptionPage.SkinOptionInstance.skin == "Fantom")
+            {
+                pskin2.SetSecondSkin("submarine2left");
+                skingame = pskin2.GetSecondSkin();
+                Bitmap bmp = (Bitmap)Properties.Resources.ResourceManager.GetObject(skingame);
+                pboxSubmarine.Image = bmp;
+
+            }
+            else if (SkinOptionPage.SkinOptionInstance.skin == "Veindal")
+            {
+                pskin3.SetThirdSkin("submarine3left");
+                skingame = pskin3.GetThirdSkin();
+                Bitmap bmp = (Bitmap)Properties.Resources.ResourceManager.GetObject(skingame);
+                pboxSubmarine.Image = bmp;
+            }
+
             //move left
             if (submarineLeft == true && pboxSubmarine.Left > 0)
             {

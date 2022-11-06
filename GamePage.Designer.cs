@@ -66,7 +66,6 @@ namespace AD_SeaAnimalGame
             // pboxSubmarine
             // 
             this.pboxSubmarine.BackColor = System.Drawing.Color.Transparent;
-            this.pboxSubmarine.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.submarineleft;
             this.pboxSubmarine.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pboxSubmarine.Location = new System.Drawing.Point(750, 272);
             this.pboxSubmarine.Name = "pboxSubmarine";

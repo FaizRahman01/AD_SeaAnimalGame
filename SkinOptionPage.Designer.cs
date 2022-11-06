@@ -44,7 +44,6 @@ namespace AD_SeaAnimalGame
             this.pboxSkin3 = new System.Windows.Forms.PictureBox();
             this.pboxSkin2 = new System.Windows.Forms.PictureBox();
             this.pboxSkin1 = new System.Windows.Forms.PictureBox();
-            this.btnConfirmChange = new System.Windows.Forms.Button();
             this.panelSkinOptionPage.SuspendLayout();
             this.panelSkinSelection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSkin3)).BeginInit();
@@ -87,7 +86,6 @@ namespace AD_SeaAnimalGame
             this.panelSkinSelection.BackColor = System.Drawing.Color.Turquoise;
             this.panelSkinSelection.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.cactus_underwater;
             this.panelSkinSelection.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelSkinSelection.Controls.Add(this.btnConfirmChange);
             this.panelSkinSelection.Controls.Add(this.lblPlayerChoice);
             this.panelSkinSelection.Controls.Add(this.lblStatement);
             this.panelSkinSelection.Controls.Add(this.btnUse3);
@@ -243,23 +241,6 @@ namespace AD_SeaAnimalGame
             this.pboxSkin1.TabIndex = 0;
             this.pboxSkin1.TabStop = false;
             // 
-            // btnConfirmChange
-            // 
-            this.btnConfirmChange.BackColor = System.Drawing.Color.Transparent;
-            this.btnConfirmChange.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.buttonbg;
-            this.btnConfirmChange.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnConfirmChange.FlatAppearance.BorderSize = 0;
-            this.btnConfirmChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmChange.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmChange.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmChange.Location = new System.Drawing.Point(318, 479);
-            this.btnConfirmChange.Name = "btnConfirmChange";
-            this.btnConfirmChange.Size = new System.Drawing.Size(104, 45);
-            this.btnConfirmChange.TabIndex = 13;
-            this.btnConfirmChange.Text = "CHANGE";
-            this.btnConfirmChange.UseVisualStyleBackColor = false;
-            this.btnConfirmChange.Click += new System.EventHandler(this.btnConfirmChange_Click);
-            // 
             // SkinOptionPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,6 +255,7 @@ namespace AD_SeaAnimalGame
             this.Name = "SkinOptionPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SkinOptionPage";
+            this.Load += new System.EventHandler(this.SkinOptionPage_Load);
             this.panelSkinOptionPage.ResumeLayout(false);
             this.panelSkinSelection.ResumeLayout(false);
             this.panelSkinSelection.PerformLayout();
@@ -300,6 +282,5 @@ namespace AD_SeaAnimalGame
         private System.Windows.Forms.Label lblSkinName1;
         private System.Windows.Forms.Label lblPlayerChoice;
         private System.Windows.Forms.Label lblStatement;
-        private System.Windows.Forms.Button btnConfirmChange;
     }
 }

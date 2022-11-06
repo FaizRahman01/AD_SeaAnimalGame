@@ -9,25 +9,38 @@ namespace AD_SeaAnimalGame
     class PlayerSkin
     {
         public string skinName;
-        public void MainSkin ()
+        public void SetMainSkin(string skin1)
         {
-            skinName = "submarineleft";
+            skinName = skin1;
+            
+        }
+        public string GetMainSkin()
+        {
+            return skinName;
         }
     }
 
     class PlayerSkin2 : PlayerSkin
     {
-        public void SecondSkin ()
+        public void SetSecondSkin(string skin2)
         {
-            skinName = "submarine2left";
+            skinName = skin2;
+        }
+        public string GetSecondSkin()
+        {
+            return skinName;
         }
     }
 
     class PlayerSkin3 : PlayerSkin
     {
-        public void ThirdSkin()
+        public void SetThirdSkin(string skin3)
         {
-            skinName = "submarine3left";
+            skinName = skin3;
+        }
+        public string GetThirdSkin()
+        {
+            return skinName;
         }
     }
 }

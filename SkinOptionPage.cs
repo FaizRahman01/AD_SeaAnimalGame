@@ -13,9 +13,14 @@ namespace AD_SeaAnimalGame
     public partial class SkinOptionPage : Form
     {
         private Point windowLocation;
+        public static SkinOptionPage SkinOptionInstance;
+        public Label lblskin;
+        public string skin;
         public SkinOptionPage()
         {
             InitializeComponent();
+            SkinOptionInstance = this;
+            lblskin = lblPlayerChoice;
         }
 
 
@@ -48,22 +53,24 @@ namespace AD_SeaAnimalGame
         private void btnUse1_Click(object sender, EventArgs e)
         {
             lblPlayerChoice.Text = "Spekter";
+            skin = lblPlayerChoice.Text;
         }
 
         private void btnUse2_Click(object sender, EventArgs e)
         {
             lblPlayerChoice.Text = "Fantom";
+            skin = lblPlayerChoice.Text;
         }
 
         private void btnUse3_Click(object sender, EventArgs e)
         {
             lblPlayerChoice.Text = "Veindal";
+            skin = lblPlayerChoice.Text;
         }
 
-        private void btnConfirmChange_Click(object sender, EventArgs e)
+        private void SkinOptionPage_Load(object sender, EventArgs e)
         {
-            PlayerSkin2 pskin2 = new PlayerSkin2();
-            PlayerSkin3 pskin3 = new PlayerSkin3();
+            lblPlayerChoice.Text = skin;
         }
     }
 }
