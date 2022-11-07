@@ -42,6 +42,7 @@ namespace AD_SeaAnimalGame
             this.Hide();
             MainPage mainpage = new MainPage();
             mainpage.Show();
+            Application.Restart();
         }
 
         private void btnPlayNow_Click(object sender, EventArgs e)
