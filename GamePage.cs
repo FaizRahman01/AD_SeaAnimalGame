@@ -344,7 +344,7 @@ namespace AD_SeaAnimalGame
 
         private void SubmarineMoveTimer_Tick(object sender, EventArgs e)
         {
-
+            PlayerSkin1 pskin1 = new PlayerSkin1();
             PlayerSkin2 pskin2 = new PlayerSkin2();
             PlayerSkin3 pskin3 = new PlayerSkin3();
 
@@ -353,8 +353,8 @@ namespace AD_SeaAnimalGame
 
             if (SkinOptionPage.SkinOptionInstance.skin == "Spekter")
             {
-                pskin2.SetSecondSkin("submarineleft");
-                skingame = pskin2.GetSecondSkin();
+                pskin1.SetMainSkin("submarineleft");
+                skingame = pskin1.GetMainSkin();
                 skinImage = (Bitmap)Properties.Resources.ResourceManager.GetObject(skingame);
                 pboxSubmarine.Image = skinImage;
             }
