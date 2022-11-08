@@ -14,13 +14,11 @@ namespace AD_SeaAnimalGame
     {
         private Point windowLocation;
         public static SkinOptionPage SkinOptionInstance;
-        public Label lblskin;
         public string skin;
         public SkinOptionPage()
         {
             InitializeComponent();
             SkinOptionInstance = this;
-            lblskin = lblPlayerChoice;
         }
 
 

@@ -75,7 +75,7 @@ namespace AD_SeaAnimalGame
                 dbcon.Dispose();
                 this.Hide();
                 SkinOptionPage skinoptionpage = new SkinOptionPage();
-                skinoptionpage.ShowDialog();
+                skinoptionpage.Show();
             }
             else
             {

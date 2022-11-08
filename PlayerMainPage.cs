@@ -39,10 +39,17 @@ namespace AD_SeaAnimalGame
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MainPage mainpage = new MainPage();
-            mainpage.Show();
-            Application.Restart();
+            
+
+            DialogResult logoutConfirmation = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.OKCancel);
+
+            if (logoutConfirmation == DialogResult.OK)
+            {
+                this.Hide();
+                MainPage mainpage = new MainPage();
+                mainpage.Show();
+                Application.Restart();
+            }
         }
 
         private void btnPlayNow_Click(object sender, EventArgs e)
