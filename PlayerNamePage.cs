@@ -60,22 +60,23 @@ namespace AD_SeaAnimalGame
             dbcmdlogin.Connection = dbcon;
             dbcmdlogin.CommandText = "select * from PlayerTbl where PlayerName = '" + tboxPName + "' ";
 
-            OleDbDataReader reader = dbcmdlogin.ExecuteReader();
-            int count = 0;
+            OleDbDataReader dbreader = dbcmdlogin.ExecuteReader();
+            int rdcount = 0;
 
-            while (reader.Read()) 
+            while (dbreader.Read()) 
             {
-                count = count + 1;
+                rdcount = rdcount + 1;
             }
 
-            if(count == 1)
+            if(rdcount == 1)
             {
                 MessageBox.Show("Player Name is correct");
                 dbcon.Close();
-                dbcon.Dispose();
                 this.Hide();
                 SkinOptionPage skinoptionpage = new SkinOptionPage();
                 skinoptionpage.Show();
+                Session.SessionName = tboxPName.Text;
+
             }
             else
             {

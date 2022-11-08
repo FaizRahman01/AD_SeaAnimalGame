@@ -65,5 +65,10 @@ namespace AD_SeaAnimalGame
             SkinOptionPage skinoptionpage = new SkinOptionPage();
             skinoptionpage.Show();
         }
+
+        private void PlayerMainPage_Load(object sender, EventArgs e)
+        {
+            lblPlayerName.Text = Session.SessionName;
+        }
     }
 }

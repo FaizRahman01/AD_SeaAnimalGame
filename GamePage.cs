@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
+using System.Data.OleDb;
 
 
 namespace AD_SeaAnimalGame
@@ -15,7 +16,7 @@ namespace AD_SeaAnimalGame
     public partial class GamePage : Form
     {
         private Point windowLocation;
-
+        OleDbConnection dbcon = new OleDbConnection(Properties.Resources.AccessDB_StringConnection);
 
         Random randomSpawn = new Random();
         List<PictureBox> fish = new List<PictureBox>();
@@ -27,7 +28,7 @@ namespace AD_SeaAnimalGame
         public GamePage()
         {
             InitializeComponent();
-
+            
         }
 
         private void FishSpawn()
@@ -263,12 +264,34 @@ namespace AD_SeaAnimalGame
         }
 
 
+        private void GamePage_Load(object sender, EventArgs e)
+        {
+            lblPlayerName.Text = Session.SessionName;
+        }
+
         private void btnExitGame_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            PlayerMainPage pmainpage = new PlayerMainPage();
-            pmainpage.Show();
-            TimeCounter = 120;
+            string pnametext = String.Format("System.Windows.Forms.TextBox, Text: {0}", lblPlayerName.Text);
+            try
+            {
+                dbcon.Open();
+                OleDbCommand dbcmd = new OleDbCommand("insert into PlayerScoreTbl (PlayerName, PlayerScore)values ('" + pnametext.ToString() + "','" + lblGameScore.Text + "')", dbcon);
+                dbcmd.ExecuteNonQuery();
+                dbcon.Close();
+
+                this.Hide();
+                PlayerMainPage pmainpage = new PlayerMainPage();
+                pmainpage.Show();
+                TimeCounter = 120;
+            }
+            catch
+            {
+                MessageBox.Show("Database cannot read the playername");
+                this.Hide();
+                MainPage mainpage = new MainPage();
+                mainpage.Show();
+                Application.Restart();
+            }
         }
 
         private void btnCloseGame_Click(object sender, EventArgs e)
@@ -339,6 +362,7 @@ namespace AD_SeaAnimalGame
 
         int wrongCatch = 0;
         int playerScore = 0;
+
         int correctCatch = 0;
         int playerHP = 100;
 

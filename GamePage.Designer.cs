@@ -55,6 +55,7 @@ namespace AD_SeaAnimalGame
             this.panelBackground3 = new System.Windows.Forms.Panel();
             this.lblLevelDisplay = new System.Windows.Forms.Label();
             this.panelGamePage = new System.Windows.Forms.Panel();
+            this.lblPlayerName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSubmarine)).BeginInit();
             this.panelGameOver.SuspendLayout();
             this.panelBackground1.SuspendLayout();
@@ -322,6 +323,19 @@ namespace AD_SeaAnimalGame
             this.panelGamePage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelGamePage_MouseDown);
             this.panelGamePage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelGamePage_MouseMove);
             // 
+            // lblPlayerName
+            // 
+            this.lblPlayerName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblPlayerName.AutoSize = true;
+            this.lblPlayerName.BackColor = System.Drawing.Color.Transparent;
+            this.lblPlayerName.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerName.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblPlayerName.Location = new System.Drawing.Point(12, 584);
+            this.lblPlayerName.Name = "lblPlayerName";
+            this.lblPlayerName.Size = new System.Drawing.Size(27, 33);
+            this.lblPlayerName.TabIndex = 25;
+            this.lblPlayerName.Text = "-";
+            // 
             // GamePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -330,6 +344,7 @@ namespace AD_SeaAnimalGame
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1000, 700);
+            this.Controls.Add(this.lblPlayerName);
             this.Controls.Add(this.panelGamePage);
             this.Controls.Add(this.panelBackground3);
             this.Controls.Add(this.lblPointEarn);
@@ -346,6 +361,7 @@ namespace AD_SeaAnimalGame
             this.Name = "GamePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fish Legends";
+            this.Load += new System.EventHandler(this.GamePage_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GamePage_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.GamePage_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.pboxSubmarine)).EndInit();
@@ -388,5 +404,6 @@ namespace AD_SeaAnimalGame
         private System.Windows.Forms.Panel panelBackground3;
         private System.Windows.Forms.Label lblLevelDisplay;
         private System.Windows.Forms.Panel panelGamePage;
+        private System.Windows.Forms.Label lblPlayerName;
     }
 }

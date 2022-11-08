@@ -35,6 +35,7 @@ namespace AD_SeaAnimalGame
             this.btnPlayNow = new System.Windows.Forms.Button();
             this.btnScore = new System.Windows.Forms.Button();
             this.btnSkin = new System.Windows.Forms.Button();
+            this.lblPlayerName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panelPMainPage
@@ -114,6 +115,17 @@ namespace AD_SeaAnimalGame
             this.btnSkin.UseVisualStyleBackColor = false;
             this.btnSkin.Click += new System.EventHandler(this.btnSkin_Click);
             // 
+            // lblPlayerName
+            // 
+            this.lblPlayerName.AutoSize = true;
+            this.lblPlayerName.BackColor = System.Drawing.Color.Transparent;
+            this.lblPlayerName.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerName.Location = new System.Drawing.Point(913, 70);
+            this.lblPlayerName.Name = "lblPlayerName";
+            this.lblPlayerName.Size = new System.Drawing.Size(19, 26);
+            this.lblPlayerName.TabIndex = 12;
+            this.lblPlayerName.Text = "-";
+            // 
             // PlayerMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -121,6 +133,7 @@ namespace AD_SeaAnimalGame
             this.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.boy_fishing;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1000, 700);
+            this.Controls.Add(this.lblPlayerName);
             this.Controls.Add(this.btnSkin);
             this.Controls.Add(this.btnScore);
             this.Controls.Add(this.btnPlayNow);
@@ -132,7 +145,9 @@ namespace AD_SeaAnimalGame
             this.Name = "PlayerMainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fish Legends";
+            this.Load += new System.EventHandler(this.PlayerMainPage_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -143,5 +158,6 @@ namespace AD_SeaAnimalGame
         private System.Windows.Forms.Button btnPlayNow;
         private System.Windows.Forms.Button btnScore;
         private System.Windows.Forms.Button btnSkin;
+        private System.Windows.Forms.Label lblPlayerName;
     }
 }
