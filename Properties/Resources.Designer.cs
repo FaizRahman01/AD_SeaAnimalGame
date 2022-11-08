@@ -61,6 +61,15 @@ namespace AD_SeaAnimalGame.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\db\FishLegendsDB.accdb.
+        /// </summary>
+        internal static string AccessDB_StringConnection {
+            get {
+                return ResourceManager.GetString("AccessDB_StringConnection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap bgGameOver {

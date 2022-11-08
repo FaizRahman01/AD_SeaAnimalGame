@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace AD_SeaAnimalGame
 {
     public partial class PlayerNamePage : Form
     {
+        OleDbConnection dbcon = new OleDbConnection(Properties.Resources.AccessDB_StringConnection);
         private Point windowLocation;
         public PlayerNamePage()
         {
@@ -51,14 +53,67 @@ namespace AD_SeaAnimalGame
 
         private void btnLoginPlayer_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            SkinOptionPage skinoptionpage = new SkinOptionPage();
-            skinoptionpage.Show();
+            
+
+            dbcon.Open();
+            OleDbCommand dbcmdlogin = new OleDbCommand();
+            dbcmdlogin.Connection = dbcon;
+            dbcmdlogin.CommandText = "select * from PlayerTbl where PlayerName = '" + tboxPName + "' ";
+
+            OleDbDataReader reader = dbcmdlogin.ExecuteReader();
+            int count = 0;
+
+            while (reader.Read()) 
+            {
+                count = count + 1;
+            }
+
+            if(count == 1)
+            {
+                MessageBox.Show("Player Name is correct");
+                dbcon.Close();
+                dbcon.Dispose();
+                this.Hide();
+                SkinOptionPage skinoptionpage = new SkinOptionPage();
+                skinoptionpage.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Player Name Not Found");
+            }
+
+            dbcon.Close();
         }
 
         private void btnRegisterPlayer_Click(object sender, EventArgs e)
         {
+            dbcon.Open();
+            try
+            {
+                if (tboxPName.Text == "")
+                {
+                    MessageBox.Show("The player name cannot be empty");
+                }
+                else
+                {
+                    OleDbCommand dbcmdregister = new OleDbCommand("Insert into PlayerTbl (PlayerName)values('" + tboxPName + "')", dbcon);
+                    dbcmdregister.ExecuteNonQuery();
 
+                    MessageBox.Show("You have registered as player");
+                    ClearTBoxForm();
+                }
+                
+            }
+            catch
+            {
+                MessageBox.Show("The player's name had already been used");
+            }
+            dbcon.Close();
+        }
+
+        void ClearTBoxForm()
+        {
+            tboxPName.Text = "";
         }
     }
 }
