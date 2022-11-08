@@ -32,8 +32,8 @@ namespace AD_SeaAnimalGame
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlayerNamePage));
             this.panelPNamePage = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
-            this.tboxPName = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
+            this.tboxPName = new System.Windows.Forms.TextBox();
             this.btnLoginPlayer = new System.Windows.Forms.Button();
             this.btnRegisterPlayer = new System.Windows.Forms.Button();
             this.panelBackground = new System.Windows.Forms.Panel();
@@ -71,20 +71,6 @@ namespace AD_SeaAnimalGame
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // tboxPName
-            // 
-            this.tboxPName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tboxPName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.tboxPName.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboxPName.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tboxPName.Location = new System.Drawing.Point(12, 158);
-            this.tboxPName.Multiline = true;
-            this.tboxPName.Name = "tboxPName";
-            this.tboxPName.Size = new System.Drawing.Size(275, 32);
-            this.tboxPName.TabIndex = 6;
-            // 
             // btnBack
             // 
             this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -99,6 +85,20 @@ namespace AD_SeaAnimalGame
             this.btnBack.TabIndex = 8;
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // tboxPName
+            // 
+            this.tboxPName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tboxPName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tboxPName.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tboxPName.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.tboxPName.Location = new System.Drawing.Point(12, 158);
+            this.tboxPName.MaxLength = 20;
+            this.tboxPName.Name = "tboxPName";
+            this.tboxPName.Size = new System.Drawing.Size(275, 38);
+            this.tboxPName.TabIndex = 6;
             // 
             // btnLoginPlayer
             // 

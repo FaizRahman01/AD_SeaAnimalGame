@@ -15,7 +15,7 @@ namespace AD_SeaAnimalGame
     public partial class GamePage : Form
     {
         private Point windowLocation;
-        public static GamePage GamePageInstance;
+
 
         Random randomSpawn = new Random();
         List<PictureBox> fish = new List<PictureBox>();
@@ -27,7 +27,7 @@ namespace AD_SeaAnimalGame
         public GamePage()
         {
             InitializeComponent();
-            GamePageInstance = this;
+
         }
 
         private void FishSpawn()
