@@ -66,9 +66,11 @@ namespace AD_SeaAnimalGame
             skinoptionpage.Show();
         }
 
-        private void PlayerMainPage_Load(object sender, EventArgs e)
+        private void btnScore_Click(object sender, EventArgs e)
         {
-            lblPlayerName.Text = Session.SessionName;
+            this.Hide();
+            ScorePage scorepage = new ScorePage();
+            scorepage.Show();
         }
     }
 }

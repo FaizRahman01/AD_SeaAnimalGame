@@ -335,6 +335,7 @@ namespace AD_SeaAnimalGame
             this.lblPlayerName.Size = new System.Drawing.Size(27, 33);
             this.lblPlayerName.TabIndex = 25;
             this.lblPlayerName.Text = "-";
+            this.lblPlayerName.Visible = false;
             // 
             // GamePage
             // 

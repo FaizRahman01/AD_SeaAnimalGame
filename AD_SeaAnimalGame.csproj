@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControlPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlPage.Designer.cs">
+      <DependentUpon>ControlPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="GamePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,12 @@
     <Compile Include="PlayerSkin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScorePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScorePage.Designer.cs">
+      <DependentUpon>ScorePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Session.cs" />
     <Compile Include="SkinOptionPage.cs">
       <SubType>Form</SubType>
@@ -96,6 +108,9 @@
       <DependentUpon>SkinOptionPage.cs</DependentUpon>
     </Compile>
     <Compile Include="SpawnItem.cs" />
+    <EmbeddedResource Include="ControlPage.resx">
+      <DependentUpon>ControlPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GamePage.resx">
       <DependentUpon>GamePage.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +133,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ScorePage.resx">
+      <DependentUpon>ScorePage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SkinOptionPage.resx">
       <DependentUpon>SkinOptionPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,6 +240,13 @@
     <Content Include="access\db\FishLegendsDB.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\darkbluebg.png" />
+    <None Include="Resources\bluebg.png" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\bluegradient.png" />
+    <None Include="Resources\bluecircle.png" />
+    <None Include="Resources\FishLegends.png" />
+    <None Include="Resources\FishingLegends.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

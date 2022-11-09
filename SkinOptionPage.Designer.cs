@@ -29,8 +29,10 @@ namespace AD_SeaAnimalGame
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SkinOptionPage));
             this.panelSkinOptionPage = new System.Windows.Forms.Panel();
             this.panelSkinSelection = new System.Windows.Forms.Panel();
+            this.btnConfirm = new System.Windows.Forms.Button();
             this.lblPlayerChoice = new System.Windows.Forms.Label();
             this.lblStatement = new System.Windows.Forms.Label();
             this.btnUse3 = new System.Windows.Forms.Button();
@@ -42,7 +44,6 @@ namespace AD_SeaAnimalGame
             this.pboxSkin3 = new System.Windows.Forms.PictureBox();
             this.pboxSkin2 = new System.Windows.Forms.PictureBox();
             this.pboxSkin1 = new System.Windows.Forms.PictureBox();
-            this.btnConfirm = new System.Windows.Forms.Button();
             this.panelSkinSelection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSkin3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSkin2)).BeginInit();
@@ -65,8 +66,8 @@ namespace AD_SeaAnimalGame
             this.panelSkinSelection.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelSkinSelection.BackColor = System.Drawing.Color.Turquoise;
-            this.panelSkinSelection.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.cactus_underwater;
+            this.panelSkinSelection.BackColor = System.Drawing.Color.Transparent;
+            this.panelSkinSelection.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.darkbluebg;
             this.panelSkinSelection.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelSkinSelection.Controls.Add(this.btnConfirm);
             this.panelSkinSelection.Controls.Add(this.lblPlayerChoice);
@@ -85,12 +86,30 @@ namespace AD_SeaAnimalGame
             this.panelSkinSelection.Size = new System.Drawing.Size(441, 549);
             this.panelSkinSelection.TabIndex = 5;
             // 
+            // btnConfirm
+            // 
+            this.btnConfirm.BackColor = System.Drawing.Color.Transparent;
+            this.btnConfirm.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.buttonbg;
+            this.btnConfirm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnConfirm.FlatAppearance.BorderSize = 0;
+            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirm.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirm.ForeColor = System.Drawing.Color.White;
+            this.btnConfirm.Location = new System.Drawing.Point(297, 477);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(99, 45);
+            this.btnConfirm.TabIndex = 13;
+            this.btnConfirm.Text = "CHANGE";
+            this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
             // lblPlayerChoice
             // 
             this.lblPlayerChoice.AutoSize = true;
             this.lblPlayerChoice.BackColor = System.Drawing.Color.Transparent;
             this.lblPlayerChoice.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayerChoice.Location = new System.Drawing.Point(21, 496);
+            this.lblPlayerChoice.ForeColor = System.Drawing.Color.White;
+            this.lblPlayerChoice.Location = new System.Drawing.Point(37, 496);
             this.lblPlayerChoice.Name = "lblPlayerChoice";
             this.lblPlayerChoice.Size = new System.Drawing.Size(87, 28);
             this.lblPlayerChoice.TabIndex = 12;
@@ -101,7 +120,8 @@ namespace AD_SeaAnimalGame
             this.lblStatement.AutoSize = true;
             this.lblStatement.BackColor = System.Drawing.Color.Transparent;
             this.lblStatement.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatement.Location = new System.Drawing.Point(21, 457);
+            this.lblStatement.ForeColor = System.Drawing.Color.White;
+            this.lblStatement.Location = new System.Drawing.Point(34, 457);
             this.lblStatement.Name = "lblStatement";
             this.lblStatement.Size = new System.Drawing.Size(142, 29);
             this.lblStatement.TabIndex = 11;
@@ -196,7 +216,7 @@ namespace AD_SeaAnimalGame
             this.pboxSkin3.BackColor = System.Drawing.Color.Transparent;
             this.pboxSkin3.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.submarine3right;
             this.pboxSkin3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pboxSkin3.Location = new System.Drawing.Point(26, 332);
+            this.pboxSkin3.Location = new System.Drawing.Point(41, 332);
             this.pboxSkin3.Name = "pboxSkin3";
             this.pboxSkin3.Size = new System.Drawing.Size(108, 95);
             this.pboxSkin3.TabIndex = 2;
@@ -207,7 +227,7 @@ namespace AD_SeaAnimalGame
             this.pboxSkin2.BackColor = System.Drawing.Color.Transparent;
             this.pboxSkin2.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.submarine2right;
             this.pboxSkin2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pboxSkin2.Location = new System.Drawing.Point(26, 183);
+            this.pboxSkin2.Location = new System.Drawing.Point(45, 183);
             this.pboxSkin2.Name = "pboxSkin2";
             this.pboxSkin2.Size = new System.Drawing.Size(108, 95);
             this.pboxSkin2.TabIndex = 1;
@@ -218,28 +238,11 @@ namespace AD_SeaAnimalGame
             this.pboxSkin1.BackColor = System.Drawing.Color.Transparent;
             this.pboxSkin1.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.submarineright;
             this.pboxSkin1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pboxSkin1.Location = new System.Drawing.Point(26, 37);
+            this.pboxSkin1.Location = new System.Drawing.Point(47, 37);
             this.pboxSkin1.Name = "pboxSkin1";
             this.pboxSkin1.Size = new System.Drawing.Size(108, 95);
             this.pboxSkin1.TabIndex = 0;
             this.pboxSkin1.TabStop = false;
-            // 
-            // btnConfirm
-            // 
-            this.btnConfirm.BackColor = System.Drawing.Color.Transparent;
-            this.btnConfirm.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.buttonbg;
-            this.btnConfirm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnConfirm.FlatAppearance.BorderSize = 0;
-            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirm.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Location = new System.Drawing.Point(318, 479);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(99, 45);
-            this.btnConfirm.TabIndex = 13;
-            this.btnConfirm.Text = "CHANGE";
-            this.btnConfirm.UseVisualStyleBackColor = false;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // SkinOptionPage
             // 
@@ -252,9 +255,10 @@ namespace AD_SeaAnimalGame
             this.Controls.Add(this.panelSkinOptionPage);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SkinOptionPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SkinOptionPage";
+            this.Text = "Fish Legends";
             this.Load += new System.EventHandler(this.SkinOptionPage_Load);
             this.panelSkinSelection.ResumeLayout(false);
             this.panelSkinSelection.PerformLayout();

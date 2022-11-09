@@ -36,6 +36,10 @@ namespace AD_SeaAnimalGame
             this.btnScore = new System.Windows.Forms.Button();
             this.btnSkin = new System.Windows.Forms.Button();
             this.lblPlayerName = new System.Windows.Forms.Label();
+            this.panelLogoBackground = new System.Windows.Forms.Panel();
+            this.pboxGameLogo = new System.Windows.Forms.PictureBox();
+            this.panelLogoBackground.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxGameLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelPMainPage
@@ -97,6 +101,7 @@ namespace AD_SeaAnimalGame
             this.btnScore.TabIndex = 10;
             this.btnScore.Text = "SCORE";
             this.btnScore.UseVisualStyleBackColor = false;
+            this.btnScore.Click += new System.EventHandler(this.btnScore_Click);
             // 
             // btnSkin
             // 
@@ -126,6 +131,28 @@ namespace AD_SeaAnimalGame
             this.lblPlayerName.TabIndex = 12;
             this.lblPlayerName.Text = "-";
             // 
+            // panelLogoBackground
+            // 
+            this.panelLogoBackground.BackColor = System.Drawing.Color.Transparent;
+            this.panelLogoBackground.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.bluegradient;
+            this.panelLogoBackground.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelLogoBackground.Controls.Add(this.pboxGameLogo);
+            this.panelLogoBackground.Location = new System.Drawing.Point(132, 79);
+            this.panelLogoBackground.Name = "panelLogoBackground";
+            this.panelLogoBackground.Size = new System.Drawing.Size(279, 246);
+            this.panelLogoBackground.TabIndex = 13;
+            // 
+            // pboxGameLogo
+            // 
+            this.pboxGameLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pboxGameLogo.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.FishLegends;
+            this.pboxGameLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pboxGameLogo.Location = new System.Drawing.Point(19, 24);
+            this.pboxGameLogo.Name = "pboxGameLogo";
+            this.pboxGameLogo.Size = new System.Drawing.Size(235, 205);
+            this.pboxGameLogo.TabIndex = 5;
+            this.pboxGameLogo.TabStop = false;
+            // 
             // PlayerMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -133,6 +160,7 @@ namespace AD_SeaAnimalGame
             this.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.boy_fishing;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1000, 700);
+            this.Controls.Add(this.panelLogoBackground);
             this.Controls.Add(this.lblPlayerName);
             this.Controls.Add(this.btnSkin);
             this.Controls.Add(this.btnScore);
@@ -145,7 +173,8 @@ namespace AD_SeaAnimalGame
             this.Name = "PlayerMainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fish Legends";
-            this.Load += new System.EventHandler(this.PlayerMainPage_Load);
+            this.panelLogoBackground.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pboxGameLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,5 +188,7 @@ namespace AD_SeaAnimalGame
         private System.Windows.Forms.Button btnScore;
         private System.Windows.Forms.Button btnSkin;
         private System.Windows.Forms.Label lblPlayerName;
+        private System.Windows.Forms.Panel panelLogoBackground;
+        private System.Windows.Forms.PictureBox pboxGameLogo;
     }
 }

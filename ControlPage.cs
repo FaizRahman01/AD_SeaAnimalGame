@@ -10,27 +10,20 @@ using System.Windows.Forms;
 
 namespace AD_SeaAnimalGame
 {
-
-    public partial class MainPage : Form
+    public partial class ControlPage : Form
     {
         private Point windowLocation;
-        public MainPage()
+        public ControlPage()
         {
             InitializeComponent();
-
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void panelMainPage_MouseDown(object sender, MouseEventArgs e)
+        private void panelControlPage_MouseDown(object sender, MouseEventArgs e)
         {
             this.windowLocation = e.Location;
         }
 
-        private void panelMainPage_MouseMove(object sender, MouseEventArgs e)
+        private void panelControlPage_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -44,18 +37,11 @@ namespace AD_SeaAnimalGame
             }
         }
 
-        private void btnStart_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            PlayerNamePage pnamepage = new PlayerNamePage();
-            pnamepage.Show();
-        }
-
-        private void btnControl_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ControlPage controlpage = new ControlPage();
-            controlpage.Show();
+            MainPage mainpage = new MainPage();
+            mainpage.Show();
         }
     }
 }

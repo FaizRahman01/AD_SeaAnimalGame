@@ -72,6 +72,16 @@ namespace AD_SeaAnimalGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap back {
+            get {
+                object obj = ResourceManager.GetObject("back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bgGameOver {
             get {
                 object obj = ResourceManager.GetObject("bgGameOver", resourceCulture);
@@ -92,9 +102,29 @@ namespace AD_SeaAnimalGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bluebg {
+            get {
+                object obj = ResourceManager.GetObject("bluebg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bluefish {
             get {
                 object obj = ResourceManager.GetObject("bluefish", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bluegradient {
+            get {
+                object obj = ResourceManager.GetObject("bluegradient", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -155,6 +185,26 @@ namespace AD_SeaAnimalGame.Properties {
         internal static System.IO.UnmanagedMemoryStream correct {
             get {
                 return ResourceManager.GetStream("correct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap darkbluebg {
+            get {
+                object obj = ResourceManager.GetObject("darkbluebg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FishLegends {
+            get {
+                object obj = ResourceManager.GetObject("FishLegends", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

@@ -94,10 +94,10 @@ namespace AD_SeaAnimalGame
             this.tboxPName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.tboxPName.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tboxPName.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tboxPName.Location = new System.Drawing.Point(12, 158);
+            this.tboxPName.Location = new System.Drawing.Point(32, 158);
             this.tboxPName.MaxLength = 20;
             this.tboxPName.Name = "tboxPName";
-            this.tboxPName.Size = new System.Drawing.Size(275, 38);
+            this.tboxPName.Size = new System.Drawing.Size(233, 38);
             this.tboxPName.TabIndex = 6;
             // 
             // btnLoginPlayer
@@ -112,7 +112,7 @@ namespace AD_SeaAnimalGame
             this.btnLoginPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoginPlayer.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnLoginPlayer.ForeColor = System.Drawing.Color.White;
-            this.btnLoginPlayer.Location = new System.Drawing.Point(173, 226);
+            this.btnLoginPlayer.Location = new System.Drawing.Point(158, 226);
             this.btnLoginPlayer.Name = "btnLoginPlayer";
             this.btnLoginPlayer.Size = new System.Drawing.Size(114, 80);
             this.btnLoginPlayer.TabIndex = 10;
@@ -132,7 +132,7 @@ namespace AD_SeaAnimalGame
             this.btnRegisterPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegisterPlayer.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnRegisterPlayer.ForeColor = System.Drawing.Color.White;
-            this.btnRegisterPlayer.Location = new System.Drawing.Point(12, 226);
+            this.btnRegisterPlayer.Location = new System.Drawing.Point(26, 226);
             this.btnRegisterPlayer.Name = "btnRegisterPlayer";
             this.btnRegisterPlayer.Size = new System.Drawing.Size(114, 80);
             this.btnRegisterPlayer.TabIndex = 11;
@@ -171,6 +171,8 @@ namespace AD_SeaAnimalGame
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.bluebg;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.panelBackground);
             this.panel1.Controls.Add(this.tboxPName);
             this.panel1.Controls.Add(this.btnRegisterPlayer);

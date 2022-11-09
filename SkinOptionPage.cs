@@ -61,7 +61,7 @@ namespace AD_SeaAnimalGame
 
         private void SkinOptionPage_Load(object sender, EventArgs e)
         {
-            lblPlayerChoice.Text = skin;
+
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
