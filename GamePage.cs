@@ -87,7 +87,7 @@ namespace AD_SeaAnimalGame
             this.Controls.Add(pbSeaTurtle);
 
             await Task.Delay(3000);
-            pbSeaTurtle.Dispose();
+            pbSeaTurtle.Visible = false;
         }
 
 
@@ -109,7 +109,7 @@ namespace AD_SeaAnimalGame
             this.Controls.Add(pbOctopus);
 
             await Task.Delay(3000);
-            pbOctopus.Dispose();
+            pbOctopus.Visible = false;
         }
 
         private async void FishSpawn2()
@@ -130,7 +130,7 @@ namespace AD_SeaAnimalGame
             this.Controls.Add(pbNormalFish2);
 
             await Task.Delay(3000);
-            pbNormalFish2.Dispose();
+            pbNormalFish2.Visible = false;
         }
 
         private async void NotFishSpawn2()
@@ -151,7 +151,7 @@ namespace AD_SeaAnimalGame
             this.Controls.Add(pbNotFish2);
 
             await Task.Delay(3000);
-            pbNotFish2.Dispose();
+            pbNotFish2.Visible = false;
         }
 
 
@@ -528,7 +528,7 @@ namespace AD_SeaAnimalGame
             //remove octopus when intersect  with submarine
             foreach (PictureBox octopuspb in octopus.ToList())
             {
-                if (pboxSubmarine.Bounds.IntersectsWith(octopuspb.Bounds))
+                if (pboxSubmarine.Bounds.IntersectsWith(octopuspb.Bounds) && octopuspb.Visible == true)
                 {
 
                     octopus.Remove(octopuspb);
@@ -550,7 +550,7 @@ namespace AD_SeaAnimalGame
             //remove sea turtle when intersect  with submarine
             foreach (PictureBox seaturtlepb in seaturtle.ToList())
             {
-                if (pboxSubmarine.Bounds.IntersectsWith(seaturtlepb.Bounds))
+                if (pboxSubmarine.Bounds.IntersectsWith(seaturtlepb.Bounds) && seaturtlepb.Visible == true)
                 {
 
                     seaturtle.Remove(seaturtlepb);
@@ -571,7 +571,7 @@ namespace AD_SeaAnimalGame
 
             foreach (PictureBox fishpb2 in fish2.ToList())
             {
-                if (pboxSubmarine.Bounds.IntersectsWith(fishpb2.Bounds))
+                if (pboxSubmarine.Bounds.IntersectsWith(fishpb2.Bounds) && fishpb2.Visible == true)
                 {
                     // if the collision happened do the following
                     fish2.Remove(fishpb2);
@@ -591,7 +591,7 @@ namespace AD_SeaAnimalGame
 
             foreach (PictureBox notfishpb2 in notfish2.ToList())
             {
-                if (pboxSubmarine.Bounds.IntersectsWith(notfishpb2.Bounds))
+                if (pboxSubmarine.Bounds.IntersectsWith(notfishpb2.Bounds) && notfishpb2.Visible == true)
                 {
                     // if the collision happened do the following
                     notfish2.Remove(notfishpb2);
