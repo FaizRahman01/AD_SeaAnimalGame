@@ -72,5 +72,7 @@ namespace AD_SeaAnimalGame
             ScorePage scorepage = new ScorePage();
             scorepage.Show();
         }
+
+
     }
 }

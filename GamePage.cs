@@ -267,15 +267,38 @@ namespace AD_SeaAnimalGame
         private void GamePage_Load(object sender, EventArgs e)
         {
             lblPlayerName.Text = Session.SessionName;
+            
+
+            dbcon.Open();
+            string pnametext = String.Format("System.Windows.Forms.TextBox, Text: {0}", lblPlayerName.Text);
+            OleDbCommand dbcmdlogin = new OleDbCommand();
+            dbcmdlogin.Connection = dbcon;
+            dbcmdlogin.CommandText = "select PlayerId, PlayerName from PlayerTbl where PlayerName = '" + pnametext.ToString() + "' ";
+
+            OleDbDataReader dbreader = dbcmdlogin.ExecuteReader();
+
+
+            if (dbreader.Read())
+            {
+
+                lblPlayerId.Text = dbreader["PlayerId"].ToString();
+
+            }
+            else
+            {
+
+            }
+
+            dbcon.Close();
         }
 
         private void btnExitGame_Click(object sender, EventArgs e)
         {
-            string pnametext = String.Format("System.Windows.Forms.TextBox, Text: {0}", lblPlayerName.Text);
+            
             try
             {
                 dbcon.Open();
-                OleDbCommand dbcmd = new OleDbCommand("insert into PlayerScoreTbl (PlayerName, PlayerScore)values ('" + pnametext.ToString() + "','" + lblGameScore.Text + "')", dbcon);
+                OleDbCommand dbcmd = new OleDbCommand("insert into PlayerScoreTbl (PlayerId, PlayerScore)values ('" + lblPlayerId.Text + "','" + lblGameScore.Text + "')", dbcon);
                 dbcmd.ExecuteNonQuery();
                 dbcon.Close();
 
@@ -286,7 +309,7 @@ namespace AD_SeaAnimalGame
             }
             catch
             {
-                MessageBox.Show("Database cannot read the playername");
+                MessageBox.Show("Database cannot read the player id");
                 this.Hide();
                 MainPage mainpage = new MainPage();
                 mainpage.Show();

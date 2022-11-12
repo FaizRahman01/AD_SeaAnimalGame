@@ -56,6 +56,7 @@ namespace AD_SeaAnimalGame
             this.lblLevelDisplay = new System.Windows.Forms.Label();
             this.panelGamePage = new System.Windows.Forms.Panel();
             this.lblPlayerName = new System.Windows.Forms.Label();
+            this.lblPlayerId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSubmarine)).BeginInit();
             this.panelGameOver.SuspendLayout();
             this.panelBackground1.SuspendLayout();
@@ -337,6 +338,20 @@ namespace AD_SeaAnimalGame
             this.lblPlayerName.Text = "-";
             this.lblPlayerName.Visible = false;
             // 
+            // lblPlayerId
+            // 
+            this.lblPlayerId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblPlayerId.AutoSize = true;
+            this.lblPlayerId.BackColor = System.Drawing.Color.Transparent;
+            this.lblPlayerId.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerId.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblPlayerId.Location = new System.Drawing.Point(12, 542);
+            this.lblPlayerId.Name = "lblPlayerId";
+            this.lblPlayerId.Size = new System.Drawing.Size(27, 33);
+            this.lblPlayerId.TabIndex = 26;
+            this.lblPlayerId.Text = "-";
+            this.lblPlayerId.Visible = false;
+            // 
             // GamePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,6 +360,7 @@ namespace AD_SeaAnimalGame
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1000, 700);
+            this.Controls.Add(this.lblPlayerId);
             this.Controls.Add(this.lblPlayerName);
             this.Controls.Add(this.panelGamePage);
             this.Controls.Add(this.panelBackground3);
@@ -406,5 +422,6 @@ namespace AD_SeaAnimalGame
         private System.Windows.Forms.Label lblLevelDisplay;
         private System.Windows.Forms.Panel panelGamePage;
         private System.Windows.Forms.Label lblPlayerName;
+        private System.Windows.Forms.Label lblPlayerId;
     }
 }

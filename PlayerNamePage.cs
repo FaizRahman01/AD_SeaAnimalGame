@@ -58,17 +58,12 @@ namespace AD_SeaAnimalGame
             dbcon.Open();
             OleDbCommand dbcmdlogin = new OleDbCommand();
             dbcmdlogin.Connection = dbcon;
-            dbcmdlogin.CommandText = "select * from PlayerTbl where PlayerName = '" + tboxPName + "' ";
+            dbcmdlogin.CommandText = "select PlayerId, PlayerName from PlayerTbl where PlayerName = '" + tboxPName + "' ";
 
             OleDbDataReader dbreader = dbcmdlogin.ExecuteReader();
-            int rdcount = 0;
 
-            while (dbreader.Read()) 
-            {
-                rdcount = rdcount + 1;
-            }
 
-            if(rdcount == 1)
+            if(dbreader.Read())
             {
                 MessageBox.Show("Player Name is correct");
                 dbcon.Close();
