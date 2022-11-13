@@ -270,10 +270,10 @@ namespace AD_SeaAnimalGame
             
 
             dbcon.Open();
-            string pnametext = String.Format("System.Windows.Forms.TextBox, Text: {0}", lblPlayerName.Text);
+            
             OleDbCommand dbcmdlogin = new OleDbCommand();
             dbcmdlogin.Connection = dbcon;
-            dbcmdlogin.CommandText = "select PlayerId, PlayerName from PlayerTbl where PlayerName = '" + pnametext.ToString() + "' ";
+            dbcmdlogin.CommandText = "select PlayerId, PlayerName from PlayerTbl where PlayerName = '" + lblPlayerName.Text + "' ";
 
             OleDbDataReader dbreader = dbcmdlogin.ExecuteReader();
 
@@ -286,7 +286,7 @@ namespace AD_SeaAnimalGame
             }
             else
             {
-
+                MessageBox.Show("Player name not found");
             }
 
             dbcon.Close();

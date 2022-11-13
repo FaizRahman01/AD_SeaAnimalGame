@@ -58,7 +58,7 @@ namespace AD_SeaAnimalGame
             dbcon.Open();
             OleDbCommand dbcmdlogin = new OleDbCommand();
             dbcmdlogin.Connection = dbcon;
-            dbcmdlogin.CommandText = "select PlayerId, PlayerName from PlayerTbl where PlayerName = '" + tboxPName + "' ";
+            dbcmdlogin.CommandText = "select PlayerId, PlayerName from PlayerTbl where PlayerName = '" + tboxPName.Text + "' ";
 
             OleDbDataReader dbreader = dbcmdlogin.ExecuteReader();
 
@@ -92,7 +92,7 @@ namespace AD_SeaAnimalGame
                 }
                 else
                 {
-                    OleDbCommand dbcmdregister = new OleDbCommand("Insert into PlayerTbl (PlayerName)values('" + tboxPName + "')", dbcon);
+                    OleDbCommand dbcmdregister = new OleDbCommand("Insert into PlayerTbl (PlayerName)values('" + tboxPName.Text + "')", dbcon);
                     dbcmdregister.ExecuteNonQuery();
 
                     MessageBox.Show("You have registered as player");
