@@ -31,128 +31,95 @@ namespace AD_SeaAnimalGame
             
         }
 
+
+        SpawnItem spawngameitem = new SpawnItem();
         private void FishSpawn()
         {
+            PictureBox pbfishspawn = spawngameitem.CreateFish();
 
-            PictureBox pbNormalFish = new PictureBox();
-            pbNormalFish.Height = 50;
-            pbNormalFish.Width = 50;
-            pbNormalFish.Image = Properties.Resources.bluefish;
-            pbNormalFish.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbNormalFish.BackColor = Color.Transparent;
+            int x = randomSpawn.Next(10, this.ClientSize.Width - pbfishspawn.Width);
+            int y = randomSpawn.Next(10, this.ClientSize.Height - pbfishspawn.Height);
+            pbfishspawn.Location = new Point(x, y);
 
-            int x = randomSpawn.Next(10, this.ClientSize.Width - pbNormalFish.Width);
-            int y = randomSpawn.Next(10, this.ClientSize.Height - pbNormalFish.Height);
-            pbNormalFish.Location = new Point(x, y);
-
-            fish.Add(pbNormalFish);
-            this.Controls.Add(pbNormalFish);
+            fish.Add(pbfishspawn);
+            this.Controls.Add(pbfishspawn);
         }
 
         private void NotFishSpawn()
         {
+            PictureBox pbnotfishspawn = spawngameitem.CreateNotFish();
 
-            PictureBox pbNotFish = new PictureBox();
-            pbNotFish.Height = 50;
-            pbNotFish.Width = 50;
-            pbNotFish.Image = Properties.Resources.trash;
-            pbNotFish.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbNotFish.BackColor = Color.Transparent;
+            int x = randomSpawn.Next(10, this.ClientSize.Width - pbnotfishspawn.Width);
+            int y = randomSpawn.Next(10, this.ClientSize.Height - pbnotfishspawn.Height);
+            pbnotfishspawn.Location = new Point(x, y);
 
-            int x = randomSpawn.Next(10, this.ClientSize.Width - pbNotFish.Width);
-            int y = randomSpawn.Next(10, this.ClientSize.Height - pbNotFish.Height);
-            pbNotFish.Location = new Point(x, y);
-
-            notfish.Add(pbNotFish);
-            this.Controls.Add(pbNotFish);
+            notfish.Add(pbnotfishspawn);
+            this.Controls.Add(pbnotfishspawn);
 
 
         }
-
-        private async void SeaTurtleSpawn()
-        {
-            //spawn new pic box for sea turtle object
-            PictureBox pbSeaTurtle = new PictureBox();
-            pbSeaTurtle.Height = 50;
-            pbSeaTurtle.Width = 50;
-            pbSeaTurtle.Image = Properties.Resources.seaturtle;
-            pbSeaTurtle.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbSeaTurtle.BackColor = Color.Transparent;
-
-            int x = randomSpawn.Next(10, this.ClientSize.Width - pbSeaTurtle.Width);
-            int y = randomSpawn.Next(10, this.ClientSize.Height - pbSeaTurtle.Height);
-            pbSeaTurtle.Location = new Point(x, y);
-
-            seaturtle.Add(pbSeaTurtle);
-            this.Controls.Add(pbSeaTurtle);
-
-            await Task.Delay(3000);
-            pbSeaTurtle.Visible = false;
-        }
-
-
-        private async void OctopusSpawn()
-        {
-            //spawn new pic box for octopus object
-            PictureBox pbOctopus = new PictureBox();
-            pbOctopus.Height = 50;
-            pbOctopus.Width = 50;
-            pbOctopus.Image = Properties.Resources.octopus;
-            pbOctopus.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbOctopus.BackColor = Color.Transparent;
-
-            int x = randomSpawn.Next(10, this.ClientSize.Width - pbOctopus.Width);
-            int y = randomSpawn.Next(10, this.ClientSize.Height - pbOctopus.Height);
-            pbOctopus.Location = new Point(x, y);
-
-            octopus.Add(pbOctopus);
-            this.Controls.Add(pbOctopus);
-
-            await Task.Delay(3000);
-            pbOctopus.Visible = false;
-        }
-
         private async void FishSpawn2()
         {
+            PictureBox pbfishspawn2 = spawngameitem.CreateFish2();
 
-            PictureBox pbNormalFish2 = new PictureBox();
-            pbNormalFish2.Height = 50;
-            pbNormalFish2.Width = 50;
-            pbNormalFish2.Image = Properties.Resources.yellowfish;
-            pbNormalFish2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbNormalFish2.BackColor = Color.Transparent;
+            int x = randomSpawn.Next(10, this.ClientSize.Width - pbfishspawn2.Width);
+            int y = randomSpawn.Next(10, this.ClientSize.Height - pbfishspawn2.Height);
+            pbfishspawn2.Location = new Point(x, y);
 
-            int x = randomSpawn.Next(10, this.ClientSize.Width - pbNormalFish2.Width);
-            int y = randomSpawn.Next(10, this.ClientSize.Height - pbNormalFish2.Height);
-            pbNormalFish2.Location = new Point(x, y);
-
-            fish2.Add(pbNormalFish2);
-            this.Controls.Add(pbNormalFish2);
+            fish2.Add(pbfishspawn2);
+            this.Controls.Add(pbfishspawn2);
 
             await Task.Delay(3000);
-            pbNormalFish2.Visible = false;
+            pbfishspawn2.Visible = false;
         }
 
         private async void NotFishSpawn2()
         {
+            PictureBox pbnotfishspawn2 = spawngameitem.CreateNotFish2();
 
-            PictureBox pbNotFish2 = new PictureBox();
-            pbNotFish2.Height = 50;
-            pbNotFish2.Width = 50;
-            pbNotFish2.Image = Properties.Resources.bottle;
-            pbNotFish2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbNotFish2.BackColor = Color.Transparent;
+            int x = randomSpawn.Next(10, this.ClientSize.Width - pbnotfishspawn2.Width);
+            int y = randomSpawn.Next(10, this.ClientSize.Height - pbnotfishspawn2.Height);
+            pbnotfishspawn2.Location = new Point(x, y);
 
-            int x = randomSpawn.Next(10, this.ClientSize.Width - pbNotFish2.Width);
-            int y = randomSpawn.Next(10, this.ClientSize.Height - pbNotFish2.Height);
-            pbNotFish2.Location = new Point(x, y);
-
-            notfish2.Add(pbNotFish2);
-            this.Controls.Add(pbNotFish2);
+            notfish2.Add(pbnotfishspawn2);
+            this.Controls.Add(pbnotfishspawn2);
 
             await Task.Delay(3000);
-            pbNotFish2.Visible = false;
+            pbnotfishspawn2.Visible = false;
         }
+        private async void SeaTurtleSpawn()
+        {
+            PictureBox pbseaturtlespawn = spawngameitem.CreateSeaTurtle();
+            //spawn new pic box for sea turtle object
+            int x = randomSpawn.Next(10, this.ClientSize.Width - pbseaturtlespawn.Width);
+            int y = randomSpawn.Next(10, this.ClientSize.Height - pbseaturtlespawn.Height);
+            pbseaturtlespawn.Location = new Point(x, y);
+
+            seaturtle.Add(pbseaturtlespawn);
+            this.Controls.Add(pbseaturtlespawn);
+
+            await Task.Delay(3000);
+            pbseaturtlespawn.Visible = false;
+        }
+
+
+
+        private async void OctopusSpawn()
+        {
+            PictureBox pboctopusspawn = spawngameitem.CreateOctopus();
+            //spawn new pic box for octopus object
+            int x = randomSpawn.Next(10, this.ClientSize.Width - pboctopusspawn.Width);
+            int y = randomSpawn.Next(10, this.ClientSize.Height - pboctopusspawn.Height);
+            pboctopusspawn.Location = new Point(x, y);
+
+            octopus.Add(pboctopusspawn);
+            this.Controls.Add(pboctopusspawn);
+
+            await Task.Delay(3000);
+            pboctopusspawn.Visible = false;
+        }
+
+
 
 
         private void panelGamePage_MouseDown(object sender, MouseEventArgs e)

@@ -86,10 +86,11 @@ namespace AD_SeaAnimalGame
             dbcon.Open();
             try
             {
-                if (tboxPName.Text == "")
+                if (tboxPName.Text.Contains(" ") || tboxPName.Text == "")
                 {
-                    MessageBox.Show("The player name cannot be empty");
+                    MessageBox.Show("The player name cannot be empty and have spacing");
                 }
+
                 else
                 {
                     OleDbCommand dbcmdregister = new OleDbCommand("Insert into PlayerTbl (PlayerName)values('" + tboxPName.Text + "')", dbcon);
