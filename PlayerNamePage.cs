@@ -14,7 +14,7 @@ namespace AD_SeaAnimalGame
     public partial class PlayerNamePage : Form
     {
         OleDbConnection dbcon = new OleDbConnection(Properties.Resources.AccessDB_StringConnection);
-        private Point windowLocation;
+        
         public PlayerNamePage()
         {
             InitializeComponent();
@@ -24,10 +24,10 @@ namespace AD_SeaAnimalGame
         {
             Application.Exit();
         }
-
+        private Point FormPosition;
         private void panelPNamePage_MouseDown(object sender, MouseEventArgs e)
         {
-            this.windowLocation = e.Location;
+            this.FormPosition = e.Location;
         }
 
         private void panelPNamePage_MouseMove(object sender, MouseEventArgs e)
@@ -36,8 +36,8 @@ namespace AD_SeaAnimalGame
             {
                 // Refers to the Form location (or whatever you trigger the event on)
                 this.Location = new Point(
-                    (this.Location.X - windowLocation.X) + e.X,
-                    (this.Location.Y - windowLocation.Y) + e.Y
+                    (this.Location.X - FormPosition.X) + e.X,
+                    (this.Location.Y - FormPosition.Y) + e.Y
                 );
 
                 this.Update();

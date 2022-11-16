@@ -12,15 +12,16 @@ namespace AD_SeaAnimalGame
 {
     public partial class ScorePage : Form
     {
-        private Point windowLocation;
+
         public ScorePage()
         {
             InitializeComponent();
         }
 
+        private Point FormPosition;
         private void panelScorePage_MouseDown(object sender, MouseEventArgs e)
         {
-            this.windowLocation = e.Location;
+            this.FormPosition = e.Location;
         }
 
         private void panelScorePage_MouseMove(object sender, MouseEventArgs e)
@@ -29,14 +30,13 @@ namespace AD_SeaAnimalGame
             {
                 // Refers to the Form location (or whatever you trigger the event on)
                 this.Location = new Point(
-                    (this.Location.X - windowLocation.X) + e.X,
-                    (this.Location.Y - windowLocation.Y) + e.Y
+                    (this.Location.X - FormPosition.X) + e.X,
+                    (this.Location.Y - FormPosition.Y) + e.Y
                 );
 
                 this.Update();
             }
         }
-
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();

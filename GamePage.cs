@@ -15,7 +15,7 @@ namespace AD_SeaAnimalGame
 {
     public partial class GamePage : Form
     {
-        private Point windowLocation;
+
         OleDbConnection dbcon = new OleDbConnection(Properties.Resources.AccessDB_StringConnection);
 
         Random randomSpawn = new Random();
@@ -30,7 +30,25 @@ namespace AD_SeaAnimalGame
             InitializeComponent();
             
         }
+        private Point FormPosition;
+        private void panelGamePage_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.FormPosition = e.Location;
+        }
 
+        private void panelGamePage_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                // Refers to the Form location (or whatever you trigger the event on)
+                this.Location = new Point(
+                    (this.Location.X - FormPosition.X) + e.X,
+                    (this.Location.Y - FormPosition.Y) + e.Y
+                );
+
+                this.Update();
+            }
+        }
 
         SpawnItem spawngameitem = new SpawnItem();
         private void FishSpawn()
@@ -119,27 +137,6 @@ namespace AD_SeaAnimalGame
             pboctopusspawn.Visible = false;
         }
 
-
-
-
-        private void panelGamePage_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.windowLocation = e.Location;
-        }
-
-        private void panelGamePage_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                // Refers to the Form location (or whatever you trigger the event on)
-                this.Location = new Point(
-                    (this.Location.X - windowLocation.X) + e.X,
-                    (this.Location.Y - windowLocation.Y) + e.Y
-                );
-
-                this.Update();
-            }
-        }
 
         bool submarineUp, submarineDown, submarineLeft, submarineRight;
 
