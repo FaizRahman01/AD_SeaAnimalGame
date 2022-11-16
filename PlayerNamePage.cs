@@ -85,7 +85,7 @@ namespace AD_SeaAnimalGame
             dbcon.Open();
             try
             {
-                if (tboxPName.Text == "")
+                if (tboxPName.Text.Contains(" ") || tboxPName.Text == "")
                 {
                     MessageBox.Show("The player name cannot be empty and have spacing");
                 }
