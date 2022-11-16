@@ -61,7 +61,7 @@ namespace AD_SeaAnimalGame.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\AD_SeaAnimalGame\access\db\FishLegendsDB.accdb;Persist Security Info=True.
+        ///   Looks up a localized string similar to Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\access\db\FishLegendsDB.accdb;Persist Security Info=True.
         /// </summary>
         internal static string AccessDB_StringConnection {
             get {

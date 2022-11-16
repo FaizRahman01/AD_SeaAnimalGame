@@ -71,7 +71,6 @@ namespace AD_SeaAnimalGame
                 SkinOptionPage skinoptionpage = new SkinOptionPage();
                 skinoptionpage.Show();
                 Session.SessionName = tboxPName.Text;
-
             }
             else
             {
@@ -86,7 +85,7 @@ namespace AD_SeaAnimalGame
             dbcon.Open();
             try
             {
-                if (tboxPName.Text.Contains(" ") || tboxPName.Text == "")
+                if (tboxPName.Text == "")
                 {
                     MessageBox.Show("The player name cannot be empty and have spacing");
                 }
