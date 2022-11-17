@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,41 +9,35 @@ namespace AD_SeaAnimalGame
     class PlayerSkin
     {
         public string skinName;
+        public int SpeedOfPlayer = 12;
     }
 
     class PlayerSkin1 : PlayerSkin
     {
-        public void SetMainSkin(string skin1)
-        {
-            skinName = skin1;
-
-        }
         public string GetMainSkin()
         {
+            skinName = "submarineleft";
             return skinName;
         }
+
     }
     class PlayerSkin2 : PlayerSkin
     {
-        public void SetSecondSkin(string skin2)
-        {
-            skinName = skin2;
-        }
         public string GetSecondSkin()
         {
+            skinName = "submarine2left";
             return skinName;
         }
+
     }
 
     class PlayerSkin3 : PlayerSkin
     {
-        public void SetThirdSkin(string skin3)
-        {
-            skinName = skin3;
-        }
         public string GetThirdSkin()
         {
+            skinName = "submarine3left";
             return skinName;
         }
+
     }
 }
