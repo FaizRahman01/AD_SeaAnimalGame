@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -364,14 +364,13 @@ namespace AD_SeaAnimalGame
 
             if (SkinOptionPage.SkinOptionInstance.skin == "Spekter")
             {
-                pskin1.SetMainSkin("submarineleft");
                 skingame = pskin1.GetMainSkin();
                 skinImage = (Bitmap)Properties.Resources.ResourceManager.GetObject(skingame);
                 pboxSubmarine.Image = skinImage;
             }
             else if (SkinOptionPage.SkinOptionInstance.skin == "Fantom")
             {
-                pskin2.SetSecondSkin("submarine2left");
+
                 skingame = pskin2.GetSecondSkin();
                 skinImage = (Bitmap)Properties.Resources.ResourceManager.GetObject(skingame);
                 pboxSubmarine.Image = skinImage;
@@ -379,14 +378,13 @@ namespace AD_SeaAnimalGame
             }
             else if (SkinOptionPage.SkinOptionInstance.skin == "Veindal")
             {
-                pskin3.SetThirdSkin("submarine3left");
+
                 skingame = pskin3.GetThirdSkin();
                 skinImage = (Bitmap)Properties.Resources.ResourceManager.GetObject(skingame);
                 pboxSubmarine.Image = skinImage;
             }
             else
             {
-                pskin2.SetSecondSkin("submarineleft");
                 skingame = pskin2.GetSecondSkin();
                 skinImage = (Bitmap)Properties.Resources.ResourceManager.GetObject(skingame);
                 pboxSubmarine.Image = skinImage;
