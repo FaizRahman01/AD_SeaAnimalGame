@@ -9,7 +9,6 @@ namespace AD_SeaAnimalGame
     class PlayerSkin
     {
         public string skinName;
-        public int SpeedOfPlayer = 12;
     }
 
     class PlayerSkin1 : PlayerSkin
