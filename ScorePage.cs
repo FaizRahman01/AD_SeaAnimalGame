@@ -55,7 +55,7 @@ namespace AD_SeaAnimalGame
             //gridview
             OleDbCommand dbcmdscore = new OleDbCommand();
             dbcmdscore.Connection = dbcon;
-            dbcmdscore.CommandText = "select top 5 PlayerId, max(PlayerScore) as PScore from PlayerScoreTbl group by PlayerId";
+            dbcmdscore.CommandText = "select top 5 PlayerId as Player_ID, max(PlayerScore) as Score from PlayerScoreTbl group by PlayerId";
 
             OleDbDataAdapter dascore = new OleDbDataAdapter(dbcmdscore);
             DataTable dtscore = new DataTable();
