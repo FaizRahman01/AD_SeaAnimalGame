@@ -96,9 +96,8 @@ namespace AD_SeaAnimalGame
             // 
             // panelGameOver
             // 
-            this.panelGameOver.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelGameOver.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelGameOver.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelGameOver.BackColor = System.Drawing.Color.Transparent;
             this.panelGameOver.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.bgGameOver;
             this.panelGameOver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -112,6 +111,7 @@ namespace AD_SeaAnimalGame
             // 
             // btnExitGame
             // 
+            this.btnExitGame.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnExitGame.BackColor = System.Drawing.Color.Transparent;
             this.btnExitGame.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.buttonbg2;
             this.btnExitGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -129,6 +129,7 @@ namespace AD_SeaAnimalGame
             // 
             // btnCloseGame
             // 
+            this.btnCloseGame.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnCloseGame.BackColor = System.Drawing.Color.Transparent;
             this.btnCloseGame.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.buttonbg2;
             this.btnCloseGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
