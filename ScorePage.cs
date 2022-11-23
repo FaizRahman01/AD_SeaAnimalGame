@@ -95,7 +95,7 @@ namespace AD_SeaAnimalGame
             while (dbuserscorereader.Read())
             {
 
-                PlayerScoreChart.Series["Player Score"].Points.AddXY("FL" + dbuserscorereader["PlayerId"].ToString(), dbuserscorereader["PlayerScore"].ToString());
+                PlayerScoreChart.Series["Player Score"].Points.AddXY(dbuserscorereader["PlayerId"].ToString(), dbuserscorereader["PlayerScore"].ToString());
 
             }
 

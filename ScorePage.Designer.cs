@@ -36,6 +36,7 @@ namespace AD_SeaAnimalGame
             this.panelScorePage = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
             this.panelControl = new System.Windows.Forms.Panel();
+            this.lblGameChart = new System.Windows.Forms.Label();
             this.btnSearchPlayer = new System.Windows.Forms.Button();
             this.lblShowPName = new System.Windows.Forms.Label();
             this.lblResult = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@ namespace AD_SeaAnimalGame
             this.lblPNameTitle = new System.Windows.Forms.Label();
             this.dataGridViewScore = new System.Windows.Forms.DataGridView();
             this.PlayerScoreChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.lblGameChart = new System.Windows.Forms.Label();
             this.panelScorePage.SuspendLayout();
             this.panelControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewScore)).BeginInit();
@@ -107,6 +107,20 @@ namespace AD_SeaAnimalGame
             this.panelControl.Name = "panelControl";
             this.panelControl.Size = new System.Drawing.Size(1000, 659);
             this.panelControl.TabIndex = 7;
+            // 
+            // lblGameChart
+            // 
+            this.lblGameChart.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblGameChart.AutoSize = true;
+            this.lblGameChart.BackColor = System.Drawing.Color.Transparent;
+            this.lblGameChart.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameChart.ForeColor = System.Drawing.Color.Navy;
+            this.lblGameChart.Location = new System.Drawing.Point(543, 194);
+            this.lblGameChart.Name = "lblGameChart";
+            this.lblGameChart.Size = new System.Drawing.Size(189, 33);
+            this.lblGameChart.TabIndex = 36;
+            this.lblGameChart.Text = "Top 5 Score";
+            this.lblGameChart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnSearchPlayer
             // 
@@ -229,9 +243,9 @@ namespace AD_SeaAnimalGame
             this.lblPIdTitle.ForeColor = System.Drawing.Color.Navy;
             this.lblPIdTitle.Location = new System.Drawing.Point(552, 107);
             this.lblPIdTitle.Name = "lblPIdTitle";
-            this.lblPIdTitle.Size = new System.Drawing.Size(83, 21);
+            this.lblPIdTitle.Size = new System.Drawing.Size(81, 21);
             this.lblPIdTitle.TabIndex = 27;
-            this.lblPIdTitle.Text = "Your ID:";
+            this.lblPIdTitle.Text = "User ID:";
             this.lblPIdTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblPlayerName
@@ -256,9 +270,9 @@ namespace AD_SeaAnimalGame
             this.lblPNameTitle.ForeColor = System.Drawing.Color.Navy;
             this.lblPNameTitle.Location = new System.Drawing.Point(552, 148);
             this.lblPNameTitle.Name = "lblPNameTitle";
-            this.lblPNameTitle.Size = new System.Drawing.Size(112, 21);
+            this.lblPNameTitle.Size = new System.Drawing.Size(101, 21);
             this.lblPNameTitle.TabIndex = 14;
-            this.lblPNameTitle.Text = "Your Name:";
+            this.lblPNameTitle.Text = "UserName:";
             this.lblPNameTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dataGridViewScore
@@ -293,20 +307,6 @@ namespace AD_SeaAnimalGame
             this.PlayerScoreChart.Size = new System.Drawing.Size(305, 276);
             this.PlayerScoreChart.TabIndex = 0;
             this.PlayerScoreChart.Text = "Score Chart";
-            // 
-            // lblGameChart
-            // 
-            this.lblGameChart.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblGameChart.AutoSize = true;
-            this.lblGameChart.BackColor = System.Drawing.Color.Transparent;
-            this.lblGameChart.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGameChart.ForeColor = System.Drawing.Color.Navy;
-            this.lblGameChart.Location = new System.Drawing.Point(543, 194);
-            this.lblGameChart.Name = "lblGameChart";
-            this.lblGameChart.Size = new System.Drawing.Size(189, 33);
-            this.lblGameChart.TabIndex = 36;
-            this.lblGameChart.Text = "Top 5 Score";
-            this.lblGameChart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ScorePage
             // 
