@@ -49,7 +49,6 @@ namespace AD_SeaAnimalGame
             this.lblPNameTitle = new System.Windows.Forms.Label();
             this.dataGridViewScore = new System.Windows.Forms.DataGridView();
             this.PlayerScoreChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.lblGameScoreTitle = new System.Windows.Forms.Label();
             this.panelScorePage.SuspendLayout();
             this.panelControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewScore)).BeginInit();
@@ -91,7 +90,6 @@ namespace AD_SeaAnimalGame
             this.panelControl.BackColor = System.Drawing.Color.Transparent;
             this.panelControl.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.darkbluebg;
             this.panelControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelControl.Controls.Add(this.lblGameScoreTitle);
             this.panelControl.Controls.Add(this.btnSearchPlayer);
             this.panelControl.Controls.Add(this.lblShowPName);
             this.panelControl.Controls.Add(this.lblResult);
@@ -278,31 +276,19 @@ namespace AD_SeaAnimalGame
             this.PlayerScoreChart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.PlayerScoreChart.Legends.Add(legend1);
-            this.PlayerScoreChart.Location = new System.Drawing.Point(487, 218);
+            this.PlayerScoreChart.Location = new System.Drawing.Point(487, 175);
             this.PlayerScoreChart.Name = "PlayerScoreChart";
             this.PlayerScoreChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
             series1.EmptyPointStyle.IsValueShownAsLabel = true;
             series1.IsValueShownAsLabel = true;
             series1.Legend = "Legend1";
-            series1.Name = "Player Score";
+            series1.Name = "High Score";
             this.PlayerScoreChart.Series.Add(series1);
             this.PlayerScoreChart.Size = new System.Drawing.Size(305, 276);
             this.PlayerScoreChart.TabIndex = 0;
             this.PlayerScoreChart.Text = "Score Chart";
-            // 
-            // lblGameScoreTitle
-            // 
-            this.lblGameScoreTitle.AutoSize = true;
-            this.lblGameScoreTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblGameScoreTitle.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGameScoreTitle.ForeColor = System.Drawing.Color.Navy;
-            this.lblGameScoreTitle.Location = new System.Drawing.Point(488, 173);
-            this.lblGameScoreTitle.Name = "lblGameScoreTitle";
-            this.lblGameScoreTitle.Size = new System.Drawing.Size(157, 31);
-            this.lblGameScoreTitle.TabIndex = 36;
-            this.lblGameScoreTitle.Text = "Game Score";
-            this.lblGameScoreTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ScorePage
             // 
@@ -347,6 +333,5 @@ namespace AD_SeaAnimalGame
         private System.Windows.Forms.Label lblShowPName;
         private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.Button btnSearchPlayer;
-        private System.Windows.Forms.Label lblGameScoreTitle;
     }
 }
