@@ -42,7 +42,7 @@ namespace AD_SeaAnimalGame
             this.lblResult = new System.Windows.Forms.Label();
             this.lblSearch = new System.Windows.Forms.Label();
             this.tboxSearchPName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelUserProfileTitle = new System.Windows.Forms.Label();
             this.lblTopScore = new System.Windows.Forms.Label();
             this.lblPlayerId = new System.Windows.Forms.Label();
             this.lblPIdTitle = new System.Windows.Forms.Label();
@@ -94,7 +94,7 @@ namespace AD_SeaAnimalGame
             this.panelControl.Controls.Add(this.lblResult);
             this.panelControl.Controls.Add(this.lblSearch);
             this.panelControl.Controls.Add(this.tboxSearchPName);
-            this.panelControl.Controls.Add(this.label1);
+            this.panelControl.Controls.Add(this.labelUserProfileTitle);
             this.panelControl.Controls.Add(this.lblTopScore);
             this.panelControl.Controls.Add(this.lblPlayerId);
             this.panelControl.Controls.Add(this.lblPIdTitle);
@@ -193,19 +193,19 @@ namespace AD_SeaAnimalGame
             this.tboxSearchPName.Size = new System.Drawing.Size(233, 38);
             this.tboxSearchPName.TabIndex = 31;
             // 
-            // label1
+            // labelUserProfileTitle
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(543, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 33);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "User Profile";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelUserProfileTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelUserProfileTitle.AutoSize = true;
+            this.labelUserProfileTitle.BackColor = System.Drawing.Color.Transparent;
+            this.labelUserProfileTitle.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUserProfileTitle.ForeColor = System.Drawing.Color.Navy;
+            this.labelUserProfileTitle.Location = new System.Drawing.Point(543, 54);
+            this.labelUserProfileTitle.Name = "labelUserProfileTitle";
+            this.labelUserProfileTitle.Size = new System.Drawing.Size(196, 33);
+            this.labelUserProfileTitle.TabIndex = 30;
+            this.labelUserProfileTitle.Text = "User Profile";
+            this.labelUserProfileTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTopScore
             // 
@@ -345,7 +345,7 @@ namespace AD_SeaAnimalGame
         private System.Windows.Forms.Label lblPlayerName;
         private System.Windows.Forms.Label lblPlayerId;
         private System.Windows.Forms.Label lblTopScore;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelUserProfileTitle;
         private System.Windows.Forms.TextBox tboxSearchPName;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.Label lblShowPName;
