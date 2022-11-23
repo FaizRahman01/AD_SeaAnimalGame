@@ -54,6 +54,7 @@ namespace AD_SeaAnimalGame
             // 
             // btnQuit
             // 
+            this.btnQuit.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnQuit.BackColor = System.Drawing.Color.Transparent;
             this.btnQuit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnQuit.BackgroundImage")));
             this.btnQuit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

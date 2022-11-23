@@ -69,7 +69,7 @@ namespace AD_SeaAnimalGame
             // 
             // btnBack
             // 
-            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnBack.BackColor = System.Drawing.Color.Transparent;
             this.btnBack.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.back;
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -84,9 +84,6 @@ namespace AD_SeaAnimalGame
             // 
             // panelControl
             // 
-            this.panelControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl.BackColor = System.Drawing.Color.Transparent;
             this.panelControl.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.darkbluebg;
             this.panelControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -103,16 +100,15 @@ namespace AD_SeaAnimalGame
             this.panelControl.Controls.Add(this.lblPNameTitle);
             this.panelControl.Controls.Add(this.dataGridViewScore);
             this.panelControl.Controls.Add(this.PlayerScoreChart);
-            this.panelControl.Location = new System.Drawing.Point(51, 56);
+            this.panelControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl.Location = new System.Drawing.Point(0, 41);
             this.panelControl.Name = "panelControl";
-            this.panelControl.Size = new System.Drawing.Size(877, 632);
+            this.panelControl.Size = new System.Drawing.Size(1000, 659);
             this.panelControl.TabIndex = 7;
             // 
             // btnSearchPlayer
             // 
-            this.btnSearchPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearchPlayer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSearchPlayer.BackColor = System.Drawing.Color.Transparent;
             this.btnSearchPlayer.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.buttonbg;
             this.btnSearchPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -120,7 +116,7 @@ namespace AD_SeaAnimalGame
             this.btnSearchPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearchPlayer.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnSearchPlayer.ForeColor = System.Drawing.Color.White;
-            this.btnSearchPlayer.Location = new System.Drawing.Point(344, 511);
+            this.btnSearchPlayer.Location = new System.Drawing.Point(406, 524);
             this.btnSearchPlayer.Name = "btnSearchPlayer";
             this.btnSearchPlayer.Size = new System.Drawing.Size(114, 40);
             this.btnSearchPlayer.TabIndex = 35;
@@ -143,11 +139,12 @@ namespace AD_SeaAnimalGame
             // 
             // lblResult
             // 
+            this.lblResult.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblResult.AutoSize = true;
             this.lblResult.BackColor = System.Drawing.Color.Transparent;
             this.lblResult.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResult.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.lblResult.Location = new System.Drawing.Point(96, 568);
+            this.lblResult.Location = new System.Drawing.Point(158, 581);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(125, 21);
             this.lblResult.TabIndex = 33;
@@ -156,11 +153,12 @@ namespace AD_SeaAnimalGame
             // 
             // lblSearch
             // 
+            this.lblSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSearch.AutoSize = true;
             this.lblSearch.BackColor = System.Drawing.Color.Transparent;
             this.lblSearch.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearch.ForeColor = System.Drawing.Color.Navy;
-            this.lblSearch.Location = new System.Drawing.Point(93, 477);
+            this.lblSearch.Location = new System.Drawing.Point(155, 490);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(128, 31);
             this.lblSearch.TabIndex = 32;
@@ -169,13 +167,11 @@ namespace AD_SeaAnimalGame
             // 
             // tboxSearchPName
             // 
-            this.tboxSearchPName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tboxSearchPName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tboxSearchPName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.tboxSearchPName.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tboxSearchPName.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tboxSearchPName.Location = new System.Drawing.Point(99, 511);
+            this.tboxSearchPName.Location = new System.Drawing.Point(161, 524);
             this.tboxSearchPName.MaxLength = 20;
             this.tboxSearchPName.Name = "tboxSearchPName";
             this.tboxSearchPName.Size = new System.Drawing.Size(233, 38);
@@ -183,11 +179,12 @@ namespace AD_SeaAnimalGame
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(481, 41);
+            this.label1.Location = new System.Drawing.Point(543, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(196, 33);
             this.label1.TabIndex = 30;
@@ -196,11 +193,12 @@ namespace AD_SeaAnimalGame
             // 
             // lblTopScore
             // 
+            this.lblTopScore.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTopScore.AutoSize = true;
             this.lblTopScore.BackColor = System.Drawing.Color.Transparent;
             this.lblTopScore.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTopScore.ForeColor = System.Drawing.Color.Navy;
-            this.lblTopScore.Location = new System.Drawing.Point(115, 43);
+            this.lblTopScore.Location = new System.Drawing.Point(177, 56);
             this.lblTopScore.Name = "lblTopScore";
             this.lblTopScore.Size = new System.Drawing.Size(203, 33);
             this.lblTopScore.TabIndex = 29;
@@ -209,12 +207,12 @@ namespace AD_SeaAnimalGame
             // 
             // lblPlayerId
             // 
-            this.lblPlayerId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblPlayerId.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPlayerId.AutoSize = true;
             this.lblPlayerId.BackColor = System.Drawing.Color.Transparent;
             this.lblPlayerId.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlayerId.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblPlayerId.Location = new System.Drawing.Point(608, 83);
+            this.lblPlayerId.Location = new System.Drawing.Point(670, 96);
             this.lblPlayerId.Name = "lblPlayerId";
             this.lblPlayerId.Size = new System.Drawing.Size(27, 33);
             this.lblPlayerId.TabIndex = 28;
@@ -222,11 +220,12 @@ namespace AD_SeaAnimalGame
             // 
             // lblPIdTitle
             // 
+            this.lblPIdTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPIdTitle.AutoSize = true;
             this.lblPIdTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblPIdTitle.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPIdTitle.ForeColor = System.Drawing.Color.Navy;
-            this.lblPIdTitle.Location = new System.Drawing.Point(490, 94);
+            this.lblPIdTitle.Location = new System.Drawing.Point(552, 107);
             this.lblPIdTitle.Name = "lblPIdTitle";
             this.lblPIdTitle.Size = new System.Drawing.Size(83, 21);
             this.lblPIdTitle.TabIndex = 27;
@@ -235,12 +234,12 @@ namespace AD_SeaAnimalGame
             // 
             // lblPlayerName
             // 
-            this.lblPlayerName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblPlayerName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPlayerName.AutoSize = true;
             this.lblPlayerName.BackColor = System.Drawing.Color.Transparent;
             this.lblPlayerName.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlayerName.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblPlayerName.Location = new System.Drawing.Point(608, 129);
+            this.lblPlayerName.Location = new System.Drawing.Point(670, 142);
             this.lblPlayerName.Name = "lblPlayerName";
             this.lblPlayerName.Size = new System.Drawing.Size(27, 33);
             this.lblPlayerName.TabIndex = 26;
@@ -248,11 +247,12 @@ namespace AD_SeaAnimalGame
             // 
             // lblPNameTitle
             // 
+            this.lblPNameTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPNameTitle.AutoSize = true;
             this.lblPNameTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblPNameTitle.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPNameTitle.ForeColor = System.Drawing.Color.Navy;
-            this.lblPNameTitle.Location = new System.Drawing.Point(490, 135);
+            this.lblPNameTitle.Location = new System.Drawing.Point(552, 148);
             this.lblPNameTitle.Name = "lblPNameTitle";
             this.lblPNameTitle.Size = new System.Drawing.Size(112, 21);
             this.lblPNameTitle.TabIndex = 14;
@@ -261,22 +261,24 @@ namespace AD_SeaAnimalGame
             // 
             // dataGridViewScore
             // 
+            this.dataGridViewScore.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridViewScore.BackgroundColor = System.Drawing.Color.MediumTurquoise;
             this.dataGridViewScore.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewScore.GridColor = System.Drawing.Color.MediumTurquoise;
-            this.dataGridViewScore.Location = new System.Drawing.Point(99, 85);
+            this.dataGridViewScore.Location = new System.Drawing.Point(161, 98);
             this.dataGridViewScore.Name = "dataGridViewScore";
             this.dataGridViewScore.Size = new System.Drawing.Size(249, 366);
             this.dataGridViewScore.TabIndex = 1;
             // 
             // PlayerScoreChart
             // 
+            this.PlayerScoreChart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PlayerScoreChart.BackColor = System.Drawing.Color.MediumTurquoise;
             chartArea1.Name = "ChartArea1";
             this.PlayerScoreChart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.PlayerScoreChart.Legends.Add(legend1);
-            this.PlayerScoreChart.Location = new System.Drawing.Point(487, 175);
+            this.PlayerScoreChart.Location = new System.Drawing.Point(549, 188);
             this.PlayerScoreChart.Name = "PlayerScoreChart";
             this.PlayerScoreChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             series1.ChartArea = "ChartArea1";

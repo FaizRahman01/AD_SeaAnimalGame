@@ -33,19 +33,19 @@ namespace AD_SeaAnimalGame
             this.panelControlPage = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
             this.panelControl = new System.Windows.Forms.Panel();
-            this.lblControl1 = new System.Windows.Forms.Label();
-            this.lblControl2 = new System.Windows.Forms.Label();
-            this.lblControl3 = new System.Windows.Forms.Label();
             this.lblControl4 = new System.Windows.Forms.Label();
+            this.lblControl3 = new System.Windows.Forms.Label();
+            this.lblControl2 = new System.Windows.Forms.Label();
+            this.lblControl1 = new System.Windows.Forms.Label();
             this.panelControlPage.SuspendLayout();
             this.panelControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControlPage
             // 
+            this.panelControlPage.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelControlPage.BackColor = System.Drawing.Color.Transparent;
             this.panelControlPage.Controls.Add(this.btnBack);
-            this.panelControlPage.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControlPage.Location = new System.Drawing.Point(0, 0);
             this.panelControlPage.Name = "panelControlPage";
             this.panelControlPage.Size = new System.Drawing.Size(1000, 41);
@@ -55,7 +55,7 @@ namespace AD_SeaAnimalGame
             // 
             // btnBack
             // 
-            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnBack.BackColor = System.Drawing.Color.Transparent;
             this.btnBack.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.back;
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -70,9 +70,7 @@ namespace AD_SeaAnimalGame
             // 
             // panelControl
             // 
-            this.panelControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelControl.BackColor = System.Drawing.Color.Transparent;
             this.panelControl.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.darkbluebg;
             this.panelControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -85,29 +83,17 @@ namespace AD_SeaAnimalGame
             this.panelControl.Size = new System.Drawing.Size(571, 564);
             this.panelControl.TabIndex = 6;
             // 
-            // lblControl1
+            // lblControl4
             // 
-            this.lblControl1.AutoSize = true;
-            this.lblControl1.BackColor = System.Drawing.Color.Transparent;
-            this.lblControl1.Font = new System.Drawing.Font("MV Boli", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblControl1.ForeColor = System.Drawing.Color.Black;
-            this.lblControl1.Location = new System.Drawing.Point(72, 77);
-            this.lblControl1.Name = "lblControl1";
-            this.lblControl1.Size = new System.Drawing.Size(190, 34);
-            this.lblControl1.TabIndex = 13;
-            this.lblControl1.Text = "W - Move Up";
-            // 
-            // lblControl2
-            // 
-            this.lblControl2.AutoSize = true;
-            this.lblControl2.BackColor = System.Drawing.Color.Transparent;
-            this.lblControl2.Font = new System.Drawing.Font("MV Boli", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblControl2.ForeColor = System.Drawing.Color.Black;
-            this.lblControl2.Location = new System.Drawing.Point(72, 159);
-            this.lblControl2.Name = "lblControl2";
-            this.lblControl2.Size = new System.Drawing.Size(216, 34);
-            this.lblControl2.TabIndex = 14;
-            this.lblControl2.Text = "S - Move Down";
+            this.lblControl4.AutoSize = true;
+            this.lblControl4.BackColor = System.Drawing.Color.Transparent;
+            this.lblControl4.Font = new System.Drawing.Font("MV Boli", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblControl4.ForeColor = System.Drawing.Color.Black;
+            this.lblControl4.Location = new System.Drawing.Point(72, 311);
+            this.lblControl4.Name = "lblControl4";
+            this.lblControl4.Size = new System.Drawing.Size(218, 34);
+            this.lblControl4.TabIndex = 16;
+            this.lblControl4.Text = "D - Move Right";
             // 
             // lblControl3
             // 
@@ -121,17 +107,29 @@ namespace AD_SeaAnimalGame
             this.lblControl3.TabIndex = 15;
             this.lblControl3.Text = "A - Move Left";
             // 
-            // lblControl4
+            // lblControl2
             // 
-            this.lblControl4.AutoSize = true;
-            this.lblControl4.BackColor = System.Drawing.Color.Transparent;
-            this.lblControl4.Font = new System.Drawing.Font("MV Boli", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblControl4.ForeColor = System.Drawing.Color.Black;
-            this.lblControl4.Location = new System.Drawing.Point(72, 311);
-            this.lblControl4.Name = "lblControl4";
-            this.lblControl4.Size = new System.Drawing.Size(218, 34);
-            this.lblControl4.TabIndex = 16;
-            this.lblControl4.Text = "D - Move Right";
+            this.lblControl2.AutoSize = true;
+            this.lblControl2.BackColor = System.Drawing.Color.Transparent;
+            this.lblControl2.Font = new System.Drawing.Font("MV Boli", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblControl2.ForeColor = System.Drawing.Color.Black;
+            this.lblControl2.Location = new System.Drawing.Point(72, 159);
+            this.lblControl2.Name = "lblControl2";
+            this.lblControl2.Size = new System.Drawing.Size(216, 34);
+            this.lblControl2.TabIndex = 14;
+            this.lblControl2.Text = "S - Move Down";
+            // 
+            // lblControl1
+            // 
+            this.lblControl1.AutoSize = true;
+            this.lblControl1.BackColor = System.Drawing.Color.Transparent;
+            this.lblControl1.Font = new System.Drawing.Font("MV Boli", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblControl1.ForeColor = System.Drawing.Color.Black;
+            this.lblControl1.Location = new System.Drawing.Point(72, 77);
+            this.lblControl1.Name = "lblControl1";
+            this.lblControl1.Size = new System.Drawing.Size(190, 34);
+            this.lblControl1.TabIndex = 13;
+            this.lblControl1.Text = "W - Move Up";
             // 
             // ControlPage
             // 

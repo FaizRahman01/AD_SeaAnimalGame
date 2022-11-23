@@ -63,9 +63,7 @@ namespace AD_SeaAnimalGame
             // 
             // panelSkinSelection
             // 
-            this.panelSkinSelection.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelSkinSelection.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelSkinSelection.BackColor = System.Drawing.Color.Transparent;
             this.panelSkinSelection.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.darkbluebg;
             this.panelSkinSelection.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -88,6 +86,7 @@ namespace AD_SeaAnimalGame
             // 
             // btnConfirm
             // 
+            this.btnConfirm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnConfirm.BackColor = System.Drawing.Color.Transparent;
             this.btnConfirm.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.buttonbg;
             this.btnConfirm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -105,6 +104,7 @@ namespace AD_SeaAnimalGame
             // 
             // lblPlayerChoice
             // 
+            this.lblPlayerChoice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPlayerChoice.AutoSize = true;
             this.lblPlayerChoice.BackColor = System.Drawing.Color.Transparent;
             this.lblPlayerChoice.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -117,6 +117,7 @@ namespace AD_SeaAnimalGame
             // 
             // lblStatement
             // 
+            this.lblStatement.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblStatement.AutoSize = true;
             this.lblStatement.BackColor = System.Drawing.Color.Transparent;
             this.lblStatement.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -129,6 +130,7 @@ namespace AD_SeaAnimalGame
             // 
             // btnUse3
             // 
+            this.btnUse3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnUse3.BackColor = System.Drawing.Color.Transparent;
             this.btnUse3.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.buttonbg;
             this.btnUse3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -146,6 +148,7 @@ namespace AD_SeaAnimalGame
             // 
             // lblSkinName3
             // 
+            this.lblSkinName3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSkinName3.AutoSize = true;
             this.lblSkinName3.BackColor = System.Drawing.Color.Transparent;
             this.lblSkinName3.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -157,6 +160,7 @@ namespace AD_SeaAnimalGame
             // 
             // btnUse2
             // 
+            this.btnUse2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnUse2.BackColor = System.Drawing.Color.Transparent;
             this.btnUse2.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.buttonbg;
             this.btnUse2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -174,6 +178,7 @@ namespace AD_SeaAnimalGame
             // 
             // lblSkinName2
             // 
+            this.lblSkinName2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSkinName2.AutoSize = true;
             this.lblSkinName2.BackColor = System.Drawing.Color.Transparent;
             this.lblSkinName2.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -185,6 +190,7 @@ namespace AD_SeaAnimalGame
             // 
             // btnUse1
             // 
+            this.btnUse1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnUse1.BackColor = System.Drawing.Color.Transparent;
             this.btnUse1.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.buttonbg;
             this.btnUse1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -202,6 +208,7 @@ namespace AD_SeaAnimalGame
             // 
             // lblSkinName1
             // 
+            this.lblSkinName1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSkinName1.AutoSize = true;
             this.lblSkinName1.BackColor = System.Drawing.Color.Transparent;
             this.lblSkinName1.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -213,6 +220,7 @@ namespace AD_SeaAnimalGame
             // 
             // pboxSkin3
             // 
+            this.pboxSkin3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pboxSkin3.BackColor = System.Drawing.Color.Transparent;
             this.pboxSkin3.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.submarine3right;
             this.pboxSkin3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -224,6 +232,7 @@ namespace AD_SeaAnimalGame
             // 
             // pboxSkin2
             // 
+            this.pboxSkin2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pboxSkin2.BackColor = System.Drawing.Color.Transparent;
             this.pboxSkin2.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.submarine2right;
             this.pboxSkin2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -235,6 +244,7 @@ namespace AD_SeaAnimalGame
             // 
             // pboxSkin1
             // 
+            this.pboxSkin1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pboxSkin1.BackColor = System.Drawing.Color.Transparent;
             this.pboxSkin1.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.submarineright;
             this.pboxSkin1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
