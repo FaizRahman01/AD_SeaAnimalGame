@@ -86,7 +86,7 @@ namespace AD_SeaAnimalGame
             //chart
             OleDbCommand dbcmduserscore = new OleDbCommand();
             dbcmduserscore.Connection = dbcon;
-            dbcmduserscore.CommandText = "select top 5 PlayerId, PlayerScore from PlayerScoreTbl where PlayerId = @pid";
+            dbcmduserscore.CommandText = "select top 5 PlayerId, PlayerScore from PlayerScoreTbl where PlayerId = @pid order by PlayerScore Desc";
             dbcmduserscore.Parameters.AddWithValue("@pid", lblPlayerId.Text);
 
             OleDbDataReader dbuserscorereader = dbcmduserscore.ExecuteReader();
@@ -95,7 +95,7 @@ namespace AD_SeaAnimalGame
             while (dbuserscorereader.Read())
             {
 
-                PlayerScoreChart.Series["High Score"].Points.AddXY("FL" + dbuserscorereader["PlayerId"].ToString(), dbuserscorereader["PlayerScore"].ToString());
+                PlayerScoreChart.Series["Player Score"].Points.AddXY("FL" + dbuserscorereader["PlayerId"].ToString(), dbuserscorereader["PlayerScore"].ToString());
 
             }
 
@@ -117,13 +117,13 @@ namespace AD_SeaAnimalGame
             {
 
                 lblShowPName.Text = dbreader["PlayerName"].ToString();
-                dbcon.Close();
+                
             }
             else
             {
                 MessageBox.Show("Player name not found");
             }
-            
+            dbcon.Close();
         }
     }
 }

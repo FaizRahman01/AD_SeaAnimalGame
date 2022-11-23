@@ -49,6 +49,7 @@ namespace AD_SeaAnimalGame
             this.lblPNameTitle = new System.Windows.Forms.Label();
             this.dataGridViewScore = new System.Windows.Forms.DataGridView();
             this.PlayerScoreChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.lblGameChart = new System.Windows.Forms.Label();
             this.panelScorePage.SuspendLayout();
             this.panelControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewScore)).BeginInit();
@@ -87,6 +88,7 @@ namespace AD_SeaAnimalGame
             this.panelControl.BackColor = System.Drawing.Color.Transparent;
             this.panelControl.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.darkbluebg;
             this.panelControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelControl.Controls.Add(this.lblGameChart);
             this.panelControl.Controls.Add(this.btnSearchPlayer);
             this.panelControl.Controls.Add(this.lblShowPName);
             this.panelControl.Controls.Add(this.lblResult);
@@ -130,7 +132,7 @@ namespace AD_SeaAnimalGame
             this.lblShowPName.BackColor = System.Drawing.Color.Transparent;
             this.lblShowPName.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblShowPName.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.lblShowPName.Location = new System.Drawing.Point(227, 568);
+            this.lblShowPName.Location = new System.Drawing.Point(294, 572);
             this.lblShowPName.Name = "lblShowPName";
             this.lblShowPName.Size = new System.Drawing.Size(18, 21);
             this.lblShowPName.TabIndex = 34;
@@ -144,7 +146,7 @@ namespace AD_SeaAnimalGame
             this.lblResult.BackColor = System.Drawing.Color.Transparent;
             this.lblResult.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResult.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.lblResult.Location = new System.Drawing.Point(158, 581);
+            this.lblResult.Location = new System.Drawing.Point(163, 572);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(125, 21);
             this.lblResult.TabIndex = 33;
@@ -278,19 +280,33 @@ namespace AD_SeaAnimalGame
             this.PlayerScoreChart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.PlayerScoreChart.Legends.Add(legend1);
-            this.PlayerScoreChart.Location = new System.Drawing.Point(549, 188);
+            this.PlayerScoreChart.Location = new System.Drawing.Point(549, 230);
             this.PlayerScoreChart.Name = "PlayerScoreChart";
             this.PlayerScoreChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series1.EmptyPointStyle.IsValueShownAsLabel = true;
             series1.IsValueShownAsLabel = true;
             series1.Legend = "Legend1";
-            series1.Name = "High Score";
+            series1.Name = "Player Score";
             this.PlayerScoreChart.Series.Add(series1);
             this.PlayerScoreChart.Size = new System.Drawing.Size(305, 276);
             this.PlayerScoreChart.TabIndex = 0;
             this.PlayerScoreChart.Text = "Score Chart";
+            // 
+            // lblGameChart
+            // 
+            this.lblGameChart.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblGameChart.AutoSize = true;
+            this.lblGameChart.BackColor = System.Drawing.Color.Transparent;
+            this.lblGameChart.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameChart.ForeColor = System.Drawing.Color.Navy;
+            this.lblGameChart.Location = new System.Drawing.Point(543, 194);
+            this.lblGameChart.Name = "lblGameChart";
+            this.lblGameChart.Size = new System.Drawing.Size(189, 33);
+            this.lblGameChart.TabIndex = 36;
+            this.lblGameChart.Text = "Top 5 Score";
+            this.lblGameChart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ScorePage
             // 
@@ -335,5 +351,6 @@ namespace AD_SeaAnimalGame
         private System.Windows.Forms.Label lblShowPName;
         private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.Button btnSearchPlayer;
+        private System.Windows.Forms.Label lblGameChart;
     }
 }
