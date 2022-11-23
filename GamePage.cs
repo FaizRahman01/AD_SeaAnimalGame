@@ -30,9 +30,15 @@ namespace AD_SeaAnimalGame
             InitializeComponent();
             
         }
+
+        //point use for coordinate x,y
         private Point FormPosition;
+
+        //user can drag the panel that place on top (panel of submarine hp)
+
         private void panelGamePage_MouseDown(object sender, MouseEventArgs e)
         {
+            //make the mouse cursor position stay on where it clicks on the panel
             this.FormPosition = e.Location;
         }
 
@@ -40,7 +46,7 @@ namespace AD_SeaAnimalGame
         {
             if (e.Button == MouseButtons.Left)
             {
-                // Refers to the Form location (or whatever you trigger the event on)
+                // let user to drag the form anywhere in coordinate x and y
                 this.Location = new Point(
                     (this.Location.X - FormPosition.X) + e.X,
                     (this.Location.Y - FormPosition.Y) + e.Y
@@ -50,6 +56,7 @@ namespace AD_SeaAnimalGame
             }
         }
 
+        //call the class in SpawnItem.cs
         SpawnFish spawnFishItem = new SpawnFish();
         SpawnNotFish spawnNotFishItem = new SpawnNotFish();
         private void FishSpawn()

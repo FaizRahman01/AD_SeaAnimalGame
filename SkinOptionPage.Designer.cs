@@ -270,7 +270,6 @@ namespace AD_SeaAnimalGame
             this.Name = "SkinOptionPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fish Legends";
-            this.Load += new System.EventHandler(this.SkinOptionPage_Load);
             this.panelSkinSelection.ResumeLayout(false);
             this.panelSkinSelection.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSkin3)).EndInit();

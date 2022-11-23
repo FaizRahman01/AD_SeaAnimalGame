@@ -18,9 +18,13 @@ namespace AD_SeaAnimalGame
             InitializeComponent();
         }
 
+        //point use for coordinate x,y
         private Point FormPosition;
+
+        //user can drag the panel that place on top 
         private void panelPMainPage_MouseDown(object sender, MouseEventArgs e)
         {
+            //make the mouse cursor position stay on where it clicks on the panel
             this.FormPosition = e.Location;
         }
 
@@ -28,7 +32,7 @@ namespace AD_SeaAnimalGame
         {
             if (e.Button == MouseButtons.Left)
             {
-                // Refers to the Form location (or whatever you trigger the event on)
+                // let user to drag the form anywhere in coordinate x and y
                 this.Location = new Point(
                     (this.Location.X - FormPosition.X) + e.X,
                     (this.Location.Y - FormPosition.Y) + e.Y
@@ -41,20 +45,23 @@ namespace AD_SeaAnimalGame
         private void btnQuit_Click(object sender, EventArgs e)
         {
             
-
+            //messagebox with ok cancel button
             DialogResult logoutConfirmation = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.OKCancel);
-
+            //if the user press ok the it will go to the MainPage but the user will not go to the other page if press cancecl
             if (logoutConfirmation == DialogResult.OK)
             {
+                //hide this page and open other form
                 this.Hide();
                 MainPage mainpage = new MainPage();
                 mainpage.Show();
+                //refresh the form and reset any passing value to the farm
                 Application.Restart();
             }
         }
 
         private void btnPlayNow_Click(object sender, EventArgs e)
         {
+            //hide this page and open other form
             this.Hide();
             GamePage gamepage = new GamePage();
             gamepage.Show();
@@ -62,6 +69,7 @@ namespace AD_SeaAnimalGame
 
         private void btnSkin_Click(object sender, EventArgs e)
         {
+            //hide this page and open other form
             this.Hide();
             SkinOptionPage skinoptionpage = new SkinOptionPage();
             skinoptionpage.Show();
@@ -69,6 +77,7 @@ namespace AD_SeaAnimalGame
 
         private void btnScore_Click(object sender, EventArgs e)
         {
+            //hide this page and open other form
             this.Hide();
             ScorePage scorepage = new ScorePage();
             scorepage.Show();

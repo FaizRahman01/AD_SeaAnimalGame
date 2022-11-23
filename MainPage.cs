@@ -24,9 +24,14 @@ namespace AD_SeaAnimalGame
         {
             Application.Exit();
         }
+
+        //point use for coordinate x,y
         private Point FormPosition;
+
+        //user can drag the panel that place on top 
         private void panelMainPage_MouseDown(object sender, MouseEventArgs e)
         {
+            //make the mouse cursor position stay on where it clicks on the panel
             this.FormPosition = e.Location;
         }
 
@@ -34,7 +39,7 @@ namespace AD_SeaAnimalGame
         {
             if (e.Button == MouseButtons.Left)
             {
-                // Refers to the Form location (or whatever you trigger the event on)
+                // let user to drag the form anywhere in coordinate x and y
                 this.Location = new Point(
                     (this.Location.X - FormPosition.X) + e.X,
                     (this.Location.Y - FormPosition.Y) + e.Y
@@ -46,6 +51,7 @@ namespace AD_SeaAnimalGame
 
         private void btnStart_Click(object sender, EventArgs e)
         {
+            //hide this page and open other form
             this.Hide();
             PlayerNamePage pnamepage = new PlayerNamePage();
             pnamepage.Show();
@@ -53,6 +59,7 @@ namespace AD_SeaAnimalGame
 
         private void btnControl_Click(object sender, EventArgs e)
         {
+            //hide this page and open other form
             this.Hide();
             ControlPage controlpage = new ControlPage();
             controlpage.Show();
