@@ -145,6 +145,7 @@
     <EmbeddedResource Include="SkinOptionPage.resx">
       <DependentUpon>SkinOptionPage.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="GameClassDiagram.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
