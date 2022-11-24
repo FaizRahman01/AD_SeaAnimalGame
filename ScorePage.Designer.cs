@@ -37,11 +37,6 @@ namespace AD_SeaAnimalGame
             this.btnBack = new System.Windows.Forms.Button();
             this.panelControl = new System.Windows.Forms.Panel();
             this.lblGameChart = new System.Windows.Forms.Label();
-            this.btnSearchPlayer = new System.Windows.Forms.Button();
-            this.lblShowPName = new System.Windows.Forms.Label();
-            this.lblResult = new System.Windows.Forms.Label();
-            this.lblSearch = new System.Windows.Forms.Label();
-            this.tboxSearchPName = new System.Windows.Forms.TextBox();
             this.labelUserProfileTitle = new System.Windows.Forms.Label();
             this.lblTopScore = new System.Windows.Forms.Label();
             this.lblPlayerId = new System.Windows.Forms.Label();
@@ -89,11 +84,6 @@ namespace AD_SeaAnimalGame
             this.panelControl.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.darkbluebg;
             this.panelControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelControl.Controls.Add(this.lblGameChart);
-            this.panelControl.Controls.Add(this.btnSearchPlayer);
-            this.panelControl.Controls.Add(this.lblShowPName);
-            this.panelControl.Controls.Add(this.lblResult);
-            this.panelControl.Controls.Add(this.lblSearch);
-            this.panelControl.Controls.Add(this.tboxSearchPName);
             this.panelControl.Controls.Add(this.labelUserProfileTitle);
             this.panelControl.Controls.Add(this.lblTopScore);
             this.panelControl.Controls.Add(this.lblPlayerId);
@@ -121,77 +111,6 @@ namespace AD_SeaAnimalGame
             this.lblGameChart.TabIndex = 36;
             this.lblGameChart.Text = "Top 5 Score";
             this.lblGameChart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnSearchPlayer
-            // 
-            this.btnSearchPlayer.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSearchPlayer.BackColor = System.Drawing.Color.Transparent;
-            this.btnSearchPlayer.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.buttonbg;
-            this.btnSearchPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearchPlayer.FlatAppearance.BorderSize = 0;
-            this.btnSearchPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchPlayer.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnSearchPlayer.ForeColor = System.Drawing.Color.White;
-            this.btnSearchPlayer.Location = new System.Drawing.Point(406, 524);
-            this.btnSearchPlayer.Name = "btnSearchPlayer";
-            this.btnSearchPlayer.Size = new System.Drawing.Size(114, 40);
-            this.btnSearchPlayer.TabIndex = 35;
-            this.btnSearchPlayer.Text = "Search";
-            this.btnSearchPlayer.UseVisualStyleBackColor = false;
-            this.btnSearchPlayer.Click += new System.EventHandler(this.btnSearchPlayer_Click);
-            // 
-            // lblShowPName
-            // 
-            this.lblShowPName.AutoSize = true;
-            this.lblShowPName.BackColor = System.Drawing.Color.Transparent;
-            this.lblShowPName.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShowPName.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.lblShowPName.Location = new System.Drawing.Point(294, 572);
-            this.lblShowPName.Name = "lblShowPName";
-            this.lblShowPName.Size = new System.Drawing.Size(18, 21);
-            this.lblShowPName.TabIndex = 34;
-            this.lblShowPName.Text = "-";
-            this.lblShowPName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblResult
-            // 
-            this.lblResult.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblResult.AutoSize = true;
-            this.lblResult.BackColor = System.Drawing.Color.Transparent;
-            this.lblResult.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResult.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.lblResult.Location = new System.Drawing.Point(163, 572);
-            this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(125, 21);
-            this.lblResult.TabIndex = 33;
-            this.lblResult.Text = "Player Name:";
-            this.lblResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblSearch
-            // 
-            this.lblSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblSearch.AutoSize = true;
-            this.lblSearch.BackColor = System.Drawing.Color.Transparent;
-            this.lblSearch.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.ForeColor = System.Drawing.Color.Navy;
-            this.lblSearch.Location = new System.Drawing.Point(155, 490);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(128, 31);
-            this.lblSearch.TabIndex = 32;
-            this.lblSearch.Text = "Player ID";
-            this.lblSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tboxSearchPName
-            // 
-            this.tboxSearchPName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tboxSearchPName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.tboxSearchPName.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboxSearchPName.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tboxSearchPName.Location = new System.Drawing.Point(161, 524);
-            this.tboxSearchPName.MaxLength = 20;
-            this.tboxSearchPName.Name = "tboxSearchPName";
-            this.tboxSearchPName.Size = new System.Drawing.Size(233, 38);
-            this.tboxSearchPName.TabIndex = 31;
             // 
             // labelUserProfileTitle
             // 
@@ -346,11 +265,6 @@ namespace AD_SeaAnimalGame
         private System.Windows.Forms.Label lblPlayerId;
         private System.Windows.Forms.Label lblTopScore;
         private System.Windows.Forms.Label labelUserProfileTitle;
-        private System.Windows.Forms.TextBox tboxSearchPName;
-        private System.Windows.Forms.Label lblSearch;
-        private System.Windows.Forms.Label lblShowPName;
-        private System.Windows.Forms.Label lblResult;
-        private System.Windows.Forms.Button btnSearchPlayer;
         private System.Windows.Forms.Label lblGameChart;
     }
 }

@@ -232,6 +232,7 @@ namespace AD_SeaAnimalGame
                 SubmarineMoveTimer.Stop();
                 panelGameOver.Visible = true;
             }
+            
 
             if (e.KeyCode == Keys.A)
             {
@@ -275,6 +276,62 @@ namespace AD_SeaAnimalGame
             }
         }
 
+
+
+
+        int MoveSpawnSpeed = 1;
+        int MoveSpawnSpeed2 = 2;
+        
+        private void MoveSpawnTimer_Tick(object sender, EventArgs e)
+        {
+            //level 1
+            foreach (PictureBox fishpb in fish.ToList())
+            {
+                if (fishpb.Left > 0)
+                {
+                    fishpb.Left -= MoveSpawnSpeed;
+                }
+            }
+            foreach (PictureBox notfishpb in notfish.ToList())
+            {
+                if (notfishpb.Top < 599)
+                {
+                    notfishpb.Top += MoveSpawnSpeed;
+                }
+            }
+
+            //level 2
+            foreach (PictureBox fishpb2 in fish2.ToList())
+            {
+                if (fishpb2.Left > 0)
+                {
+                    fishpb2.Left -= MoveSpawnSpeed2;
+                }
+            }
+            foreach (PictureBox octopuspb in octopus.ToList())
+            {
+                if (octopuspb.Left > 0)
+                {
+                    octopuspb.Left -= MoveSpawnSpeed2;
+                }
+            }
+            foreach (PictureBox seaturtlepb in seaturtle.ToList())
+            {
+                if (seaturtlepb.Left > 0)
+                {
+                    seaturtlepb.Left -= MoveSpawnSpeed2;
+                }
+            }
+            foreach (PictureBox notfishpb2 in notfish2.ToList())
+            {
+                if (notfishpb2.Top < 599)
+                {
+                    notfishpb2.Top += MoveSpawnSpeed2;
+                }
+            }
+
+
+        }
 
         //timer event for all spawn item
 
@@ -373,7 +430,6 @@ namespace AD_SeaAnimalGame
 
         //set the submarine speed
         int submarineSpeed = 12;
-
         int correctCatch = 0;
         int wrongCatch = 0;
         //set default starting player score to 0
@@ -491,30 +547,6 @@ namespace AD_SeaAnimalGame
 
             submarineHP.Value = Convert.ToInt32(playerHP);
 
-            foreach (PictureBox fishpb in fish.ToList())
-            {
-                if (pboxSubmarine.Bounds.IntersectsWith(fishpb.Bounds))
-                {
-                    //everytime the submarine intersect with any picturebox it will remove 
-                    //the picturebox
-                    fish.Remove(fishpb);
-                    this.Controls.Remove(fishpb);
-
-                    correctCatch++;
-                    //reset the wrongcatch value to 0 
-                    wrongCatch = 0;
-                    playerScore = correctCatch + wrongCatch;
-                    //if the user hit the picturebox it will make the progressbar become full
-                    playerHP = 100;
-                    //show how many score add in label
-                    lblPointEarn.Text = "+1";
-                    //soundplayer use for game sound effect everytime picturebox got hit
-                    SoundPlayer player = new SoundPlayer(Properties.Resources.correct);
-                    player.Play();
-                }
-
-            }
-
             foreach (PictureBox notfishpb in notfish.ToList())
             {
                 if (pboxSubmarine.Bounds.IntersectsWith(notfishpb.Bounds))
@@ -562,7 +594,88 @@ namespace AD_SeaAnimalGame
                 }
 
             }
-  
+
+            foreach (PictureBox notfishpb2 in notfish2.ToList())
+            {
+                //if any picturebox that spawn in form visible = false it will not use
+                //the if statement
+                if (pboxSubmarine.Bounds.IntersectsWith(notfishpb2.Bounds) && notfishpb2.Visible == true)
+                {
+                    //everytime the submarine intersect with any picturebox it will remove 
+                    //the picturebox
+                    notfish2.Remove(notfishpb2);
+                    this.Controls.Remove(notfishpb2);
+
+                    SoundPlayer player = new SoundPlayer(Properties.Resources.wrong);
+                    player.Play();
+
+
+                    lblPointEarn.Text = "-1";
+                    playerHP -= 20;
+                    wrongCatch++;
+                    correctCatch--;
+                    playerScore = correctCatch;
+
+                    if (playerScore < 0)
+                    {
+                        playerScore = 0;
+                    }
+
+                    if (correctCatch < 0)
+                    {
+                        correctCatch = 0;
+                    }
+
+                    if (wrongCatch == 5)
+                    {
+                        CountdownGameTimer.Stop();
+                        FishSpawnTimer.Stop();
+                        NonFishSpawnTimer.Stop();
+                        TurtleSpawnTimer.Stop();
+                        OctopusSpawnTimer.Stop();
+                        FishSpawnTimer2.Stop();
+                        NotFishSpawnTimer2.Stop();
+                        SubmarineMoveTimer.Stop();
+                        panelGameOver.Visible = true;
+
+                    }
+                }
+
+            }
+
+        }
+
+        //click anywhere on the gamepage form when the submarine hit the spawn picturebox
+        private void GamePage_MouseClick(object sender, MouseEventArgs e)
+        {
+
+
+            foreach (PictureBox fishpb in fish.ToList())
+            {
+                if (pboxSubmarine.Bounds.IntersectsWith(fishpb.Bounds))
+                {
+                    //everytime the submarine intersect with any picturebox it will remove 
+                    //the picturebox
+                    fish.Remove(fishpb);
+                    this.Controls.Remove(fishpb);
+
+                    correctCatch++;
+                    //reset the wrongcatch value to 0 
+                    wrongCatch = 0;
+                    playerScore = correctCatch + wrongCatch;
+                    //if the user hit the picturebox it will make the progressbar become full
+                    playerHP = 100;
+                    //show how many score add in label
+                    lblPointEarn.Text = "+1";
+                    //soundplayer use for game sound effect everytime picturebox got hit
+                    SoundPlayer player = new SoundPlayer(Properties.Resources.correct);
+                    player.Play();
+                }
+
+            }
+
+
+
             foreach (PictureBox octopuspb in octopus.ToList())
             {
                 //if any picturebox that spawn in form visible = false it will not use
@@ -633,53 +746,6 @@ namespace AD_SeaAnimalGame
 
             }
 
-            foreach (PictureBox notfishpb2 in notfish2.ToList())
-            {
-                //if any picturebox that spawn in form visible = false it will not use
-                //the if statement
-                if (pboxSubmarine.Bounds.IntersectsWith(notfishpb2.Bounds) && notfishpb2.Visible == true)
-                {
-                    //everytime the submarine intersect with any picturebox it will remove 
-                    //the picturebox
-                    notfish2.Remove(notfishpb2);
-                    this.Controls.Remove(notfishpb2);
-
-                    SoundPlayer player = new SoundPlayer(Properties.Resources.wrong);
-                    player.Play();
-
-
-                    lblPointEarn.Text = "-1";
-                    playerHP -= 20;
-                    wrongCatch++;
-                    correctCatch--;
-                    playerScore = correctCatch;
-
-                    if (playerScore < 0)
-                    {
-                        playerScore = 0;
-                    }
-
-                    if (correctCatch < 0)
-                    {
-                        correctCatch = 0;
-                    }
-
-                    if (wrongCatch == 5)
-                    {
-                        CountdownGameTimer.Stop();
-                        FishSpawnTimer.Stop();
-                        NonFishSpawnTimer.Stop();
-                        TurtleSpawnTimer.Stop();
-                        OctopusSpawnTimer.Stop();
-                        FishSpawnTimer2.Stop();
-                        NotFishSpawnTimer2.Stop();
-                        SubmarineMoveTimer.Stop();
-                        panelGameOver.Visible = true;
-
-                    }
-                }
-
-            }
 
         }
     }

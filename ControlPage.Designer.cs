@@ -33,19 +33,14 @@ namespace AD_SeaAnimalGame
             this.panelControlPage = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
             this.panelControl = new System.Windows.Forms.Panel();
-            this.lblControl4 = new System.Windows.Forms.Label();
-            this.lblControl3 = new System.Windows.Forms.Label();
-            this.lblControl2 = new System.Windows.Forms.Label();
-            this.lblControl1 = new System.Windows.Forms.Label();
             this.panelControlPage.SuspendLayout();
-            this.panelControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControlPage
             // 
-            this.panelControlPage.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelControlPage.BackColor = System.Drawing.Color.Transparent;
             this.panelControlPage.Controls.Add(this.btnBack);
+            this.panelControlPage.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControlPage.Location = new System.Drawing.Point(0, 0);
             this.panelControlPage.Name = "panelControlPage";
             this.panelControlPage.Size = new System.Drawing.Size(1000, 41);
@@ -70,66 +65,14 @@ namespace AD_SeaAnimalGame
             // 
             // panelControl
             // 
-            this.panelControl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelControl.BackColor = System.Drawing.Color.Transparent;
-            this.panelControl.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.darkbluebg;
+            this.panelControl.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.controlkey;
             this.panelControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelControl.Controls.Add(this.lblControl4);
-            this.panelControl.Controls.Add(this.lblControl3);
-            this.panelControl.Controls.Add(this.lblControl2);
-            this.panelControl.Controls.Add(this.lblControl1);
-            this.panelControl.Location = new System.Drawing.Point(231, 76);
+            this.panelControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl.Location = new System.Drawing.Point(0, 41);
             this.panelControl.Name = "panelControl";
-            this.panelControl.Size = new System.Drawing.Size(571, 564);
+            this.panelControl.Size = new System.Drawing.Size(1000, 659);
             this.panelControl.TabIndex = 6;
-            // 
-            // lblControl4
-            // 
-            this.lblControl4.AutoSize = true;
-            this.lblControl4.BackColor = System.Drawing.Color.Transparent;
-            this.lblControl4.Font = new System.Drawing.Font("MV Boli", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblControl4.ForeColor = System.Drawing.Color.Black;
-            this.lblControl4.Location = new System.Drawing.Point(72, 311);
-            this.lblControl4.Name = "lblControl4";
-            this.lblControl4.Size = new System.Drawing.Size(218, 34);
-            this.lblControl4.TabIndex = 16;
-            this.lblControl4.Text = "D - Move Right";
-            // 
-            // lblControl3
-            // 
-            this.lblControl3.AutoSize = true;
-            this.lblControl3.BackColor = System.Drawing.Color.Transparent;
-            this.lblControl3.Font = new System.Drawing.Font("MV Boli", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblControl3.ForeColor = System.Drawing.Color.Black;
-            this.lblControl3.Location = new System.Drawing.Point(72, 238);
-            this.lblControl3.Name = "lblControl3";
-            this.lblControl3.Size = new System.Drawing.Size(204, 34);
-            this.lblControl3.TabIndex = 15;
-            this.lblControl3.Text = "A - Move Left";
-            // 
-            // lblControl2
-            // 
-            this.lblControl2.AutoSize = true;
-            this.lblControl2.BackColor = System.Drawing.Color.Transparent;
-            this.lblControl2.Font = new System.Drawing.Font("MV Boli", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblControl2.ForeColor = System.Drawing.Color.Black;
-            this.lblControl2.Location = new System.Drawing.Point(72, 159);
-            this.lblControl2.Name = "lblControl2";
-            this.lblControl2.Size = new System.Drawing.Size(216, 34);
-            this.lblControl2.TabIndex = 14;
-            this.lblControl2.Text = "S - Move Down";
-            // 
-            // lblControl1
-            // 
-            this.lblControl1.AutoSize = true;
-            this.lblControl1.BackColor = System.Drawing.Color.Transparent;
-            this.lblControl1.Font = new System.Drawing.Font("MV Boli", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblControl1.ForeColor = System.Drawing.Color.Black;
-            this.lblControl1.Location = new System.Drawing.Point(72, 77);
-            this.lblControl1.Name = "lblControl1";
-            this.lblControl1.Size = new System.Drawing.Size(190, 34);
-            this.lblControl1.TabIndex = 13;
-            this.lblControl1.Text = "W - Move Up";
             // 
             // ControlPage
             // 
@@ -147,8 +90,6 @@ namespace AD_SeaAnimalGame
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ControlPage";
             this.panelControlPage.ResumeLayout(false);
-            this.panelControl.ResumeLayout(false);
-            this.panelControl.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -158,9 +99,5 @@ namespace AD_SeaAnimalGame
         private System.Windows.Forms.Panel panelControlPage;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel panelControl;
-        private System.Windows.Forms.Label lblControl1;
-        private System.Windows.Forms.Label lblControl3;
-        private System.Windows.Forms.Label lblControl2;
-        private System.Windows.Forms.Label lblControl4;
     }
 }

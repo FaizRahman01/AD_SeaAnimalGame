@@ -57,6 +57,7 @@ namespace AD_SeaAnimalGame
             this.panelGamePage = new System.Windows.Forms.Panel();
             this.lblPlayerName = new System.Windows.Forms.Label();
             this.lblPlayerId = new System.Windows.Forms.Label();
+            this.MoveSpawnTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pboxSubmarine)).BeginInit();
             this.panelGameOver.SuspendLayout();
             this.panelBackground1.SuspendLayout();
@@ -353,6 +354,12 @@ namespace AD_SeaAnimalGame
             this.lblPlayerId.Text = "-";
             this.lblPlayerId.Visible = false;
             // 
+            // MoveSpawnTimer
+            // 
+            this.MoveSpawnTimer.Enabled = true;
+            this.MoveSpawnTimer.Interval = 20;
+            this.MoveSpawnTimer.Tick += new System.EventHandler(this.MoveSpawnTimer_Tick);
+            // 
             // GamePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,6 +389,7 @@ namespace AD_SeaAnimalGame
             this.Load += new System.EventHandler(this.GamePage_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GamePage_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.GamePage_KeyUp);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.GamePage_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.pboxSubmarine)).EndInit();
             this.panelGameOver.ResumeLayout(false);
             this.panelBackground1.ResumeLayout(false);
@@ -424,5 +432,6 @@ namespace AD_SeaAnimalGame
         private System.Windows.Forms.Panel panelGamePage;
         private System.Windows.Forms.Label lblPlayerName;
         private System.Windows.Forms.Label lblPlayerId;
+        private System.Windows.Forms.Timer MoveSpawnTimer;
     }
 }

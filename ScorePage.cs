@@ -61,7 +61,9 @@ namespace AD_SeaAnimalGame
             OleDbCommand dbcmdscore = new OleDbCommand();
             dbcmdscore.Connection = dbcon;
             //show only 5 player with the highest score that they achieved in the game
-            dbcmdscore.CommandText = "select top 5 PlayerId as Player_ID, max(PlayerScore) as Score from PlayerScoreTbl group by PlayerId";
+            dbcmdscore.CommandText = "SELECT TOP 5  PlayerTbl.PlayerName as PlayerName, max(PlayerScoreTbl.PlayerScore) as Score " +
+                                     "FROM PlayerScoreTbl INNER JOIN PlayerTbl ON PlayerScoreTbl.PlayerId=PlayerTbl.PlayerId " +
+                                     "GROUP BY PlayerTbl.PlayerName ORDER BY max(PlayerScoreTbl.PlayerScore) desc;";
 
             OleDbDataAdapter dascore = new OleDbDataAdapter(dbcmdscore);
             DataTable dtscore = new DataTable();
@@ -106,31 +108,6 @@ namespace AD_SeaAnimalGame
 
             }
 
-            dbcon.Close();
-        }
-
-        private void btnSearchPlayer_Click(object sender, EventArgs e)
-        {
-            dbcon.Open();
-            OleDbCommand dbcmdsearch = new OleDbCommand();
-            dbcmdsearch.Connection = dbcon;
-            //search for name that match the id display on gridview so that the user know the playername of the playerid
-            dbcmdsearch.CommandText = "select PlayerId, PlayerName from PlayerTbl where PlayerId = @pid";
-            dbcmdsearch.Parameters.AddWithValue("@pid", tboxSearchPName.Text);
-
-            OleDbDataReader dbreader = dbcmdsearch.ExecuteReader();
-
-
-            if (dbreader.Read())
-            {
-
-                lblShowPName.Text = dbreader["PlayerName"].ToString();
-                
-            }
-            else
-            {
-                MessageBox.Show("Player name not found");
-            }
             dbcon.Close();
         }
     }

@@ -49,29 +49,33 @@ namespace AD_SeaAnimalGame
         private void btnUse1_Click(object sender, EventArgs e)
         {
             //going to pass the skin value to GamePage 
-            lblPlayerChoice.Text = "Spekter";
-            skin = lblPlayerChoice.Text;
-        }
 
-        private void btnUse2_Click(object sender, EventArgs e)
-        {
-            lblPlayerChoice.Text = "Fantom";
-            skin = lblPlayerChoice.Text;
-        }
+            skin = "Spekter";
 
-        private void btnUse3_Click(object sender, EventArgs e)
-        {
-            lblPlayerChoice.Text = "Veindal";
-            skin = lblPlayerChoice.Text;
-        }
-
-
-        private void btnConfirm_Click(object sender, EventArgs e)
-        {
-            //hide this page and open other form
             this.Hide();
             PlayerMainPage pmainpage = new PlayerMainPage();
             pmainpage.Show();
         }
+
+        private void btnUse2_Click(object sender, EventArgs e)
+        {
+
+            skin = "Fantom";
+
+            this.Hide();
+            PlayerMainPage pmainpage = new PlayerMainPage();
+            pmainpage.Show();
+        }
+
+        private void btnUse3_Click(object sender, EventArgs e)
+        {
+
+            skin = "Veindal";
+
+            this.Hide();
+            PlayerMainPage pmainpage = new PlayerMainPage();
+            pmainpage.Show();
+        }
+
     }
 }

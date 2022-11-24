@@ -248,6 +248,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="FishLegends.ico" />
+    <None Include="Resources\controlkey.png" />
     <None Include="Resources\darkbluebg.png" />
     <None Include="Resources\bluebg.png" />
     <None Include="Resources\back.png" />

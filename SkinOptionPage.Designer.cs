@@ -32,9 +32,6 @@ namespace AD_SeaAnimalGame
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SkinOptionPage));
             this.panelSkinOptionPage = new System.Windows.Forms.Panel();
             this.panelSkinSelection = new System.Windows.Forms.Panel();
-            this.btnConfirm = new System.Windows.Forms.Button();
-            this.lblPlayerChoice = new System.Windows.Forms.Label();
-            this.lblStatement = new System.Windows.Forms.Label();
             this.btnUse3 = new System.Windows.Forms.Button();
             this.lblSkinName3 = new System.Windows.Forms.Label();
             this.btnUse2 = new System.Windows.Forms.Button();
@@ -67,9 +64,6 @@ namespace AD_SeaAnimalGame
             this.panelSkinSelection.BackColor = System.Drawing.Color.Transparent;
             this.panelSkinSelection.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.darkbluebg;
             this.panelSkinSelection.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelSkinSelection.Controls.Add(this.btnConfirm);
-            this.panelSkinSelection.Controls.Add(this.lblPlayerChoice);
-            this.panelSkinSelection.Controls.Add(this.lblStatement);
             this.panelSkinSelection.Controls.Add(this.btnUse3);
             this.panelSkinSelection.Controls.Add(this.lblSkinName3);
             this.panelSkinSelection.Controls.Add(this.btnUse2);
@@ -83,50 +77,6 @@ namespace AD_SeaAnimalGame
             this.panelSkinSelection.Name = "panelSkinSelection";
             this.panelSkinSelection.Size = new System.Drawing.Size(441, 549);
             this.panelSkinSelection.TabIndex = 5;
-            // 
-            // btnConfirm
-            // 
-            this.btnConfirm.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnConfirm.BackColor = System.Drawing.Color.Transparent;
-            this.btnConfirm.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.buttonbg;
-            this.btnConfirm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnConfirm.FlatAppearance.BorderSize = 0;
-            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirm.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Location = new System.Drawing.Point(297, 477);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(99, 45);
-            this.btnConfirm.TabIndex = 13;
-            this.btnConfirm.Text = "CHANGE";
-            this.btnConfirm.UseVisualStyleBackColor = false;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
-            // 
-            // lblPlayerChoice
-            // 
-            this.lblPlayerChoice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblPlayerChoice.AutoSize = true;
-            this.lblPlayerChoice.BackColor = System.Drawing.Color.Transparent;
-            this.lblPlayerChoice.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayerChoice.ForeColor = System.Drawing.Color.White;
-            this.lblPlayerChoice.Location = new System.Drawing.Point(37, 496);
-            this.lblPlayerChoice.Name = "lblPlayerChoice";
-            this.lblPlayerChoice.Size = new System.Drawing.Size(87, 28);
-            this.lblPlayerChoice.TabIndex = 12;
-            this.lblPlayerChoice.Text = "Spekter";
-            // 
-            // lblStatement
-            // 
-            this.lblStatement.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblStatement.AutoSize = true;
-            this.lblStatement.BackColor = System.Drawing.Color.Transparent;
-            this.lblStatement.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatement.ForeColor = System.Drawing.Color.White;
-            this.lblStatement.Location = new System.Drawing.Point(34, 457);
-            this.lblStatement.Name = "lblStatement";
-            this.lblStatement.Size = new System.Drawing.Size(142, 29);
-            this.lblStatement.TabIndex = 11;
-            this.lblStatement.Text = "You Choose";
             // 
             // btnUse3
             // 
@@ -292,8 +242,5 @@ namespace AD_SeaAnimalGame
         private System.Windows.Forms.Label lblSkinName2;
         private System.Windows.Forms.Button btnUse1;
         private System.Windows.Forms.Label lblSkinName1;
-        private System.Windows.Forms.Label lblPlayerChoice;
-        private System.Windows.Forms.Label lblStatement;
-        private System.Windows.Forms.Button btnConfirm;
     }
 }
