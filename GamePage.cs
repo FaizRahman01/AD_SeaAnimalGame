@@ -19,6 +19,8 @@ namespace AD_SeaAnimalGame
         OleDbConnection dbcon = new OleDbConnection(Properties.Resources.AccessDB_StringConnection);
 
         Random randomSpawn = new Random();
+
+        //use list to store the new picturebox that add to the form
         List<PictureBox> fish = new List<PictureBox>();
         List<PictureBox> notfish = new List<PictureBox>();
         List<PictureBox> octopus = new List<PictureBox>();
@@ -56,6 +58,68 @@ namespace AD_SeaAnimalGame
             }
         }
 
+
+        private void GamePage_Load(object sender, EventArgs e)
+        {
+            //get passing value in Session.cs from the PlayerNamePage
+            lblPlayerName.Text = Session.SessionName;
+            dbcon.Open();
+
+            OleDbCommand dbcmdlogin = new OleDbCommand();
+            dbcmdlogin.Connection = dbcon;
+            //show player id that match the playername that show as a label that get the passing value from Session.cs
+            dbcmdlogin.CommandText = "select PlayerId, PlayerName from PlayerTbl where PlayerName = '" + lblPlayerName.Text + "' ";
+
+            OleDbDataReader dbreader = dbcmdlogin.ExecuteReader();
+
+
+            if (dbreader.Read())
+            {
+
+                lblPlayerId.Text = dbreader["PlayerId"].ToString();
+
+            }
+            else
+            {
+                MessageBox.Show("Player name not found");
+            }
+
+            dbcon.Close();
+        }
+
+        private void btnExitGame_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                dbcon.Open();
+                //insert score in database that take the value from the label show in form
+                OleDbCommand dbcmd = new OleDbCommand("insert into PlayerScoreTbl (PlayerId, PlayerScore)values ('" + lblPlayerId.Text + "','" + lblGameScore.Text + "')", dbcon);
+                dbcmd.ExecuteNonQuery();
+                dbcon.Close();
+
+                this.Hide();
+                PlayerMainPage pmainpage = new PlayerMainPage();
+                pmainpage.Show();
+                TimeCounter = 120;
+            }
+            catch
+            {
+                MessageBox.Show("Database cannot read the player id");
+                this.Hide();
+                MainPage mainpage = new MainPage();
+                mainpage.Show();
+                Application.Restart();
+            }
+        }
+
+        private void btnCloseGame_Click(object sender, EventArgs e)
+        {
+            //if the user decide to exit the game it will not store the score in database
+            Application.Exit();
+            TimeCounter = 120;
+        }
+
         //call the class in SpawnItem.cs
         SpawnFish spawnFishItem = new SpawnFish();
         SpawnNotFish spawnNotFishItem = new SpawnNotFish();
@@ -63,57 +127,60 @@ namespace AD_SeaAnimalGame
         {
 
             PictureBox pbfishspawn = spawnFishItem.CreateFish();
-
+            //spawn new pic box for level 1 fish
             int x = randomSpawn.Next(10, this.ClientSize.Width - pbfishspawn.Width);
             int y = randomSpawn.Next(10, this.ClientSize.Height - pbfishspawn.Height);
             pbfishspawn.Location = new Point(x, y);
-
+            //add any picturebox that spawn inside the form and add it to the list
             fish.Add(pbfishspawn);
             this.Controls.Add(pbfishspawn);
 
         }
 
         private async void FishSpawn2()
+        //need to add async to use await task.delay 
         {
             PictureBox pbfishspawn2 = spawnFishItem.CreateFish2();
-
+            //spawn new pic box for level 2 fish
             int x = randomSpawn.Next(10, this.ClientSize.Width - pbfishspawn2.Width);
             int y = randomSpawn.Next(10, this.ClientSize.Height - pbfishspawn2.Height);
             pbfishspawn2.Location = new Point(x, y);
-
+            //add any picturebox that spawn inside the form and add it to the list
             fish2.Add(pbfishspawn2);
             this.Controls.Add(pbfishspawn2);
-
+            //after 3 second when the new picturebox add,it will make picturebox visible = false
             await Task.Delay(3000);
             pbfishspawn2.Visible = false;
         }
 
         private async void SeaTurtleSpawn()
+        //need to add async to use await task.delay 
         {
             PictureBox pbseaturtlespawn = spawnFishItem.CreateSeaTurtle();
             //spawn new pic box for sea turtle object
             int x = randomSpawn.Next(10, this.ClientSize.Width - pbseaturtlespawn.Width);
             int y = randomSpawn.Next(10, this.ClientSize.Height - pbseaturtlespawn.Height);
             pbseaturtlespawn.Location = new Point(x, y);
-
+            //add any picturebox that spawn inside the form and add it to the list
             seaturtle.Add(pbseaturtlespawn);
             this.Controls.Add(pbseaturtlespawn);
-
+            //after 3 second when the new picturebox add,it will make picturebox visible = false
             await Task.Delay(3000);
             pbseaturtlespawn.Visible = false;
         }
 
         private async void OctopusSpawn()
+        //need to add async to use await task.delay 
         {
             PictureBox pboctopusspawn = spawnFishItem.CreateOctopus();
             //spawn new pic box for octopus object
             int x = randomSpawn.Next(10, this.ClientSize.Width - pboctopusspawn.Width);
             int y = randomSpawn.Next(10, this.ClientSize.Height - pboctopusspawn.Height);
             pboctopusspawn.Location = new Point(x, y);
-
+            //add any picturebox that spawn inside the form and add it to the list
             octopus.Add(pboctopusspawn);
             this.Controls.Add(pboctopusspawn);
-
+            //after 3 second when the new picturebox add,it will make picturebox visible = false
             await Task.Delay(3000);
             pboctopusspawn.Visible = false;
         }
@@ -121,11 +188,11 @@ namespace AD_SeaAnimalGame
         private void NotFishSpawn()
         {
             PictureBox pbnotfishspawn = spawnNotFishItem.CreateNotFish();
-
+            //spawn new pic box for level 1 random object
             int x = randomSpawn.Next(10, this.ClientSize.Width - pbnotfishspawn.Width);
             int y = randomSpawn.Next(10, this.ClientSize.Height - pbnotfishspawn.Height);
             pbnotfishspawn.Location = new Point(x, y);
-
+            //add any picturebox that spawn inside the form and add it to the list
             notfish.Add(pbnotfishspawn);
             this.Controls.Add(pbnotfishspawn);
 
@@ -133,28 +200,27 @@ namespace AD_SeaAnimalGame
         }
 
         private async void NotFishSpawn2()
+        //need to add async to use await task.delay 
         {
             PictureBox pbnotfishspawn2 = spawnNotFishItem.CreateNotFish2();
-
+            //spawn new pic box for level 2 random object
             int x = randomSpawn.Next(10, this.ClientSize.Width - pbnotfishspawn2.Width);
             int y = randomSpawn.Next(10, this.ClientSize.Height - pbnotfishspawn2.Height);
             pbnotfishspawn2.Location = new Point(x, y);
-
+            //add any picturebox that spawn inside the form and add it to the list
             notfish2.Add(pbnotfishspawn2);
             this.Controls.Add(pbnotfishspawn2);
-
+            //after 3 second when the new picturebox add,it will make picturebox visible = false
             await Task.Delay(3000);
             pbnotfishspawn2.Visible = false;
         }
 
-
         bool submarineUp, submarineDown, submarineLeft, submarineRight;
-
-        int submarineSpeed = 12;
-
         private void GamePage_KeyDown(object sender, KeyEventArgs e)
+        //when the user press any of the key it will run anything that is set inside this event
         {
             if (e.KeyCode == Keys.Escape)
+            //when the user press esc button the panel for game over will become visible
             {
                 CountdownGameTimer.Stop();
                 FishSpawnTimer.Stop();
@@ -189,6 +255,7 @@ namespace AD_SeaAnimalGame
         }
 
         private void GamePage_KeyUp(object sender, KeyEventArgs e)
+        //when the user not press any of the key it will not do anything
         {
             if (e.KeyCode == Keys.A)
             {
@@ -237,78 +304,22 @@ namespace AD_SeaAnimalGame
             NotFishSpawn2();
         }
 
-
-        private void GamePage_Load(object sender, EventArgs e)
-        {
-            lblPlayerName.Text = Session.SessionName;
-            
-
-            dbcon.Open();
-            
-            OleDbCommand dbcmdlogin = new OleDbCommand();
-            dbcmdlogin.Connection = dbcon;
-            dbcmdlogin.CommandText = "select PlayerId, PlayerName from PlayerTbl where PlayerName = '" + lblPlayerName.Text + "' ";
-
-            OleDbDataReader dbreader = dbcmdlogin.ExecuteReader();
-
-
-            if (dbreader.Read())
-            {
-
-                lblPlayerId.Text = dbreader["PlayerId"].ToString();
-
-            }
-            else
-            {
-                MessageBox.Show("Player name not found");
-            }
-
-            dbcon.Close();
-        }
-
-        private void btnExitGame_Click(object sender, EventArgs e)
-        {
-            
-            try
-            {
-                dbcon.Open();
-                OleDbCommand dbcmd = new OleDbCommand("insert into PlayerScoreTbl (PlayerId, PlayerScore)values ('" + lblPlayerId.Text + "','" + lblGameScore.Text + "')", dbcon);
-                dbcmd.ExecuteNonQuery();
-                dbcon.Close();
-
-                this.Hide();
-                PlayerMainPage pmainpage = new PlayerMainPage();
-                pmainpage.Show();
-                TimeCounter = 120;
-            }
-            catch
-            {
-                MessageBox.Show("Database cannot read the player id");
-                this.Hide();
-                MainPage mainpage = new MainPage();
-                mainpage.Show();
-                Application.Restart();
-            }
-        }
-
-        private void btnCloseGame_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-            TimeCounter = 120;
-        }
-
+        //game timer set to 120 second
         int TimeCounter = 120;
         private void CountdownGameTimer_Tick(object sender, EventArgs e)
         {
+            //use the value of TimeCounter and show it as a label
             lblGameTImer.Text = String.Format("{0} s", TimeCounter);
 
             if (TimeCounter > 0)
             {
+                //if the timer is more than 0 seconds it will deduct 1 seconds of the game timer
                 CountdownGameTimer.Start();
                 TimeCounter--;
             }
             else if (TimeCounter == 0)
             {
+                //the game timer reach 0 seconds the game will stop running
                 CountdownGameTimer.Stop();
                 FishSpawnTimer.Stop();
                 NonFishSpawnTimer.Stop();
@@ -323,6 +334,7 @@ namespace AD_SeaAnimalGame
 
             if(TimeCounter > 100)
             {
+                //game timer more than 100 second will make the spawn item for level 2 not show
                 TurtleSpawnTimer.Stop();
                 OctopusSpawnTimer.Stop();
                 FishSpawnTimer2.Stop();
@@ -331,11 +343,13 @@ namespace AD_SeaAnimalGame
 
             else if(TimeCounter <= 100 && TimeCounter > 0)
             {
+                //time counter value less and equal to 100 && more than 0 will spawn the level 2 picturebox
                 TurtleSpawnTimer.Start();
                 OctopusSpawnTimer.Start();
                 FishSpawnTimer2.Start();
                 NotFishSpawnTimer2.Start();
 
+                //remove any level 1 picturebox when timer reach 101 seconds
                 foreach (PictureBox fishpb in fish.ToList())
                 {
                     fish.Remove(fishpb);
@@ -348,6 +362,7 @@ namespace AD_SeaAnimalGame
                     this.Controls.Remove(notfishpb);
 
                 }
+                //stop the level 1 picturebox add into the form
                 FishSpawnTimer.Stop();
                 NonFishSpawnTimer.Stop();
 
@@ -356,47 +371,63 @@ namespace AD_SeaAnimalGame
 
         }
 
-
-        int wrongCatch = 0;
-        int playerScore = 0;
+        //set the submarine speed
+        int submarineSpeed = 12;
 
         int correctCatch = 0;
+        int wrongCatch = 0;
+        //set default starting player score to 0
+        int playerScore = 0;
+        //playerHP use for the progress bar
         int playerHP = 100;
 
         private void SubmarineMoveTimer_Tick(object sender, EventArgs e)
         {
+            //call the skin properties name inside the PlayerSkin.cs class
             PlayerSkin1 pskin1 = new PlayerSkin1();
             PlayerSkin2 pskin2 = new PlayerSkin2();
             PlayerSkin3 pskin3 = new PlayerSkin3();
 
+            //skingame use to call the method from the class 
             string skingame;
+            //bitmap can be use to call the value from the variable and use 
+            //it to call the properties name 
             Bitmap skinImage;
 
+
+            //one of the if statement will be use from what the user
+            //has select from SkinOptionPage.cs and pass the skin value to this form
             if (SkinOptionPage.SkinOptionInstance.skin == "Spekter")
             {
+                //get the value of skin properties name from the class
                 skingame = pskin1.GetMainSkin();
                 skinImage = (Bitmap)Properties.Resources.ResourceManager.GetObject(skingame);
+                //image name for propeties get from PlayerSkin.cs
                 pboxSubmarine.Image = skinImage;
             }
             else if (SkinOptionPage.SkinOptionInstance.skin == "Fantom")
             {
-
+                //get the value of skin properties name from the class
                 skingame = pskin2.GetSecondSkin();
                 skinImage = (Bitmap)Properties.Resources.ResourceManager.GetObject(skingame);
+                //image name for propeties get from PlayerSkin.cs
                 pboxSubmarine.Image = skinImage;
 
             }
             else if (SkinOptionPage.SkinOptionInstance.skin == "Veindal")
             {
-
+                //get the value of skin properties name from the class
                 skingame = pskin3.GetThirdSkin();
                 skinImage = (Bitmap)Properties.Resources.ResourceManager.GetObject(skingame);
+                //image name for propeties get from PlayerSkin.cs
                 pboxSubmarine.Image = skinImage;
             }
             else
             {
+                //get the value of skin properties name from the class
                 skingame = pskin2.GetSecondSkin();
                 skinImage = (Bitmap)Properties.Resources.ResourceManager.GetObject(skingame);
+                //image name for propeties get from PlayerSkin.cs
                 pboxSubmarine.Image = skinImage;
             }
 
@@ -405,9 +436,10 @@ namespace AD_SeaAnimalGame
             if (submarineLeft == true && pboxSubmarine.Left > 0)
             {
                 pboxSubmarine.Left -= submarineSpeed;
-
+                //run one of the if statement from what skin that the player choose
                 if(skingame.ToString() == "submarineleft")
                 {
+                    //change the picturebox image if move to left
                     pboxSubmarine.Image = Properties.Resources.submarineleft;
                 }
                 else if(skingame.ToString() == "submarine2left")
@@ -423,9 +455,10 @@ namespace AD_SeaAnimalGame
             if (submarineRight == true && pboxSubmarine.Left < 877)
             {
                 pboxSubmarine.Left += submarineSpeed;
-
+                //run one of the if statement from what skin that the player choose
                 if (skingame.ToString() == "submarineleft")
                 {
+                    //change the picturebox image if move to right
                     pboxSubmarine.Image = Properties.Resources.submarineright;
                 }
                 else if (skingame.ToString() == "submarine2left")
@@ -448,9 +481,12 @@ namespace AD_SeaAnimalGame
                 pboxSubmarine.Top += submarineSpeed;
             }
 
-
+            //show playerScore as label
             lblGameScore.Text = "" + playerScore;
+            //show the value of each item they hit
+            //wrongCatch for the not sea animal object
             lblNotFishCatch.Text = "NotFish: " + wrongCatch;
+            //correctCatch for the sea animal
             lblFishCatch.Text = "Fish: " + correctCatch;
 
             submarineHP.Value = Convert.ToInt32(playerHP);
@@ -459,16 +495,20 @@ namespace AD_SeaAnimalGame
             {
                 if (pboxSubmarine.Bounds.IntersectsWith(fishpb.Bounds))
                 {
-                    // if the collision happened do the following
+                    //everytime the submarine intersect with any picturebox it will remove 
+                    //the picturebox
                     fish.Remove(fishpb);
                     this.Controls.Remove(fishpb);
 
                     correctCatch++;
+                    //reset the wrongcatch value to 0 
                     wrongCatch = 0;
                     playerScore = correctCatch + wrongCatch;
+                    //if the user hit the picturebox it will make the progressbar become full
                     playerHP = 100;
+                    //show how many score add in label
                     lblPointEarn.Text = "+1";
-
+                    //soundplayer use for game sound effect everytime picturebox got hit
                     SoundPlayer player = new SoundPlayer(Properties.Resources.correct);
                     player.Play();
                 }
@@ -479,7 +519,8 @@ namespace AD_SeaAnimalGame
             {
                 if (pboxSubmarine.Bounds.IntersectsWith(notfishpb.Bounds))
                 {
-                    // if the collision happened do the following
+                    //everytime the submarine intersect with any picturebox it will remove 
+                    //the picturebox
                     notfish.Remove(notfishpb);
                     this.Controls.Remove(notfishpb);
 
@@ -488,6 +529,8 @@ namespace AD_SeaAnimalGame
 
 
                     lblPointEarn.Text = "-1";
+                    //reduce the progressbar value is user hit the
+                    //picturebox which is not seaanimal
                     playerHP -= 20;
                     wrongCatch++;
                     correctCatch--;
@@ -502,7 +545,7 @@ namespace AD_SeaAnimalGame
                     {
                         correctCatch = 0;
                     }
-
+                    //if wrongcatch value equal to 5 the game will end
                     if (wrongCatch == 5)
                     {
                         CountdownGameTimer.Stop();
@@ -519,16 +562,17 @@ namespace AD_SeaAnimalGame
                 }
 
             }
-
-            //remove octopus when intersect  with submarine
+  
             foreach (PictureBox octopuspb in octopus.ToList())
             {
+                //if any picturebox that spawn in form visible = false it will not use
+                //the if statement
                 if (pboxSubmarine.Bounds.IntersectsWith(octopuspb.Bounds) && octopuspb.Visible == true)
                 {
-
+                    //everytime the submarine intersect with any picturebox it will remove 
+                    //the picturebox
                     octopus.Remove(octopuspb);
                     this.Controls.Remove(octopuspb);
-
                     correctCatch += 2;
                     wrongCatch = 0;
 
@@ -542,12 +586,14 @@ namespace AD_SeaAnimalGame
 
             }
 
-            //remove sea turtle when intersect  with submarine
             foreach (PictureBox seaturtlepb in seaturtle.ToList())
             {
+                //if any picturebox that spawn in form visible = false it will not use
+                //the if statement
                 if (pboxSubmarine.Bounds.IntersectsWith(seaturtlepb.Bounds) && seaturtlepb.Visible == true)
                 {
-
+                    //everytime the submarine intersect with any picturebox it will remove 
+                    //the picturebox
                     seaturtle.Remove(seaturtlepb);
                     this.Controls.Remove(seaturtlepb);
 
@@ -566,9 +612,12 @@ namespace AD_SeaAnimalGame
 
             foreach (PictureBox fishpb2 in fish2.ToList())
             {
+                //if any picturebox that spawn in form visible = false it will not use
+                //the if statement
                 if (pboxSubmarine.Bounds.IntersectsWith(fishpb2.Bounds) && fishpb2.Visible == true)
                 {
-                    // if the collision happened do the following
+                    //everytime the submarine intersect with any picturebox it will remove 
+                    //the picturebox
                     fish2.Remove(fishpb2);
                     this.Controls.Remove(fishpb2);
 
@@ -586,9 +635,12 @@ namespace AD_SeaAnimalGame
 
             foreach (PictureBox notfishpb2 in notfish2.ToList())
             {
+                //if any picturebox that spawn in form visible = false it will not use
+                //the if statement
                 if (pboxSubmarine.Bounds.IntersectsWith(notfishpb2.Bounds) && notfishpb2.Visible == true)
                 {
-                    // if the collision happened do the following
+                    //everytime the submarine intersect with any picturebox it will remove 
+                    //the picturebox
                     notfish2.Remove(notfishpb2);
                     this.Controls.Remove(notfishpb2);
 

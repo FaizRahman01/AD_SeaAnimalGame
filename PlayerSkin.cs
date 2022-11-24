@@ -15,6 +15,7 @@ namespace AD_SeaAnimalGame
     {
         public string GetMainSkin()
         {
+            //use the properties image name if user choose Spekter in SkinOptionPage
             skinName = "submarineleft";
             return skinName;
         }
@@ -24,6 +25,7 @@ namespace AD_SeaAnimalGame
     {
         public string GetSecondSkin()
         {
+            //use the properties image name if user choose Fantom in SkinOptionPage
             skinName = "submarine2left";
             return skinName;
         }
@@ -34,6 +36,7 @@ namespace AD_SeaAnimalGame
     {
         public string GetThirdSkin()
         {
+            //use the properties image name if user choose Veindal in SkinOptionPage
             skinName = "submarine3left";
             return skinName;
         }

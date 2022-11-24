@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 namespace AD_SeaAnimalGame
 {
+    //parent class 'SpawnItem'
     class SpawnItem
     {
          public PictureBox pbSpawn()
@@ -23,15 +24,18 @@ namespace AD_SeaAnimalGame
 
     }
 	
-	
+	//child class 'SpawnFIsh'
     class SpawnFish:SpawnItem
     {
+        //call the SpawnItem class
         SpawnItem mySpawnFishItem = new SpawnItem();
         public PictureBox CreateFish()
         {
+            //use the same properties as in the SpawnItem class
             PictureBox pbNormalFish = mySpawnFishItem.pbSpawn();
+            //use the picturebox image from properties
             pbNormalFish.Image = Properties.Resources.bluefish;
-
+            //return the value of method to the picturebox
             return pbNormalFish;
         }
 
@@ -63,7 +67,7 @@ namespace AD_SeaAnimalGame
         
        
 
-       
+     //child class 'SpawnNotFish'  
     class SpawnNotFish:SpawnItem
     {
         SpawnItem mySpawnNotFishItem = new SpawnItem();
