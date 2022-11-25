@@ -1,146 +1,105 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="AD_SeaAnimalGame.PlayerSkin" Collapsed="true">
-    <Position X="16.75" Y="16" Width="1.25" />
+    <Position X="5.75" Y="10" Width="1.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PlayerSkin.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="GamePage" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="AD_SeaAnimalGame.PlayerSkin1" Collapsed="true">
-    <Position X="16.75" Y="17" Width="1.25" />
+    <Position X="5.75" Y="11" Width="1.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
       <FileName>PlayerSkin.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AD_SeaAnimalGame.PlayerSkin2" Collapsed="true">
-    <Position X="16.75" Y="18" Width="1.25" />
+    <Position X="5.75" Y="12" Width="1.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
       <FileName>PlayerSkin.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AD_SeaAnimalGame.PlayerSkin3" Collapsed="true">
-    <Position X="16.75" Y="18.75" Width="1.25" />
+    <Position X="5.75" Y="12.75" Width="1.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PlayerSkin.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AD_SeaAnimalGame.Session" Collapsed="true">
-    <Position X="14.75" Y="15.5" Width="1.5" />
-    <AssociationLine Name="GamePage" Type="AD_SeaAnimalGame.GamePage" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="16.25" Y="15.719" />
-        <Point X="18.438" Y="15.719" />
-        <Point X="18.438" Y="15.191" />
-      </Path>
-    </AssociationLine>
+    <Position X="3.75" Y="9.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAACEAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>Session.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="GamePage" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="AD_SeaAnimalGame.SpawnItem" Collapsed="true">
-    <Position X="18.25" Y="16" Width="1.5" />
+    <Position X="7.25" Y="10" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SpawnItem.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="GamePage" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="AD_SeaAnimalGame.SpawnFish" Collapsed="true">
-    <Position X="18.25" Y="18" Width="1.5" />
+    <Position X="7.25" Y="12" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EgAAgAAAAAAAAAIAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SpawnItem.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AD_SeaAnimalGame.SpawnNotFish" Collapsed="true">
-    <Position X="18.25" Y="17" Width="1.5" />
+    <Position X="7.25" Y="11" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAQAAAAAAQAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SpawnItem.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AD_SeaAnimalGame.ControlPage" Collapsed="true">
-    <Position X="13.75" Y="12.5" Width="2.5" />
+    <Position X="2.75" Y="6.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAACAAAEAAAACAAIACAAQBAABAAAAIAAEAAAA=</HashCode>
       <FileName>ControlPage.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AD_SeaAnimalGame.GamePage" Collapsed="true">
-    <Position X="18.25" Y="14.5" Width="1.5" />
+    <Position X="7.25" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ySokASASACIQgBCEJNSIARJDAMU4QWCNiyAMAjAggYg=</HashCode>
       <FileName>GamePage.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AD_SeaAnimalGame.MainPage" Collapsed="true">
-    <Position X="12" Y="13.25" Width="1.5" />
-    <AssociationLine Name="PlayerNamePage" Type="AD_SeaAnimalGame.PlayerNamePage" FixedFromPoint="true">
-      <Path>
-        <Point X="12.667" Y="13.941" />
-        <Point X="12.667" Y="14.5" />
-      </Path>
-    </AssociationLine>
+    <Position X="1" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IQAAAAgBACAAEABAAACAEgADAAAAQAAGAIAAAAACAAA=</HashCode>
+      <HashCode>IQAAAAgBACAAEABAAACAEgACAAAAQAACAIAAAAACAAA=</HashCode>
       <FileName>MainPage.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="PlayerNamePage" />
-      <Property Name="ControlPage" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="AD_SeaAnimalGame.PlayerMainPage" Collapsed="true">
-    <Position X="14.75" Y="14.5" Width="2.5" />
-    <AssociationLine Name="ScorePage" Type="AD_SeaAnimalGame.ScorePage" FixedFromPoint="true">
-      <Path>
-        <Point X="16.938" Y="14.5" />
-        <Point X="16.938" Y="13.941" />
-      </Path>
-    </AssociationLine>
+    <Position X="3.75" Y="8.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>IQAAgAAAQCIAACAAAACAAAAHQAKAAAACAQBAEAACAAA=</HashCode>
+      <HashCode>IQAAgAAAQCIAAAAAAACAAAADQAIAAAACAQBAEAACAAA=</HashCode>
       <FileName>PlayerMainPage.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="GamePage" />
-      <Property Name="ScorePage" />
-      <Property Name="SkinOptionPage" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="AD_SeaAnimalGame.PlayerNamePage" Collapsed="true">
-    <Position X="12" Y="14.5" Width="1.5" />
+    <Position X="1" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAAGBEAKAAAUAAAECgAIACAAEBQAFAAIAoAQAAAAA=</HashCode>
+      <HashCode>AQAAAGBEAKAAAEAAAECgAIACAAEAQAFAAIAoAQAAAAA=</HashCode>
       <FileName>PlayerNamePage.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="PlayerMainPage" />
-      <Property Name="Session" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="AD_SeaAnimalGame.ScorePage" Collapsed="true">
-    <Position X="16" Y="13.25" Width="2" />
+    <Position X="3" Y="10.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AQIAACAAACEAAAAAAAyAAIACAQRAAABAAAgAQAgAIAA=</HashCode>
       <FileName>ScorePage.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AD_SeaAnimalGame.SkinOptionPage" Collapsed="true">
-    <Position X="13.75" Y="13.25" Width="2" />
+    <Position X="2.75" Y="7.25" Width="2" />
     <TypeIdentifier>
       <HashCode>QQAAABAAACAALGApACCAAAACAAAAAAAABAARAAAAAAA=</HashCode>
       <FileName>SkinOptionPage.cs</FileName>

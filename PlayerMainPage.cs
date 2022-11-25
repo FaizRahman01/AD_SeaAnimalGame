@@ -18,30 +18,6 @@ namespace AD_SeaAnimalGame
             InitializeComponent();
         }
 
-        public GamePage GamePage
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public ScorePage ScorePage
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public SkinOptionPage SkinOptionPage
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
         //point use for coordinate x,y
         private Point FormPosition;
 

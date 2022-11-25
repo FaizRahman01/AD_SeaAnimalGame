@@ -127,21 +127,5 @@ namespace AD_SeaAnimalGame
             //clear textbox value 
             tboxPName.Text = "";
         }
-
-        public PlayerMainPage PlayerMainPage
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        internal Session Session
-        {
-            get => default;
-            set
-            {
-            }
-        }
     }
 }

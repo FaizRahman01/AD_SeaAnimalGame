@@ -9,14 +9,6 @@ namespace AD_SeaAnimalGame
     class PlayerSkin
     {
         public string skinName;
-
-        public GamePage GamePage
-        {
-            get => default;
-            set
-            {
-            }
-        }
     }
 
     class PlayerSkin1 : PlayerSkin

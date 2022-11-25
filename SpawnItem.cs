@@ -11,13 +11,6 @@ namespace AD_SeaAnimalGame
     //parent class 'SpawnItem'
     class SpawnItem
     {
-        public GamePage GamePage
-        {
-            get => default;
-            set
-            {
-            }
-        }
 
         public PictureBox pbSpawn()
 		 {
