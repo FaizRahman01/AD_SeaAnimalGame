@@ -643,13 +643,6 @@ namespace AD_SeaAnimalGame
 
             }
 
-        }
-
-        //click anywhere on the gamepage form when the submarine hit the spawn picturebox
-        private void GamePage_MouseClick(object sender, MouseEventArgs e)
-        {
-
-
             foreach (PictureBox fishpb in fish.ToList())
             {
                 if (pboxSubmarine.Bounds.IntersectsWith(fishpb.Bounds))
@@ -745,7 +738,6 @@ namespace AD_SeaAnimalGame
                 }
 
             }
-
 
         }
     }

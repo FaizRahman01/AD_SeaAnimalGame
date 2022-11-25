@@ -389,7 +389,6 @@ namespace AD_SeaAnimalGame
             this.Load += new System.EventHandler(this.GamePage_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GamePage_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.GamePage_KeyUp);
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.GamePage_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.pboxSubmarine)).EndInit();
             this.panelGameOver.ResumeLayout(false);
             this.panelBackground1.ResumeLayout(false);
