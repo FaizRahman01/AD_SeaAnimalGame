@@ -171,6 +171,7 @@ namespace AD_SeaAnimalGame
             this.dataGridViewScore.GridColor = System.Drawing.Color.MediumTurquoise;
             this.dataGridViewScore.Location = new System.Drawing.Point(161, 98);
             this.dataGridViewScore.Name = "dataGridViewScore";
+            this.dataGridViewScore.ReadOnly = true;
             this.dataGridViewScore.Size = new System.Drawing.Size(249, 366);
             this.dataGridViewScore.TabIndex = 1;
             // 
