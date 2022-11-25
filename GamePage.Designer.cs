@@ -80,13 +80,13 @@ namespace AD_SeaAnimalGame
             // FishSpawnTimer
             // 
             this.FishSpawnTimer.Enabled = true;
-            this.FishSpawnTimer.Interval = 4000;
+            this.FishSpawnTimer.Interval = 3000;
             this.FishSpawnTimer.Tick += new System.EventHandler(this.FishSpawnTimer_Tick);
             // 
             // NonFishSpawnTimer
             // 
             this.NonFishSpawnTimer.Enabled = true;
-            this.NonFishSpawnTimer.Interval = 7500;
+            this.NonFishSpawnTimer.Interval = 5000;
             this.NonFishSpawnTimer.Tick += new System.EventHandler(this.NonFishSpawnTimer_Tick);
             // 
             // SubmarineMoveTimer
@@ -261,13 +261,13 @@ namespace AD_SeaAnimalGame
             // TurtleSpawnTimer
             // 
             this.TurtleSpawnTimer.Enabled = true;
-            this.TurtleSpawnTimer.Interval = 15000;
+            this.TurtleSpawnTimer.Interval = 10000;
             this.TurtleSpawnTimer.Tick += new System.EventHandler(this.TurtleSpawnTimer_Tick);
             // 
             // OctopusSpawnTimer
             // 
             this.OctopusSpawnTimer.Enabled = true;
-            this.OctopusSpawnTimer.Interval = 11000;
+            this.OctopusSpawnTimer.Interval = 8000;
             this.OctopusSpawnTimer.Tick += new System.EventHandler(this.OctopusSpawnTimer_Tick);
             // 
             // CountdownGameTimer
@@ -279,13 +279,13 @@ namespace AD_SeaAnimalGame
             // FishSpawnTimer2
             // 
             this.FishSpawnTimer2.Enabled = true;
-            this.FishSpawnTimer2.Interval = 3000;
+            this.FishSpawnTimer2.Interval = 2000;
             this.FishSpawnTimer2.Tick += new System.EventHandler(this.FishSpawnTimer2_Tick);
             // 
             // NotFishSpawnTimer2
             // 
             this.NotFishSpawnTimer2.Enabled = true;
-            this.NotFishSpawnTimer2.Interval = 10000;
+            this.NotFishSpawnTimer2.Interval = 5000;
             this.NotFishSpawnTimer2.Tick += new System.EventHandler(this.NotFishSpawnTimer2_Tick);
             // 
             // panelBackground3
