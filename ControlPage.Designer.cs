@@ -33,7 +33,9 @@ namespace AD_SeaAnimalGame
             this.panelControlPage = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
             this.panelControl = new System.Windows.Forms.Panel();
+            this.lblGameTips = new System.Windows.Forms.Label();
             this.panelControlPage.SuspendLayout();
+            this.panelControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControlPage
@@ -68,11 +70,24 @@ namespace AD_SeaAnimalGame
             this.panelControl.BackColor = System.Drawing.Color.Transparent;
             this.panelControl.BackgroundImage = global::AD_SeaAnimalGame.Properties.Resources.controlkey;
             this.panelControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelControl.Controls.Add(this.lblGameTips);
             this.panelControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl.Location = new System.Drawing.Point(0, 41);
             this.panelControl.Name = "panelControl";
             this.panelControl.Size = new System.Drawing.Size(1000, 659);
             this.panelControl.TabIndex = 6;
+            // 
+            // lblGameTips
+            // 
+            this.lblGameTips.AutoSize = true;
+            this.lblGameTips.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameTips.Location = new System.Drawing.Point(154, 497);
+            this.lblGameTips.Name = "lblGameTips";
+            this.lblGameTips.Size = new System.Drawing.Size(243, 115);
+            this.lblGameTips.TabIndex = 0;
+            this.lblGameTips.Text = "Tips: \r\nCatch the sea animal \r\nby clicking anywhere \r\non the game page when \r\nthe" +
+    " submarine hits it.";
+            this.lblGameTips.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ControlPage
             // 
@@ -90,6 +105,8 @@ namespace AD_SeaAnimalGame
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ControlPage";
             this.panelControlPage.ResumeLayout(false);
+            this.panelControl.ResumeLayout(false);
+            this.panelControl.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -99,5 +116,6 @@ namespace AD_SeaAnimalGame
         private System.Windows.Forms.Panel panelControlPage;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel panelControl;
+        private System.Windows.Forms.Label lblGameTips;
     }
 }
