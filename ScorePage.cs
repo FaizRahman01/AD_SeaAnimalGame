@@ -72,31 +72,15 @@ namespace AD_SeaAnimalGame
 
 
             //----------user profile section------------------
-            //show player login session id
-            OleDbCommand dbcmdpid = new OleDbCommand();
-            dbcmdpid.Connection = dbcon;
-            dbcmdpid.CommandText = "select PlayerId, PlayerName from PlayerTbl where PlayerName = '" + lblPlayerName.Text + "' ";
-
-            OleDbDataReader dbreader = dbcmdpid.ExecuteReader();
-
-
-            if (dbreader.Read())
-            {
-
-                lblPlayerId.Text = dbreader["PlayerId"].ToString();
-
-            }
-            else
-            {
-                MessageBox.Show("Player name not found");
-            }
 
             //chart
             OleDbCommand dbcmduserscore = new OleDbCommand();
             dbcmduserscore.Connection = dbcon;
             //show the top 5 highest score for the user that login
-            dbcmduserscore.CommandText = "select top 5 PlayerId, PlayerScore from PlayerScoreTbl where PlayerId = @pid order by PlayerScore Desc";
-            dbcmduserscore.Parameters.AddWithValue("@pid", lblPlayerId.Text);
+            dbcmduserscore.CommandText = "SELECT top 5 PlayerTbl.PlayerName, PlayerScoreTbl.PlayerScore FROM PlayerScoreTbl " +
+                                         "LEFT JOIN PlayerTbl ON PlayerScoreTbl.PlayerId=PlayerTbl.PlayerId " +
+                                         "WHERE PlayerTbl.PlayerName = @pname ORDER BY  PlayerScoreTbl.PlayerScore desc";
+            dbcmduserscore.Parameters.AddWithValue("@pname", lblPlayerName.Text);
 
             OleDbDataReader dbuserscorereader = dbcmduserscore.ExecuteReader();
 
@@ -104,7 +88,7 @@ namespace AD_SeaAnimalGame
             while (dbuserscorereader.Read())
             {
 
-                PlayerScoreChart.Series["Player Score"].Points.AddXY(dbuserscorereader["PlayerId"].ToString(), dbuserscorereader["PlayerScore"].ToString());
+                PlayerScoreChart.Series["Player Score"].Points.AddXY(dbuserscorereader["PlayerName"].ToString(), dbuserscorereader["PlayerScore"].ToString());
 
             }
 

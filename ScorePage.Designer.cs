@@ -39,8 +39,6 @@ namespace AD_SeaAnimalGame
             this.lblGameChart = new System.Windows.Forms.Label();
             this.labelUserProfileTitle = new System.Windows.Forms.Label();
             this.lblTopScore = new System.Windows.Forms.Label();
-            this.lblPlayerId = new System.Windows.Forms.Label();
-            this.lblPIdTitle = new System.Windows.Forms.Label();
             this.lblPlayerName = new System.Windows.Forms.Label();
             this.lblPNameTitle = new System.Windows.Forms.Label();
             this.dataGridViewScore = new System.Windows.Forms.DataGridView();
@@ -86,8 +84,6 @@ namespace AD_SeaAnimalGame
             this.panelControl.Controls.Add(this.lblGameChart);
             this.panelControl.Controls.Add(this.labelUserProfileTitle);
             this.panelControl.Controls.Add(this.lblTopScore);
-            this.panelControl.Controls.Add(this.lblPlayerId);
-            this.panelControl.Controls.Add(this.lblPIdTitle);
             this.panelControl.Controls.Add(this.lblPlayerName);
             this.panelControl.Controls.Add(this.lblPNameTitle);
             this.panelControl.Controls.Add(this.dataGridViewScore);
@@ -105,7 +101,7 @@ namespace AD_SeaAnimalGame
             this.lblGameChart.BackColor = System.Drawing.Color.Transparent;
             this.lblGameChart.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGameChart.ForeColor = System.Drawing.Color.Navy;
-            this.lblGameChart.Location = new System.Drawing.Point(543, 194);
+            this.lblGameChart.Location = new System.Drawing.Point(543, 139);
             this.lblGameChart.Name = "lblGameChart";
             this.lblGameChart.Size = new System.Drawing.Size(189, 33);
             this.lblGameChart.TabIndex = 36;
@@ -140,33 +136,6 @@ namespace AD_SeaAnimalGame
             this.lblTopScore.Text = "Top 5 Player";
             this.lblTopScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblPlayerId
-            // 
-            this.lblPlayerId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblPlayerId.AutoSize = true;
-            this.lblPlayerId.BackColor = System.Drawing.Color.Transparent;
-            this.lblPlayerId.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayerId.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblPlayerId.Location = new System.Drawing.Point(670, 96);
-            this.lblPlayerId.Name = "lblPlayerId";
-            this.lblPlayerId.Size = new System.Drawing.Size(27, 33);
-            this.lblPlayerId.TabIndex = 28;
-            this.lblPlayerId.Text = "-";
-            // 
-            // lblPIdTitle
-            // 
-            this.lblPIdTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblPIdTitle.AutoSize = true;
-            this.lblPIdTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblPIdTitle.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPIdTitle.ForeColor = System.Drawing.Color.Navy;
-            this.lblPIdTitle.Location = new System.Drawing.Point(552, 107);
-            this.lblPIdTitle.Name = "lblPIdTitle";
-            this.lblPIdTitle.Size = new System.Drawing.Size(81, 21);
-            this.lblPIdTitle.TabIndex = 27;
-            this.lblPIdTitle.Text = "User ID:";
-            this.lblPIdTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lblPlayerName
             // 
             this.lblPlayerName.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -174,7 +143,7 @@ namespace AD_SeaAnimalGame
             this.lblPlayerName.BackColor = System.Drawing.Color.Transparent;
             this.lblPlayerName.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlayerName.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblPlayerName.Location = new System.Drawing.Point(670, 142);
+            this.lblPlayerName.Location = new System.Drawing.Point(670, 87);
             this.lblPlayerName.Name = "lblPlayerName";
             this.lblPlayerName.Size = new System.Drawing.Size(27, 33);
             this.lblPlayerName.TabIndex = 26;
@@ -187,7 +156,7 @@ namespace AD_SeaAnimalGame
             this.lblPNameTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblPNameTitle.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPNameTitle.ForeColor = System.Drawing.Color.Navy;
-            this.lblPNameTitle.Location = new System.Drawing.Point(552, 148);
+            this.lblPNameTitle.Location = new System.Drawing.Point(552, 93);
             this.lblPNameTitle.Name = "lblPNameTitle";
             this.lblPNameTitle.Size = new System.Drawing.Size(101, 21);
             this.lblPNameTitle.TabIndex = 14;
@@ -213,7 +182,7 @@ namespace AD_SeaAnimalGame
             this.PlayerScoreChart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.PlayerScoreChart.Legends.Add(legend1);
-            this.PlayerScoreChart.Location = new System.Drawing.Point(549, 230);
+            this.PlayerScoreChart.Location = new System.Drawing.Point(549, 175);
             this.PlayerScoreChart.Name = "PlayerScoreChart";
             this.PlayerScoreChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             series1.ChartArea = "ChartArea1";
@@ -260,9 +229,7 @@ namespace AD_SeaAnimalGame
         private System.Windows.Forms.DataVisualization.Charting.Chart PlayerScoreChart;
         private System.Windows.Forms.DataGridView dataGridViewScore;
         private System.Windows.Forms.Label lblPNameTitle;
-        private System.Windows.Forms.Label lblPIdTitle;
         private System.Windows.Forms.Label lblPlayerName;
-        private System.Windows.Forms.Label lblPlayerId;
         private System.Windows.Forms.Label lblTopScore;
         private System.Windows.Forms.Label labelUserProfileTitle;
         private System.Windows.Forms.Label lblGameChart;
