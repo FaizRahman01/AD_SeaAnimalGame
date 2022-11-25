@@ -11,7 +11,15 @@ namespace AD_SeaAnimalGame
     //parent class 'SpawnItem'
     class SpawnItem
     {
-         public PictureBox pbSpawn()
+        public GamePage GamePage
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public PictureBox pbSpawn()
 		 {
             PictureBox pbSpawnItem = new PictureBox();
             pbSpawnItem.Height = 50;

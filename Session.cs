@@ -22,5 +22,13 @@ namespace AD_SeaAnimalGame
             }
            
         }
+
+        public GamePage GamePage
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

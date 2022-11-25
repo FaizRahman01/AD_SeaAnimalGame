@@ -64,5 +64,21 @@ namespace AD_SeaAnimalGame
             ControlPage controlpage = new ControlPage();
             controlpage.Show();
         }
+
+        public PlayerNamePage PlayerNamePage
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public ControlPage ControlPage
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }
