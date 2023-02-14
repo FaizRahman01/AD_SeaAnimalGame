@@ -47,7 +47,7 @@ namespace AD_SeaAnimalGame
             
             //messagebox with ok cancel button
             DialogResult logoutConfirmation = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.OKCancel);
-            //if the user press ok the it will go to the MainPage but the user will not go to the other page if press cancecl
+            //if the user press ok it will go to the MainPage but the user will not go to the other page if press cancecl
             if (logoutConfirmation == DialogResult.OK)
             {
                 //hide this page and open other form
