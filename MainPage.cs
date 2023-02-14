@@ -51,7 +51,6 @@ namespace AD_SeaAnimalGame
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            //hide this page and open other form
             this.Hide();
             PlayerNamePage pnamepage = new PlayerNamePage();
             pnamepage.Show();
@@ -59,7 +58,6 @@ namespace AD_SeaAnimalGame
 
         private void btnControl_Click(object sender, EventArgs e)
         {
-            //hide this page and open other form
             this.Hide();
             ControlPage controlpage = new ControlPage();
             controlpage.Show();
