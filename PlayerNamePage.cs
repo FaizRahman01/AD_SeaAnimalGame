@@ -50,7 +50,6 @@ namespace AD_SeaAnimalGame
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            //hide this page and open other form
             this.Hide();
             MainPage mainpage = new MainPage();
             mainpage.Show();
@@ -74,7 +73,7 @@ namespace AD_SeaAnimalGame
                 //if the username is registered in database it will run this statement
                 MessageBox.Show("Player Name is correct");
                 dbcon.Close();
-                //hide this page and open other form
+
                 this.Hide();
                 SkinOptionPage skinoptionpage = new SkinOptionPage();
                 skinoptionpage.Show();

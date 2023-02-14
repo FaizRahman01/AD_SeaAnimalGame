@@ -66,8 +66,6 @@ namespace AD_SeaAnimalGame
     }
         
         
-       
-
      //child class 'SpawnNotFish'  
     class SpawnNotFish:SpawnItem
     {

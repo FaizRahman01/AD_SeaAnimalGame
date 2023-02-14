@@ -40,6 +40,5 @@ namespace AD_SeaAnimalGame
             skinName = "submarine3left";
             return skinName;
         }
-
     }
 }

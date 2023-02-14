@@ -20,7 +20,6 @@ namespace AD_SeaAnimalGame
                 sessionname = value;
                 //set the username value from what user store in PlayerNamePage textbox
             }
-           
         }
     }
 }
